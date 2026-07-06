@@ -11,6 +11,7 @@ export default function Header() {
     <header className="cabecera">
       <div className="contenedor cabecera-fila">
         <a href="#" className="wordmark">
+          <img src="/logo-s.png" alt="" className="logo-s" width="48" height="48" />
           suspensivo<span className="elipsis">…</span>
         </a>
         <div className="cabecera-derecha">

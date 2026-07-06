@@ -63,3 +63,23 @@ img {
   font-size: var(--t-meta);
   color: var(--gris);
 }
+
+/* aparicion sutil al entrar en pantalla */
+.revelar {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.revelar.visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .revelar {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}

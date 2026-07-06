@@ -18,9 +18,18 @@
 }
 
 .wordmark {
+  display: flex;
+  align-items: center;
+  gap: var(--e-2);
   font-weight: 900;
   font-size: var(--t-md);
   letter-spacing: -0.02em;
+}
+
+.logo-s {
+  width: 30px;
+  height: 30px;
+  display: block;
 }
 
 .wordmark:hover {
