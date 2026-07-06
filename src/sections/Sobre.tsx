@@ -1,29 +1,17 @@
+import { useIdioma } from '../i18n/idioma'
 import './Sobre.css'
 
 export default function Sobre() {
+  const { t } = useIdioma()
   return (
     <section className="seccion" id="sobre">
       <div className="contenedor sobre-fila">
-        <h2 className="titulo-seccion">Sobre mí</h2>
+        <h2 className="titulo-seccion">{t.sobre.titulo}</h2>
         <div className="sobre-texto">
-          <p>
-            Sale el sol, hago fotos. No sale el sol, pongo el flash.
-          </p>
-          <p>
-            Soy Fabian Suspensivo, fotógrafo chileno radicado en Barcelona.
-            Vengo de la música: conciertos, sesiones a artistas y todo lo que
-            pasa alrededor de un escenario.
-          </p>
-          <p>
-            La otra mitad de mi trabajo es la calle. Fotoperiodismo y
-            fotografía documental: manifestaciones, huelgas y las
-            problemáticas sociales de Catalunya, donde tengo una serie en
-            curso. He publicado en Der Spiegel y colaborado con Open Arms.
-          </p>
-          <p>
-            Trabajo en digital, edito en Lightroom y también hago video: live
-            sessions, reels y aftermovies.
-          </p>
+          <p>{t.sobre.p1}</p>
+          <p>{t.sobre.p2}</p>
+          <p>{t.sobre.p3}</p>
+          <p>{t.sobre.p4}</p>
         </div>
       </div>
     </section>

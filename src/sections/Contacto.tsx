@@ -1,14 +1,17 @@
+import { useIdioma } from '../i18n/idioma'
 import './Contacto.css'
 
 export default function Contacto() {
+  const { t } = useIdioma()
   return (
     <section className="seccion" id="contacto">
       <div className="contenedor">
-        <h2 className="titulo-seccion">Contacto</h2>
+        <h2 className="titulo-seccion">{t.contacto.titulo}</h2>
         <p className="contacto-frase">
-          ¿Un concierto, una sesión, un encargo editorial?
+          {t.contacto.pregunta}
           <br />
-          Escríbeme<span className="elipsis-contacto">…</span>
+          {t.contacto.escribeme}
+          <span className="elipsis-contacto">…</span>
         </p>
         <div className="contacto-vias">
           <a href="mailto:fabiansuspensivo@gmail.com">

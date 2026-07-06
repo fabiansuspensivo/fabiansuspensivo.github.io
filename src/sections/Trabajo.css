@@ -27,6 +27,27 @@
   break-inside: avoid;
 }
 
+.serie-boton {
+  margin-top: var(--e-2);
+  background: none;
+  border: none;
+  padding: 0 0 2px;
+  font-family: inherit;
+  font-size: var(--t-meta);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--tinta);
+  border-bottom: 1px solid var(--linea);
+  cursor: pointer;
+  transition: color var(--transicion), border-color var(--transicion);
+}
+
+.serie-boton:hover {
+  color: var(--rojo);
+  border-color: var(--rojo);
+}
+
 @media (max-width: 720px) {
   .serie-fotos {
     columns: 1;

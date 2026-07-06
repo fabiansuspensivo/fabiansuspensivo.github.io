@@ -1,6 +1,8 @@
+import { useIdioma } from '../i18n/idioma'
 import './Hero.css'
 
 export default function Hero() {
+  const { t } = useIdioma()
   return (
     <section className="hero">
       <div className="contenedor">
@@ -9,10 +11,7 @@ export default function Hero() {
           <br />
           Suspensivo<span className="elipsis-hero">…</span>
         </h1>
-        <p className="hero-sub">
-          Fotógrafo. Conciertos, sesiones a artistas y fotoperiodismo.
-          Barcelona.
-        </p>
+        <p className="hero-sub">{t.hero.sub}</p>
       </div>
     </section>
   )
