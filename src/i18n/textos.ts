@@ -11,7 +11,7 @@ export type Textos = {
   nav: { trabajo: string; sobre: string; cv: string; contacto: string }
   hero: { sub: string }
   trabajo: { titulo: string; verMas: string; verMenos: string }
-  sobre: { titulo: string; p1: string; p2: string; p3: string; p4: string }
+  sobre: { titulo: string; p1: string; p2: string }
   cv: {
     titulo: string
     bloques: {
@@ -47,10 +47,8 @@ export const textos: Record<Idioma, Textos> = {
     },
     sobre: {
       titulo: 'Sobre mí',
-      p1: 'Sale el sol, hago fotos. No sale el sol, pongo el flash.',
-      p2: 'Soy Fabian Suspensivo, fotógrafo chileno radicado en Barcelona. Vengo de la música: conciertos, sesiones a artistas y todo lo que pasa alrededor de un escenario.',
-      p3: 'La otra mitad de mi trabajo es la calle. Fotoperiodismo y fotografía documental: manifestaciones, huelgas y las problemáticas sociales de Catalunya, donde tengo una serie en curso. He publicado en Der Spiegel y colaborado con Open Arms.',
-      p4: 'Trabajo en digital, edito en Lightroom y también hago video: live sessions, reels y aftermovies.',
+      p1: 'Soy fotógrafo y vivo en Barcelona. Cubro manifestaciones y la noticia del día a día en Catalunya, y trabajo para publicar en revistas, periódicos y agencias internacionales.',
+      p2: 'He publicado en Der Spiegel y colaborado con Open Arms. Vengo de la música: conciertos y sesiones a artistas. Edito en Lightroom y también hago video.',
     },
     cv: {
       titulo: 'CV',
@@ -129,10 +127,8 @@ export const textos: Record<Idioma, Textos> = {
     },
     sobre: {
       titulo: 'Sobre mi',
-      p1: 'Surt el sol, faig fotos. No surt el sol, poso el flaix.',
-      p2: 'Soc Fabian Suspensivo, fotògraf xilè establert a Barcelona. Vinc de la música: concerts, sessions a artistes i tot el que passa al voltant d’un escenari.',
-      p3: 'L’altra meitat de la meva feina és el carrer. Fotoperiodisme i fotografia documental: manifestacions, vagues i les problemàtiques socials de Catalunya, on tinc una sèrie en curs. He publicat a Der Spiegel i he col·laborat amb Open Arms.',
-      p4: 'Treballo en digital, edito amb Lightroom i també faig vídeo: live sessions, reels i aftermovies.',
+      p1: 'Soc fotògraf i visc a Barcelona. Cobreixo manifestacions i l’actualitat del dia a dia a Catalunya, i treballo per publicar en revistes, diaris i agències internacionals.',
+      p2: 'He publicat a Der Spiegel i he col·laborat amb Open Arms. Vinc de la música: concerts i sessions a artistes. Edito amb Lightroom i també faig vídeo.',
     },
     cv: {
       titulo: 'CV',
@@ -211,10 +207,8 @@ export const textos: Record<Idioma, Textos> = {
     },
     sobre: {
       titulo: 'Über mich',
-      p1: 'Scheint die Sonne, mache ich Fotos. Scheint sie nicht, nehme ich den Blitz.',
-      p2: 'Ich bin Fabian Suspensivo, chilenischer Fotograf in Barcelona. Ich komme von der Musik: Konzerte, Sessions mit Künstlerinnen und Künstlern und alles, was rund um eine Bühne passiert.',
-      p3: 'Die andere Hälfte meiner Arbeit ist die Straße. Fotojournalismus und Dokumentarfotografie: Demonstrationen, Streiks und die sozialen Fragen Kataloniens, wo ich an einer laufenden Serie arbeite. Veröffentlicht im Spiegel, Zusammenarbeit mit Open Arms.',
-      p4: 'Ich arbeite digital, entwickle in Lightroom und mache auch Video: Live-Sessions, Reels und Aftermovies.',
+      p1: 'Ich bin Fotograf und lebe in Barcelona. Ich fotografiere Demonstrationen und das tägliche Nachrichtengeschehen in Katalonien und arbeite darauf hin, in internationalen Magazinen, Zeitungen und Agenturen zu veröffentlichen.',
+      p2: 'Veröffentlicht im Spiegel, Zusammenarbeit mit Open Arms. Ich komme von der Musik: Konzerte und Sessions mit Künstlern. Ich entwickle in Lightroom und mache auch Video.',
     },
     cv: {
       titulo: 'CV',

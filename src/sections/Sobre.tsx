@@ -10,8 +10,6 @@ export default function Sobre() {
         <div className="sobre-texto">
           <p>{t.sobre.p1}</p>
           <p>{t.sobre.p2}</p>
-          <p>{t.sobre.p3}</p>
-          <p>{t.sobre.p4}</p>
         </div>
       </div>
     </section>
