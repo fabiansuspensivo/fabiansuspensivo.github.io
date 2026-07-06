@@ -1,0 +1,27 @@
+# dependencias y build
+node_modules/
+dist/
+*.local
+
+# solo entran exportaciones optimizadas para web (webp/avif/jpg <= 500 KB)
+# los originales y el video nunca entran a este repo
+*.mp4
+*.mov
+*.mxf
+*.braw
+*.r3d
+*.arw
+*.cr2
+*.cr3
+*.nef
+*.dng
+*.psd
+*.tif
+*.tiff
+footage/
+exports/
+renders/
+raw/
+
+# sistema
+.DS_Store

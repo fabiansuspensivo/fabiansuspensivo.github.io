@@ -1,0 +1,30 @@
+.contacto-frase {
+  font-size: var(--t-xl);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+.elipsis-contacto {
+  color: var(--rojo);
+}
+
+.contacto-vias {
+  margin-top: var(--e-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--e-2);
+  font-size: var(--t-md);
+  font-weight: 500;
+}
+
+.contacto-vias a {
+  width: fit-content;
+  border-bottom: 1px solid var(--linea);
+  padding-bottom: 2px;
+}
+
+.contacto-vias a:hover {
+  border-color: var(--rojo);
+}

@@ -1,0 +1,19 @@
+.pie {
+  border-top: 1px solid var(--linea);
+  padding: var(--e-5) 0;
+}
+
+.pie-fila {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.pie-marca {
+  font-weight: 900;
+  font-size: var(--t-meta);
+}
+
+.elipsis-pie {
+  color: var(--rojo);
+}

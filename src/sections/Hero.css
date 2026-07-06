@@ -1,0 +1,22 @@
+.hero {
+  padding: var(--e-7) 0;
+}
+
+.hero-titulo {
+  font-size: var(--t-display);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+  text-wrap: balance;
+}
+
+.elipsis-hero {
+  color: var(--rojo);
+}
+
+.hero-sub {
+  margin-top: var(--e-4);
+  font-size: var(--t-md);
+  color: var(--gris);
+  max-width: 34ch;
+}
