@@ -7,6 +7,9 @@ export default function Sobre() {
         <h2 className="titulo-seccion">Sobre mí</h2>
         <div className="sobre-texto">
           <p>
+            Sale el sol, hago fotos. No sale el sol, pongo el flash.
+          </p>
+          <p>
             Soy Fabian Suspensivo, fotógrafo chileno radicado en Barcelona.
             Vengo de la música: conciertos, sesiones a artistas y todo lo que
             pasa alrededor de un escenario.
