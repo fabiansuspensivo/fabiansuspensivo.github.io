@@ -30,33 +30,48 @@ Objetivo: una página con secciones Trabajo, Sobre mí, CV, Contacto, header fij
 Hecho cuando: navegación por anclas funciona en móvil y escritorio.
 Notas: (2026-07-06) hecho. La galería se oculta sola mientras esté vacía.
 
-## M05 - Galería curada  [ ]
+## M05 - Galería curada  [x]
 Objetivo: series de fotos elegidas por Fabián (nunca auto-elegidas), exportadas para web.
-Entregable: `public/fotos/` (WebP <= 500 KB) + `src/data/galeria.ts` con series y alt text.
+Entregable: `public/fotos/` (JPG <= 500 KB) + `src/data/galeria.ts` con series y alt text.
 Hecho cuando: Fabián aprobó cada foto publicada y la página las muestra bien en móvil.
-Notas: (2026-07-06) en curso: hoja de contactos generada desde sus álbumes para que él
-marque su selección.
+Notas: (2026-07-07) hecho con 101 fotos que él eligió en una hoja de contactos, en 5 series.
+Pendiente su 2a selección para afinar (dijo que la hará otro día). Filas justificadas por
+altura (no se recortan), muestra de 4 por serie con botón "ver las N fotos".
 
-## M06 - Sobre mí + CV público + contacto  [~]
+## M06 - Sobre mí + CV público + contacto  [x]
 Objetivo: textos reales en su voz; CV curado (solo lo aprobado por Fabián).
 Hecho cuando: Fabián aprobó los textos publicados.
-Notas: (2026-07-06) borrador en página, pendiente su revisión.
+Notas: (2026-07-07) Sobre mí con el texto que él eligió (opción "prensa directa");
+CV con Der Spiegel (enlace), Open Arms, foto fija y su serie de Catalunya; contacto con
+correo, WhatsApp e Instagram. Entrevista en curso (`studio/cv/entrevista.md`) para
+enriquecer Sobre mí en próximas rondas.
 
-## M07 - Hero fotográfico  [ ]
-Objetivo: reemplazar el hero tipográfico por una foto a sangre elegida por Fabián.
-Hecho cuando: LCP sigue rápido (imagen optimizada, sin layout shift).
+## M07 - Deploy a GitHub Pages  [x]
+Objetivo: sitio público y en vivo.
+Hecho cuando: la URL de Pages sirve el sitio.
+Notas: (2026-07-07) EN VIVO en https://fabiansuspensivo.github.io/. Repo hecho público.
+Se sirve desde la rama `gh-pages` (el token de `gh` no tiene scope `workflow`, así que en
+vez de GitHub Actions se despliega empujando `dist/` a `gh-pages`; para republicar:
+`bun run build` y empujar el contenido de `dist/` a `gh-pages`).
 
-## M08 - Pase SEO y calidad  [ ]
-Objetivo: la línea base completa: metadatos por página, sitemap real, alt en todas las
-fotos, Lighthouse >= 90 en todo.
-Hecho cuando: reporte Lighthouse adjunto en el PR con >= 90 en las cuatro categorías.
+## M08 - Favicon, OG y trilingüe  [x]
+Objetivo: favicon desde el logo, imagen para compartir, y web en es/ca/de.
+Hecho cuando: la pestaña muestra la S, al compartir sale tarjeta, y detecta el idioma.
+Notas: (2026-07-07) favicon e ícono desde `logo-S.png`; `og.png` para redes; i18n es/ca/de
+con detección automática del navegador y selector ES/CA/DE. QA visual contra portafolios de
+referencia (McCurry, Magnum, Addario, Noire): nombre más sobrio, obra arriba, puntos rojos
+redondos (antes cuadrados, parecían Mossos).
 
-## M09 - Favicon y OG image  [ ]
-Objetivo: favicon desde el logo original (cuando llegue el archivo) y una imagen para
-compartir en redes.
-Hecho cuando: al pegar la URL en WhatsApp/Instagram se ve tarjeta con foto y título.
+## M09 - Pase SEO y calidad (Lighthouse >= 90)  [ ]
+Objetivo: metadatos por idioma con `hreflang`, sitemap real, alt en todas las fotos,
+Lighthouse >= 90 en las cuatro categorías.
+Hecho cuando: reporte Lighthouse con >= 90 en todo.
 
-## M10 - Dominio propio (evaluar)  [ ]
+## M10 - 2a selección de fotos + hero fotográfico (evaluar)  [ ]
+Objetivo: incorporar la 2a selección de Fabián; evaluar con él un hero con foto a sangre.
+Hecho cuando: galería afinada y decisión del hero tomada.
+
+## M11 - Dominio propio (evaluar)  [ ]
 Objetivo: decidir con Fabián si comprar dominio; solo cuando la página ya trabaje por él.
 Hecho cuando: decisión tomada y anotada aquí.
 
