@@ -16,54 +16,116 @@
   letter-spacing: -0.01em;
 }
 
-.fila {
+/* visor de una foto a la vez */
+.visor-marco {
+  position: relative;
+  height: 68vh;
+  max-height: 720px;
+  min-height: 340px;
   display: flex;
-  gap: var(--e-3);
-  margin-bottom: var(--e-3);
+  align-items: center;
+  justify-content: center;
+  background: var(--papel);
+  overflow: hidden;
 }
 
-.foto {
-  min-width: 0;
-}
-
-.fila > .foto:only-child {
-  max-width: 72%;
-}
-
-.foto img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.visor-img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
   display: block;
+  animation: visorEntra 480ms ease;
 }
 
-.serie-boton {
-  margin-top: var(--e-2);
-  background: none;
+@keyframes visorEntra {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* zonas invisibles para pasar foto clicando la imagen */
+.visor-zona {
+  position: absolute;
+  top: 0;
+  bottom: 0;
   border: none;
-  padding: 0 0 2px;
-  font-family: inherit;
-  font-size: var(--t-meta);
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.visor-zona.izq {
+  left: 0;
+  width: 38%;
+}
+
+.visor-zona.der {
+  right: 0;
+  width: 62%;
+}
+
+.visor-pie {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--e-3);
+}
+
+.visor-flechas {
+  display: flex;
+  gap: var(--e-2);
+}
+
+.visor-flecha {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--linea);
+  background: var(--papel);
   color: var(--tinta);
-  border-bottom: 1px solid var(--linea);
+  font-family: inherit;
+  font-size: 22px;
+  line-height: 1;
   cursor: pointer;
   transition: color var(--transicion), border-color var(--transicion);
 }
 
-.serie-boton:hover {
+.visor-flecha:hover {
   color: var(--rojo);
   border-color: var(--rojo);
 }
 
-@media (max-width: 720px) {
-  .fila {
-    flex-direction: column;
-  }
+.visor-contador {
+  font-size: var(--t-meta);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--gris);
+  font-variant-numeric: tabular-nums;
+}
 
-  .foto {
-    flex: none !important;
+.visor-contador .sep {
+  color: var(--linea);
+}
+
+:where(.visor-flecha, .visor-zona):focus-visible {
+  outline: 2px solid var(--rojo);
+  outline-offset: 2px;
+}
+
+@media (max-width: 720px) {
+  .visor-marco {
+    height: 56vh;
+    min-height: 280px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .visor-img {
+    animation: none;
   }
 }

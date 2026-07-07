@@ -10,7 +10,13 @@ export type Textos = {
   meta: { titulo: string; descripcion: string }
   nav: { trabajo: string; sobre: string; cv: string; contacto: string }
   hero: { sub: string }
-  trabajo: { titulo: string; verMas: string; verMenos: string }
+  trabajo: {
+    titulo: string
+    verMas: string
+    verMenos: string
+    anterior: string
+    siguiente: string
+  }
   sobre: { titulo: string; p1: string; p2: string }
   cv: {
     titulo: string
@@ -44,6 +50,8 @@ export const textos: Record<Idioma, Textos> = {
       titulo: 'Trabajo',
       verMas: 'Ver las {n} fotos',
       verMenos: 'Mostrar menos',
+      anterior: 'Anterior',
+      siguiente: 'Siguiente',
     },
     sobre: {
       titulo: 'Sobre mí',
@@ -108,6 +116,16 @@ export const textos: Record<Idioma, Textos> = {
         nota: 'Festival Tradicionàrius',
         alt: 'Concierto, fotografía de música en vivo',
       },
+      '1-de-mayo': {
+        titulo: '1 de mayo',
+        nota: 'Manifestación del Primero de Mayo, Barcelona',
+        alt: 'Manifestación del 1 de mayo en Barcelona',
+      },
+      prensa: {
+        titulo: 'Prensa',
+        nota: 'Selección de fotoperiodismo',
+        alt: 'Fotoperiodismo y trabajo de prensa en Barcelona y Catalunya',
+      },
     },
   },
   ca: {
@@ -124,6 +142,8 @@ export const textos: Record<Idioma, Textos> = {
       titulo: 'Treball',
       verMas: 'Veure les {n} fotos',
       verMenos: 'Mostra’n menys',
+      anterior: 'Anterior',
+      siguiente: 'Següent',
     },
     sobre: {
       titulo: 'Sobre mi',
@@ -188,6 +208,16 @@ export const textos: Record<Idioma, Textos> = {
         nota: 'Festival Tradicionàrius',
         alt: 'Concert, fotografia de música en directe',
       },
+      '1-de-mayo': {
+        titulo: '1 de maig',
+        nota: 'Manifestació del Primer de Maig, Barcelona',
+        alt: 'Manifestació de l’1 de maig a Barcelona',
+      },
+      prensa: {
+        titulo: 'Premsa',
+        nota: 'Selecció de fotoperiodisme',
+        alt: 'Fotoperiodisme i treball de premsa a Barcelona i Catalunya',
+      },
     },
   },
   de: {
@@ -204,6 +234,8 @@ export const textos: Record<Idioma, Textos> = {
       titulo: 'Arbeit',
       verMas: 'Alle {n} Fotos ansehen',
       verMenos: 'Weniger anzeigen',
+      anterior: 'Zurück',
+      siguiente: 'Weiter',
     },
     sobre: {
       titulo: 'Über mich',
@@ -267,6 +299,16 @@ export const textos: Record<Idioma, Textos> = {
         titulo: 'Musik',
         nota: 'Tradicionàrius-Festival',
         alt: 'Konzert, Livemusik-Fotografie',
+      },
+      '1-de-mayo': {
+        titulo: '1. Mai',
+        nota: 'Demonstration zum Ersten Mai, Barcelona',
+        alt: 'Demonstration zum 1. Mai in Barcelona',
+      },
+      prensa: {
+        titulo: 'Presse',
+        nota: 'Auswahl an Fotojournalismus',
+        alt: 'Fotojournalismus und Pressearbeit in Barcelona und Katalonien',
       },
     },
   },
