@@ -1,22 +1,19 @@
 .hero {
-  padding: var(--e-7) 0;
+  padding: var(--e-6) 0 var(--e-5);
+}
+
+.hero-sub {
+  font-size: var(--t-meta);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--gris);
+  margin-bottom: var(--e-3);
 }
 
 .hero-titulo {
-  font-size: var(--t-display);
+  font-size: clamp(2rem, 6vw, 3.6rem);
   font-weight: 900;
   letter-spacing: -0.02em;
   line-height: 1.02;
   text-wrap: balance;
-}
-
-.elipsis-hero {
-  color: var(--rojo);
-}
-
-.hero-sub {
-  margin-top: var(--e-4);
-  font-size: var(--t-md);
-  color: var(--gris);
-  max-width: 34ch;
 }

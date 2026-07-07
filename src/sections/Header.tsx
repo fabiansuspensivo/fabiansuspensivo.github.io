@@ -1,6 +1,7 @@
 import { series } from '../data/galeria'
 import { useIdioma } from '../i18n/idioma'
 import type { Idioma } from '../i18n/textos'
+import Puntos from '../components/Puntos'
 import './Header.css'
 
 const IDIOMAS: Idioma[] = ['es', 'ca', 'de']
@@ -12,7 +13,7 @@ export default function Header() {
       <div className="contenedor cabecera-fila">
         <a href="#" className="wordmark">
           <img src="/logo-s.png" alt="" className="logo-s" width="48" height="48" />
-          suspensivo<span className="elipsis">…</span>
+          suspensivo<Puntos />
         </a>
         <div className="cabecera-derecha">
           <nav className="nav" aria-label="Secciones">

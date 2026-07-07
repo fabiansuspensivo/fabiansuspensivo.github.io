@@ -1,0 +1,14 @@
+.puntos {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 0.14em;
+  margin-left: 0.14em;
+}
+
+.puntos i {
+  width: 0.17em;
+  height: 0.17em;
+  border-radius: 50%;
+  background: var(--rojo);
+  margin-bottom: 0.14em;
+}
