@@ -46,13 +46,15 @@ CV con Der Spiegel (enlace), Open Arms, foto fija y su serie de Catalunya; conta
 correo, WhatsApp e Instagram. Entrevista en curso (`studio/cv/entrevista.md`) para
 enriquecer Sobre mí en próximas rondas.
 
-## M07 - Deploy a GitHub Pages  [x]
-Objetivo: sitio público y en vivo.
-Hecho cuando: la URL de Pages sirve el sitio.
-Notas: (2026-07-07) EN VIVO en https://fabiansuspensivo.github.io/. Repo hecho público.
-Se sirve desde la rama `gh-pages` (el token de `gh` no tiene scope `workflow`, así que en
-vez de GitHub Actions se despliega empujando `dist/` a `gh-pages`; para republicar:
-`bun run build` y empujar el contenido de `dist/` a `gh-pages`).
+## M07 - Deploy y dominio propio  [x]
+Objetivo: sitio público, en vivo y con dominio propio.
+Hecho cuando: los dominios sirven el sitio con HTTPS.
+Notas: (2026-07-07) EN VIVO en **https://suspensivo.com** (canónico) y **https://suspensivo.es**
+(ambos con www), hospedado en **Vercel** (proyecto `suspensivo`). Fabián compró los dominios
+en GoDaddy; DNS vía API de GoDaddy (A @ -> 76.76.21.21, CNAME www -> cname.vercel-dns.com).
+Republicar: `vercel deploy --prod --yes --cwd .`. Respaldo aún en Pages
+(`fabiansuspensivo.github.io`, rama `gh-pages`). Guía de depuración completa: sección
+"Web deployment & DNS" del CLAUDE.md raíz.
 
 ## M08 - Favicon, OG y trilingüe  [x]
 Objetivo: favicon desde el logo, imagen para compartir, y web en es/ca/de.
