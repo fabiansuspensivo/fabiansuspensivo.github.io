@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fabiansuspensivo.github.io/sitemap.xml
