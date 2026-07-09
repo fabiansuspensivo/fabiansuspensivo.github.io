@@ -1,37 +1,95 @@
-import { useEffect, useRef, useState } from 'react'
-import { series } from '../data/galeria'
+import { useEffect, useState } from 'react'
+import { series, type Serie } from '../data/galeria'
 import { useIdioma } from '../i18n/idioma'
+import type { SerieTexto, Textos } from '../i18n/textos'
 import './Trabajo.css'
 
-// Visor de una foto a la vez por serie: las fotos pasan de una en una con un
-// fundido, en vez de una cuadricula con scroll. Inspirado en la sobriedad
-// editorial de las agencias de foto (la imagen manda, el resto se aparta).
-export default function Trabajo() {
-  const { t } = useIdioma()
-  const [indices, setIndices] = useState<Record<string, number>>({})
-  const activa = useRef<string | null>(null)
+// Visor de una serie: una foto a la vez sobre fondo oscuro, con fundido
+// cruzado al pasar. Navegacion manual (clic en la imagen, flechas o teclado).
+// Sobriedad editorial de agencia de foto, con la identidad de suspensivo.
+function Visor({ serie, texto, t }: { serie: Serie; texto: SerieTexto; t: Textos }) {
+  const largo = serie.fotos.length
+  const [i, setI] = useState(0)
+  const [saliente, setSaliente] = useState<number | null>(null)
+  const [hover, setHover] = useState(false)
 
-  const mover = (id: string, largo: number, dir: number) =>
-    setIndices((prev) => ({
-      ...prev,
-      [id]: ((prev[id] ?? 0) + dir + largo) % largo,
-    }))
+  const mover = (dir: number) => {
+    setSaliente(i)
+    setI((prev) => (prev + dir + largo) % largo)
+  }
 
-  // flechas del teclado mueven la serie sobre la que esta el cursor
+  // quita la foto saliente cuando termina el fundido
   useEffect(() => {
+    if (saliente === null) return
+    const id = window.setTimeout(() => setSaliente(null), 620)
+    return () => window.clearTimeout(id)
+  }, [i, saliente])
+
+  // flechas del teclado cuando el cursor esta sobre esta serie
+  useEffect(() => {
+    if (!hover) return
     const onKey = (e: KeyboardEvent) => {
-      const id = activa.current
-      if (!id) return
-      const serie = series.find((s) => s.id === id)
-      if (!serie) return
-      if (e.key === 'ArrowRight') mover(id, serie.fotos.length, 1)
-      if (e.key === 'ArrowLeft') mover(id, serie.fotos.length, -1)
+      if (e.key === 'ArrowRight') mover(1)
+      if (e.key === 'ArrowLeft') mover(-1)
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [])
+  })
 
-  // aparicion sutil de cada serie al entrar en pantalla
+  const foto = serie.fotos[i]
+
+  return (
+    <div
+      className="visor-marco"
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+    >
+      {saliente !== null && (
+        <img
+          className="visor-img saliente"
+          src={serie.fotos[saliente].src}
+          alt=""
+          aria-hidden="true"
+        />
+      )}
+      <img
+        key={i}
+        className="visor-img entrante"
+        src={foto.src}
+        alt={texto.alt}
+        width={foto.w}
+        height={foto.h}
+      />
+
+      <button
+        type="button"
+        className="visor-zona izq"
+        aria-label={t.trabajo.anterior}
+        onClick={() => mover(-1)}
+      >
+        <span className="visor-flecha">&lsaquo;</span>
+      </button>
+      <button
+        type="button"
+        className="visor-zona der"
+        aria-label={t.trabajo.siguiente}
+        onClick={() => mover(1)}
+      >
+        <span className="visor-flecha">&rsaquo;</span>
+      </button>
+
+      <span className="visor-contador">
+        {String(i + 1).padStart(2, '0')}
+        <span className="sep"> / </span>
+        {String(largo).padStart(2, '0')}
+      </span>
+    </div>
+  )
+}
+
+export default function Trabajo() {
+  const { t } = useIdioma()
+
   useEffect(() => {
     const obs = new IntersectionObserver(
       (entradas) => {
@@ -56,73 +114,13 @@ export default function Trabajo() {
         <h2 className="titulo-seccion">{t.trabajo.titulo}</h2>
         {series.map((serie) => {
           const texto = t.series[serie.id]
-          const largo = serie.fotos.length
-          const i = indices[serie.id] ?? 0
-          const foto = serie.fotos[i]
           return (
-            <article
-              className="serie revelar"
-              key={serie.id}
-              onMouseEnter={() => (activa.current = serie.id)}
-              onMouseLeave={() => {
-                if (activa.current === serie.id) activa.current = null
-              }}
-            >
+            <article className="serie revelar" key={serie.id}>
               <header className="serie-cabecera">
                 <h3 className="serie-titulo">{texto.titulo}</h3>
                 <p className="meta">{texto.nota}</p>
               </header>
-
-              <div className="visor">
-                <div className="visor-marco">
-                  <img
-                    key={foto.src}
-                    className="visor-img"
-                    src={foto.src}
-                    alt={texto.alt}
-                    width={foto.w}
-                    height={foto.h}
-                  />
-                  <button
-                    type="button"
-                    className="visor-zona izq"
-                    aria-label={t.trabajo.anterior}
-                    onClick={() => mover(serie.id, largo, -1)}
-                  />
-                  <button
-                    type="button"
-                    className="visor-zona der"
-                    aria-label={t.trabajo.siguiente}
-                    onClick={() => mover(serie.id, largo, 1)}
-                  />
-                </div>
-
-                <div className="visor-pie">
-                  <div className="visor-flechas">
-                    <button
-                      type="button"
-                      className="visor-flecha"
-                      aria-label={t.trabajo.anterior}
-                      onClick={() => mover(serie.id, largo, -1)}
-                    >
-                      &lsaquo;
-                    </button>
-                    <button
-                      type="button"
-                      className="visor-flecha"
-                      aria-label={t.trabajo.siguiente}
-                      onClick={() => mover(serie.id, largo, 1)}
-                    >
-                      &rsaquo;
-                    </button>
-                  </div>
-                  <span className="visor-contador">
-                    {String(i + 1).padStart(2, '0')}
-                    <span className="sep"> / </span>
-                    {String(largo).padStart(2, '0')}
-                  </span>
-                </div>
-              </div>
+              <Visor serie={serie} texto={texto} t={t} />
             </article>
           )
         })}

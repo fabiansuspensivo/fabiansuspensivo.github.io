@@ -16,27 +16,36 @@
   letter-spacing: -0.01em;
 }
 
-/* visor de una foto a la vez */
+/* visor: una foto a la vez sobre fondo oscuro */
 .visor-marco {
   position: relative;
   height: 68vh;
-  max-height: 720px;
+  max-height: 760px;
   min-height: 340px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--papel);
+  background: #0e0e0e;
   overflow: hidden;
 }
 
 .visor-img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
   max-width: 100%;
   max-height: 100%;
   width: auto;
   height: auto;
   object-fit: contain;
   display: block;
-  animation: visorEntra 480ms ease;
+}
+
+.visor-img.entrante {
+  z-index: 2;
+  animation: visorEntra 600ms ease;
+}
+
+.visor-img.saliente {
+  z-index: 1;
+  animation: visorSale 600ms ease forwards;
 }
 
 @keyframes visorEntra {
@@ -48,84 +57,98 @@
   }
 }
 
-/* zonas invisibles para pasar foto clicando la imagen */
+@keyframes visorSale {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* zonas para pasar foto: mitad izquierda atras, derecha adelante */
 .visor-zona {
   position: absolute;
   top: 0;
   bottom: 0;
+  z-index: 3;
   border: none;
   background: transparent;
-  padding: 0;
+  padding: 0 24px;
   margin: 0;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .visor-zona.izq {
   left: 0;
-  width: 38%;
+  width: 40%;
+  justify-content: flex-start;
 }
 
 .visor-zona.der {
   right: 0;
-  width: 62%;
+  width: 60%;
+  justify-content: flex-end;
 }
 
-.visor-pie {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: var(--e-3);
-}
-
-.visor-flechas {
-  display: flex;
-  gap: var(--e-2);
-}
-
+/* flechas discretas: aparecen al pasar el cursor */
 .visor-flecha {
-  width: 40px;
-  height: 40px;
-  border: 1px solid var(--linea);
-  background: var(--papel);
-  color: var(--tinta);
   font-family: inherit;
-  font-size: 22px;
+  font-size: 40px;
   line-height: 1;
-  cursor: pointer;
-  transition: color var(--transicion), border-color var(--transicion);
+  color: #fff;
+  opacity: 0;
+  transition: opacity var(--transicion);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
 }
 
-.visor-flecha:hover {
-  color: var(--rojo);
-  border-color: var(--rojo);
+.visor-marco:hover .visor-flecha {
+  opacity: 0.55;
+}
+
+.visor-zona:hover .visor-flecha {
+  opacity: 1;
 }
 
 .visor-contador {
+  position: absolute;
+  z-index: 3;
+  right: 16px;
+  bottom: 14px;
   font-size: var(--t-meta);
   font-weight: 500;
-  letter-spacing: 0.08em;
-  color: var(--gris);
+  letter-spacing: 0.09em;
+  color: rgba(255, 255, 255, 0.78);
   font-variant-numeric: tabular-nums;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+  pointer-events: none;
 }
 
 .visor-contador .sep {
-  color: var(--linea);
+  color: rgba(255, 255, 255, 0.4);
 }
 
-:where(.visor-flecha, .visor-zona):focus-visible {
+.visor-zona:focus-visible {
   outline: 2px solid var(--rojo);
-  outline-offset: 2px;
+  outline-offset: -4px;
 }
 
 @media (max-width: 720px) {
   .visor-marco {
-    height: 56vh;
-    min-height: 280px;
+    height: 54vh;
+    min-height: 300px;
+  }
+  .visor-flecha {
+    opacity: 0.5;
+    font-size: 34px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .visor-img {
-    animation: none;
+  .visor-img.entrante,
+  .visor-img.saliente {
+    animation-duration: 1ms;
   }
 }
