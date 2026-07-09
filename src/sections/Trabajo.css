@@ -31,6 +31,12 @@
   line-height: 0;
 }
 
+/* lienzo: envuelve la foto y aloja el esqueleto exactamente sobre su encuadre */
+.visor-lienzo {
+  position: relative;
+  line-height: 0;
+}
+
 .visor-img {
   display: block;
   /* misma altura maxima para horizontales y verticales: se ven parejas */
@@ -39,15 +45,62 @@
   width: auto;
   height: auto;
   object-fit: contain;
-  animation: visorEntra 460ms ease;
+  /* salida: fundido limpio de opacidad, sin escalar (evita el zoom al irse) */
+  opacity: 0;
+  transform: scale(1);
+  transition: opacity 240ms ease;
+  will-change: opacity, transform;
+}
+
+/* entrada: la foto asienta con un leve acercamiento y una curva suave */
+.visor-img.visible {
+  opacity: 1;
+  animation: visorEntra 560ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 @keyframes visorEntra {
   from {
     opacity: 0;
+    transform: scale(1.02);
   }
   to {
     opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* esqueleto: solo visible mientras una foto tarda en decodificar */
+.visor-esqueleto {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background: #e9e7e2;
+  transition: opacity 200ms ease;
+}
+
+.visor-esqueleto.activo {
+  opacity: 1;
+}
+
+.visor-esqueleto::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  animation: brillo 1.25s ease-in-out infinite;
+}
+
+@keyframes brillo {
+  100% {
+    transform: translateX(100%);
   }
 }
 
@@ -133,6 +186,14 @@
 
 @media (prefers-reduced-motion: reduce) {
   .visor-img {
+    transition: opacity 120ms linear;
+    transform: none;
+  }
+  .visor-img.visible {
+    animation: none;
+    transform: none;
+  }
+  .visor-esqueleto::after {
     animation: none;
   }
 }

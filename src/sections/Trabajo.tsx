@@ -1,20 +1,101 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { series, type Serie } from '../data/galeria'
 import { useIdioma } from '../i18n/idioma'
 import type { SerieTexto, Textos } from '../i18n/textos'
 import './Trabajo.css'
 
-// Visor de una serie: una foto a la vez. El fondo oscuro es un paspartu de
-// margen uniforme (mismo borde en todos los lados, igual para horizontales y
-// verticales), asi todas se ven parejas. Navegacion manual, con fundido.
+// Visor de una serie: una foto a la vez sobre un paspartu de margen uniforme.
+// La transicion es de galeria: la foto actual se funde hacia el paspartu y la
+// siguiente se revela SOLO cuando ya esta decodificada, asi nunca aparece a
+// medio cargar ni pega saltos. Las fotos vecinas se precargan en silencio, de
+// modo que pasar de una a otra es instantaneo. Si una imagen tarda de verdad
+// (primera visita, salto rapido) se muestra un esqueleto con el mismo encuadre,
+// sin mover el layout.
+const SALIDA = 240 // ms del fundido de salida antes de cambiar de foto
+
 function Visor({ serie, texto, t }: { serie: Serie; texto: SerieTexto; t: Textos }) {
   const largo = serie.fotos.length
   const [i, setI] = useState(0)
+  const [visible, setVisible] = useState(false)
+  const [cargando, setCargando] = useState(false)
   const [hover, setHover] = useState(false)
+  const animando = useRef(false)
+  const cargadas = useRef<Set<string>>(new Set())
+  const timers = useRef<number[]>([])
+  const reduce = useRef(false)
 
-  const mover = (dir: number) => setI((prev) => (prev + dir + largo) % largo)
+  const norm = (idx: number) => ((idx % largo) + largo) % largo
 
-  // flechas del teclado cuando el cursor esta sobre esta serie
+  const precargar = useCallback(
+    (idx: number) => {
+      const src = serie.fotos[norm(idx)].src
+      if (cargadas.current.has(src)) return
+      const im = new Image()
+      im.src = src
+      const ok = () => cargadas.current.add(src)
+      if (im.decode) im.decode().then(ok).catch(() => {})
+      else im.onload = ok
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [serie, largo],
+  )
+
+  // Decodifica la foto destino (esqueleto solo si tarda), la funde hacia adentro
+  // y precarga las vecinas.
+  const revelar = useCallback(
+    async (idx: number) => {
+      const src = serie.fotos[idx].src
+      if (!cargadas.current.has(src)) {
+        const tskel = window.setTimeout(() => setCargando(true), 100)
+        timers.current.push(tskel)
+        const im = new Image()
+        im.src = src
+        try {
+          if (im.decode) await im.decode()
+        } catch {
+          /* imagen rota: seguimos sin bloquear el visor */
+        }
+        window.clearTimeout(tskel)
+        cargadas.current.add(src)
+      }
+      setCargando(false)
+      // dos frames para asegurar que la <img> ya pinto en opacidad 0 antes de encenderla
+      requestAnimationFrame(() => requestAnimationFrame(() => setVisible(true)))
+      precargar(idx + 1)
+      precargar(idx - 1)
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [serie],
+  )
+
+  const irA = useCallback(
+    (next: number) => {
+      if (animando.current || next === i) return
+      animando.current = true
+      setVisible(false) // funde la actual hacia el paspartu
+      const espera = reduce.current ? 0 : SALIDA
+      const tt = window.setTimeout(async () => {
+        setI(next)
+        await revelar(next)
+        animando.current = false
+      }, espera)
+      timers.current.push(tt)
+    },
+    [i, revelar],
+  )
+
+  const mover = (dir: number) => irA(norm(i + dir))
+
+  // primera foto + limpieza de timers al desmontar
+  useEffect(() => {
+    reduce.current = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    revelar(0)
+    const t = timers.current
+    return () => t.forEach((x) => window.clearTimeout(x))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  // flechas del teclado cuando el cursor esta sobre el visor
   useEffect(() => {
     if (!hover) return
     const onKey = (e: KeyboardEvent) => {
@@ -34,14 +115,20 @@ function Visor({ serie, texto, t }: { serie: Serie; texto: SerieTexto; t: Textos
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
       >
-        <img
-          key={i}
-          className="visor-img"
-          src={foto.src}
-          alt={texto.alt}
-          width={foto.w}
-          height={foto.h}
-        />
+        <div className="visor-lienzo">
+          <img
+            className={`visor-img${visible ? ' visible' : ''}`}
+            src={foto.src}
+            alt={texto.alt}
+            width={foto.w}
+            height={foto.h}
+            draggable={false}
+          />
+          <span
+            className={`visor-esqueleto${cargando ? ' activo' : ''}`}
+            aria-hidden="true"
+          />
+        </div>
 
         <button
           type="button"
