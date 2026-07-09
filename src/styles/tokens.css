@@ -1,12 +1,12 @@
 /* Tokens de marca: fuente de verdad en studio/brand/manual.md (privado).
    Cambios de valores se hacen alla primero y se reflejan aqui. */
 :root {
-  /* color */
-  --tinta: #0a0a0a;
-  --papel: #ffffff;
+  /* color (tema oscuro: fondo negro, texto blanco) */
+  --tinta: #f4f3f0;
+  --papel: #0b0b0b;
   --rojo: #ff3131;
-  --gris: #6e6e6e;
-  --linea: #e6e6e6;
+  --gris: #948f89;
+  --linea: #2a2926;
 
   /* tipografia */
   --familia: 'Archivo Variable', Archivo, ui-sans-serif, system-ui, sans-serif;

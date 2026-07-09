@@ -4,26 +4,15 @@ import { useIdioma } from '../i18n/idioma'
 import type { SerieTexto, Textos } from '../i18n/textos'
 import './Trabajo.css'
 
-// Visor de una serie: una foto a la vez sobre fondo oscuro, con fundido
-// cruzado al pasar. Navegacion manual (clic en la imagen, flechas o teclado).
-// Sobriedad editorial de agencia de foto, con la identidad de suspensivo.
+// Visor de una serie: una foto a la vez. El fondo oscuro es un paspartu de
+// margen uniforme (mismo borde en todos los lados, igual para horizontales y
+// verticales), asi todas se ven parejas. Navegacion manual, con fundido.
 function Visor({ serie, texto, t }: { serie: Serie; texto: SerieTexto; t: Textos }) {
   const largo = serie.fotos.length
   const [i, setI] = useState(0)
-  const [saliente, setSaliente] = useState<number | null>(null)
   const [hover, setHover] = useState(false)
 
-  const mover = (dir: number) => {
-    setSaliente(i)
-    setI((prev) => (prev + dir + largo) % largo)
-  }
-
-  // quita la foto saliente cuando termina el fundido
-  useEffect(() => {
-    if (saliente === null) return
-    const id = window.setTimeout(() => setSaliente(null), 620)
-    return () => window.clearTimeout(id)
-  }, [i, saliente])
+  const mover = (dir: number) => setI((prev) => (prev + dir + largo) % largo)
 
   // flechas del teclado cuando el cursor esta sobre esta serie
   useEffect(() => {
@@ -39,50 +28,44 @@ function Visor({ serie, texto, t }: { serie: Serie; texto: SerieTexto; t: Textos
   const foto = serie.fotos[i]
 
   return (
-    <div
-      className="visor-marco"
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-    >
-      {saliente !== null && (
+    <div className="visor">
+      <div
+        className="visor-marco"
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+      >
         <img
-          className="visor-img saliente"
-          src={serie.fotos[saliente].src}
-          alt=""
-          aria-hidden="true"
+          key={i}
+          className="visor-img"
+          src={foto.src}
+          alt={texto.alt}
+          width={foto.w}
+          height={foto.h}
         />
-      )}
-      <img
-        key={i}
-        className="visor-img entrante"
-        src={foto.src}
-        alt={texto.alt}
-        width={foto.w}
-        height={foto.h}
-      />
 
-      <button
-        type="button"
-        className="visor-zona izq"
-        aria-label={t.trabajo.anterior}
-        onClick={() => mover(-1)}
-      >
-        <span className="visor-flecha">&lsaquo;</span>
-      </button>
-      <button
-        type="button"
-        className="visor-zona der"
-        aria-label={t.trabajo.siguiente}
-        onClick={() => mover(1)}
-      >
-        <span className="visor-flecha">&rsaquo;</span>
-      </button>
+        <button
+          type="button"
+          className="visor-zona izq"
+          aria-label={t.trabajo.anterior}
+          onClick={() => mover(-1)}
+        >
+          <span className="visor-flecha">&lsaquo;</span>
+        </button>
+        <button
+          type="button"
+          className="visor-zona der"
+          aria-label={t.trabajo.siguiente}
+          onClick={() => mover(1)}
+        >
+          <span className="visor-flecha">&rsaquo;</span>
+        </button>
 
-      <span className="visor-contador">
-        {String(i + 1).padStart(2, '0')}
-        <span className="sep"> / </span>
-        {String(largo).padStart(2, '0')}
-      </span>
+        <span className="visor-contador">
+          {String(i + 1).padStart(2, '0')}
+          <span className="sep"> / </span>
+          {String(largo).padStart(2, '0')}
+        </span>
+      </div>
     </div>
   )
 }

@@ -16,36 +16,30 @@
   letter-spacing: -0.01em;
 }
 
-/* visor: una foto a la vez sobre fondo oscuro */
+/* visor: una foto a la vez, con paspartu de margen uniforme */
+.visor {
+  display: flex;
+  justify-content: center;
+}
+
 .visor-marco {
   position: relative;
-  height: 68vh;
-  max-height: 760px;
-  min-height: 340px;
-  background: #0e0e0e;
-  overflow: hidden;
+  max-width: 100%;
+  background: #f4f3f0;
+  /* el paspartu: mismo margen en los cuatro lados, igual para toda foto */
+  padding: clamp(22px, 3vw, 52px);
+  line-height: 0;
 }
 
 .visor-img {
-  position: absolute;
-  inset: 0;
-  margin: auto;
+  display: block;
+  /* misma altura maxima para horizontales y verticales: se ven parejas */
+  max-height: 62vh;
   max-width: 100%;
-  max-height: 100%;
   width: auto;
   height: auto;
   object-fit: contain;
-  display: block;
-}
-
-.visor-img.entrante {
-  z-index: 2;
-  animation: visorEntra 600ms ease;
-}
-
-.visor-img.saliente {
-  z-index: 1;
-  animation: visorSale 600ms ease forwards;
+  animation: visorEntra 460ms ease;
 }
 
 @keyframes visorEntra {
@@ -57,16 +51,7 @@
   }
 }
 
-@keyframes visorSale {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-/* zonas para pasar foto: mitad izquierda atras, derecha adelante */
+/* zonas para pasar foto: izquierda vuelve, derecha avanza */
 .visor-zona {
   position: absolute;
   top: 0;
@@ -74,7 +59,7 @@
   z-index: 3;
   border: none;
   background: transparent;
-  padding: 0 24px;
+  padding: 0 20px;
   margin: 0;
   cursor: pointer;
   display: flex;
@@ -93,15 +78,13 @@
   justify-content: flex-end;
 }
 
-/* flechas discretas: aparecen al pasar el cursor */
 .visor-flecha {
   font-family: inherit;
   font-size: 40px;
   line-height: 1;
-  color: #fff;
+  color: #141414;
   opacity: 0;
   transition: opacity var(--transicion);
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
 }
 
 .visor-marco:hover .visor-flecha {
@@ -116,39 +99,40 @@
   position: absolute;
   z-index: 3;
   right: 16px;
-  bottom: 14px;
+  bottom: 12px;
+  line-height: 1;
   font-size: var(--t-meta);
   font-weight: 500;
   letter-spacing: 0.09em;
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(0, 0, 0, 0.6);
   font-variant-numeric: tabular-nums;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
   pointer-events: none;
 }
 
 .visor-contador .sep {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(0, 0, 0, 0.35);
 }
 
 .visor-zona:focus-visible {
   outline: 2px solid var(--rojo);
-  outline-offset: -4px;
+  outline-offset: -6px;
 }
 
 @media (max-width: 720px) {
+  .visor-img {
+    max-height: 52vh;
+  }
   .visor-marco {
-    height: 54vh;
-    min-height: 300px;
+    padding: clamp(14px, 4vw, 28px);
   }
   .visor-flecha {
     opacity: 0.5;
-    font-size: 34px;
+    font-size: 32px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .visor-img.entrante,
-  .visor-img.saliente {
-    animation-duration: 1ms;
+  .visor-img {
+    animation: none;
   }
 }
