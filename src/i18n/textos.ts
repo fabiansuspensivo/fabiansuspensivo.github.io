@@ -106,20 +106,10 @@ export const textos: Record<Idioma, Textos> = {
         nota: 'Cursa Top Manta y cursa antirracista, Barcelona',
         alt: 'Cursa Top Manta en Barcelona',
       },
-      calle: {
-        titulo: 'Calle y huelgas',
-        nota: 'Documental en curso, Catalunya 2026',
-        alt: 'Fotoperiodismo en las calles de Catalunya, 2026',
-      },
       musica: {
         titulo: 'Música',
         nota: 'Festival Tradicionàrius',
         alt: 'Concierto, fotografía de música en vivo',
-      },
-      '1-de-mayo': {
-        titulo: '1 de mayo',
-        nota: 'Manifestación del Primero de Mayo, Barcelona',
-        alt: 'Manifestación del 1 de mayo en Barcelona',
       },
       prensa: {
         titulo: 'Prensa',
@@ -198,20 +188,10 @@ export const textos: Record<Idioma, Textos> = {
         nota: 'Cursa Top Manta i cursa antiracista, Barcelona',
         alt: 'Cursa Top Manta a Barcelona',
       },
-      calle: {
-        titulo: 'Carrer i vagues',
-        nota: 'Documental en curs, Catalunya 2026',
-        alt: 'Fotoperiodisme als carrers de Catalunya, 2026',
-      },
       musica: {
         titulo: 'Música',
         nota: 'Festival Tradicionàrius',
         alt: 'Concert, fotografia de música en directe',
-      },
-      '1-de-mayo': {
-        titulo: '1 de maig',
-        nota: 'Manifestació del Primer de Maig, Barcelona',
-        alt: 'Manifestació de l’1 de maig a Barcelona',
       },
       prensa: {
         titulo: 'Premsa',
@@ -290,20 +270,10 @@ export const textos: Record<Idioma, Textos> = {
         nota: 'Cursa Top Manta und antirassistischer Lauf, Barcelona',
         alt: 'Cursa Top Manta in Barcelona',
       },
-      calle: {
-        titulo: 'Straße und Streiks',
-        nota: 'Laufende Dokumentation, Katalonien 2026',
-        alt: 'Fotojournalismus auf den Straßen Kataloniens, 2026',
-      },
       musica: {
         titulo: 'Musik',
         nota: 'Tradicionàrius-Festival',
         alt: 'Konzert, Livemusik-Fotografie',
-      },
-      '1-de-mayo': {
-        titulo: '1. Mai',
-        nota: 'Demonstration zum Ersten Mai, Barcelona',
-        alt: 'Demonstration zum 1. Mai in Barcelona',
       },
       prensa: {
         titulo: 'Presse',
