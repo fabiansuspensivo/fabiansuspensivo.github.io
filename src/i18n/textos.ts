@@ -108,7 +108,7 @@ export const textos: Record<Idioma, Textos> = {
       },
       musica: {
         titulo: 'Música',
-        nota: 'Festival Tradicionàrius',
+        nota: 'Conciertos y sesiones a artistas',
         alt: 'Concierto, fotografía de música en vivo',
       },
       prensa: {
@@ -190,7 +190,7 @@ export const textos: Record<Idioma, Textos> = {
       },
       musica: {
         titulo: 'Música',
-        nota: 'Festival Tradicionàrius',
+        nota: 'Concerts i sessions a artistes',
         alt: 'Concert, fotografia de música en directe',
       },
       prensa: {
@@ -272,7 +272,7 @@ export const textos: Record<Idioma, Textos> = {
       },
       musica: {
         titulo: 'Musik',
-        nota: 'Tradicionàrius-Festival',
+        nota: 'Konzerte und Sessions',
         alt: 'Konzert, Livemusik-Fotografie',
       },
       prensa: {

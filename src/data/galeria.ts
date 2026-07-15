@@ -89,6 +89,7 @@ export const series: Serie[] = [
   {
     id: 'musica',
     fotos: [
+      { src: '/fotos/rebe-01.jpg', w: 1000, h: 1500 },
       { src: '/fotos/diego-tradicionarius-01.jpg', w: 1400, h: 2100 },
       { src: '/fotos/diego-tradicionarius-02.jpg', w: 1600, h: 1066 },
       { src: '/fotos/diego-tradicionarius-03.jpg', w: 1600, h: 1066 },
