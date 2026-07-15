@@ -89,6 +89,7 @@ export const series: Serie[] = [
   {
     id: 'musica',
     fotos: [
+      { src: '/fotos/musica-web-13.jpg', w: 1066, h: 1600 },
       { src: '/fotos/diego-tradicionarius-01.jpg', w: 1400, h: 2100 },
       { src: '/fotos/rebe-01.jpg', w: 1000, h: 1500 },
       { src: '/fotos/musica-web-01.jpg', w: 1600, h: 1068 },
@@ -103,7 +104,6 @@ export const series: Serie[] = [
       { src: '/fotos/musica-web-10.jpg', w: 1500, h: 1000 },
       { src: '/fotos/musica-web-11.jpg', w: 1600, h: 1067 },
       { src: '/fotos/musica-web-12.jpg', w: 1500, h: 1000 },
-      { src: '/fotos/musica-web-13.jpg', w: 1066, h: 1600 },
       { src: '/fotos/musica-web-14.jpg', w: 1500, h: 1000 },
     ],
   },
