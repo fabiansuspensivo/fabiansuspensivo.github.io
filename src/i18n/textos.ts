@@ -55,8 +55,8 @@ export const textos: Record<Idioma, Textos> = {
     },
     sobre: {
       titulo: 'Sobre mí',
-      p1: 'Soy fotógrafo y vivo en Barcelona. Cubro manifestaciones y la noticia del día a día en Catalunya, y trabajo para publicar en revistas, periódicos y agencias internacionales.',
-      p2: 'He publicado en Der Spiegel y colaborado con Open Arms. Vengo de la música: conciertos y sesiones a artistas. Edito en Lightroom y también hago video.',
+      p1: 'Fabian Suspensivo es fotoperiodista y fotógrafo documental chileno, radicado en Barcelona. Fotografía la actualidad y los movimientos sociales de Catalunya, y su trabajo se extiende al retrato, la cobertura de conciertos y la foto fija para cine.',
+      p2: 'Autodidacta, ha colaborado con medios y organizaciones en Chile y en Europa, con publicaciones que incluyen Der Spiegel y ADN y colaboraciones como las de Open Arms y Top Manta. Trabaja con la mirada puesta en el reportaje para revistas, periódicos y agencias internacionales.',
     },
     cv: {
       titulo: 'CV',
@@ -137,8 +137,8 @@ export const textos: Record<Idioma, Textos> = {
     },
     sobre: {
       titulo: 'Sobre mi',
-      p1: 'Soc fotògraf i visc a Barcelona. Cobreixo manifestacions i l’actualitat del dia a dia a Catalunya, i treballo per publicar en revistes, diaris i agències internacionals.',
-      p2: 'He publicat a Der Spiegel i he col·laborat amb Open Arms. Vinc de la música: concerts i sessions a artistes. Edito amb Lightroom i també faig vídeo.',
+      p1: 'Fabian Suspensivo és fotoperiodista i fotògraf documental xilè, resident a Barcelona. Fotografia l’actualitat i els moviments socials de Catalunya, i el seu treball s’estén al retrat, la cobertura de concerts i la foto fixa per a cinema.',
+      p2: 'Autodidacta, ha col·laborat amb mitjans i organitzacions a Xile i a Europa, amb publicacions que inclouen Der Spiegel i ADN i col·laboracions com les d’Open Arms i Top Manta. Treballa amb la mirada posada en el reportatge per a revistes, diaris i agències internacionals.',
     },
     cv: {
       titulo: 'CV',
@@ -219,8 +219,8 @@ export const textos: Record<Idioma, Textos> = {
     },
     sobre: {
       titulo: 'Über mich',
-      p1: 'Ich bin Fotograf und lebe in Barcelona. Ich fotografiere Demonstrationen und das tägliche Nachrichtengeschehen in Katalonien und arbeite darauf hin, in internationalen Magazinen, Zeitungen und Agenturen zu veröffentlichen.',
-      p2: 'Veröffentlicht im Spiegel, Zusammenarbeit mit Open Arms. Ich komme von der Musik: Konzerte und Sessions mit Künstlern. Ich entwickle in Lightroom und mache auch Video.',
+      p1: 'Fabian Suspensivo ist ein chilenischer Fotojournalist und Dokumentarfotograf mit Sitz in Barcelona. Er fotografiert das aktuelle Geschehen und die sozialen Bewegungen in Katalonien; seine Arbeit umfasst auch Porträts, Konzertfotografie und Standfotografie fürs Kino.',
+      p2: 'Als Autodidakt hat er mit Medien und Organisationen in Chile und Europa zusammengearbeitet, mit Veröffentlichungen unter anderem im Spiegel und bei ADN sowie Kooperationen wie mit Open Arms und Top Manta. Er arbeitet mit Blick auf Reportagen für Magazine, Zeitungen und internationale Agenturen.',
     },
     cv: {
       titulo: 'CV',
