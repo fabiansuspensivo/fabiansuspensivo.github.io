@@ -16,4 +16,11 @@
   letter-spacing: -0.02em;
   line-height: 1.02;
   text-wrap: balance;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 640px) {
+  .hero-titulo {
+    font-size: clamp(1.7rem, 8vw, 2.6rem);
+  }
 }

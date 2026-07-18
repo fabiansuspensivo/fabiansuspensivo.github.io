@@ -8,6 +8,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* red de seguridad: ningun desborde horizontal en pantallas angostas */
+  overflow-x: clip;
 }
 
 body {
@@ -81,5 +83,18 @@ img {
     transition: none;
     opacity: 1;
     transform: none;
+  }
+}
+
+/* movil: secciones mas compactas y margenes ajustados */
+@media (max-width: 640px) {
+  .seccion {
+    padding: var(--e-6) 0;
+  }
+  .contenedor {
+    padding: 0 var(--e-3);
+  }
+  .titulo-seccion {
+    margin-bottom: var(--e-4);
   }
 }
