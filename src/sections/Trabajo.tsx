@@ -185,9 +185,13 @@ export default function Trabajo() {
         {series.map((serie) => {
           const texto = t.series[serie.id]
           return (
-            <article className="serie revelar" key={serie.id}>
+            <article
+              className={texto.destacada ? 'serie revelar serie-destacada' : 'serie revelar'}
+              key={serie.id}
+            >
               <header className="serie-cabecera">
                 <h3 className="serie-titulo">{texto.titulo}</h3>
+                {texto.subtitulo ? <p className="serie-subtitulo">{texto.subtitulo}</p> : null}
                 <p className="meta">{texto.nota}</p>
               </header>
               <Visor serie={serie} texto={texto} t={t} />

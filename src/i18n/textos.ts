@@ -4,6 +4,8 @@ export type SerieTexto = {
   titulo: string
   nota: string
   alt: string
+  subtitulo?: string
+  destacada?: boolean
 }
 
 export type Textos = {
@@ -91,6 +93,13 @@ export const textos: Record<Idioma, Textos> = {
       escribeme: 'Escríbeme',
     },
     series: {
+      'ball-de-nuria': {
+        titulo: 'El Ball de Núria',
+        subtitulo: 'Este proyecto se expondrá en Perpinyà, en el festival OFF.',
+        nota: 'Núria, 85 años, y la vida después de Josep. Blanes.',
+        alt: 'Núria, 85 años, en su casa de Blanes; ensayo documental El Ball de Núria',
+        destacada: true,
+      },
       'open-arms-serie': {
         titulo: 'Open Arms',
         nota: 'Rescate en el mar, con la ONG',
@@ -173,6 +182,13 @@ export const textos: Record<Idioma, Textos> = {
       escribeme: 'Escriu-me',
     },
     series: {
+      'ball-de-nuria': {
+        titulo: 'El Ball de Núria',
+        subtitulo: 'Aquest projecte s’exposarà a Perpinyà, al festival OFF.',
+        nota: 'La Núria, 85 anys, i la vida després d’en Josep. Blanes.',
+        alt: 'La Núria, 85 anys, a casa seva a Blanes; assaig documental El Ball de Núria',
+        destacada: true,
+      },
       'open-arms-serie': {
         titulo: 'Open Arms',
         nota: 'Rescat al mar, amb l’ONG',
@@ -255,6 +271,13 @@ export const textos: Record<Idioma, Textos> = {
       escribeme: 'Schreib mir',
     },
     series: {
+      'ball-de-nuria': {
+        titulo: 'El Ball de Núria',
+        subtitulo: 'Dieses Projekt wird in Perpignan beim OFF-Festival ausgestellt.',
+        nota: 'Núria, 85 Jahre, und das Leben nach Josep. Blanes.',
+        alt: 'Núria, 85 Jahre, in ihrem Haus in Blanes; Dokumentaressay El Ball de Núria',
+        destacada: true,
+      },
       'open-arms-serie': {
         titulo: 'Open Arms',
         nota: 'Seenotrettung, mit der NGO',

@@ -16,6 +16,48 @@
   letter-spacing: -0.01em;
 }
 
+/* serie destacada: proyecto en exposicion, enmarcado como una obra colgada */
+.serie-destacada {
+  position: relative;
+  padding: clamp(28px, 4.5vw, 80px);
+  border: 1px solid var(--gris);
+}
+
+.serie-destacada::before {
+  content: '';
+  position: absolute;
+  inset: 9px;
+  border: 1px solid var(--linea);
+  pointer-events: none;
+}
+
+.serie-destacada .serie-cabecera {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: var(--e-2);
+  margin-bottom: var(--e-5);
+}
+
+.serie-destacada .serie-titulo {
+  font-size: clamp(2.4rem, 5.5vw, 3.6rem);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.serie-subtitulo {
+  font-size: var(--t-md);
+  font-weight: 500;
+  color: var(--tinta);
+  max-width: 48ch;
+}
+
+.serie-destacada .meta {
+  color: var(--gris);
+}
+
 /* visor: una foto a la vez, con paspartu de margen uniforme */
 .visor {
   display: flex;
