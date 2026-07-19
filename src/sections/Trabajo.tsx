@@ -262,11 +262,20 @@ export default function Trabajo() {
                 <p className="meta">{texto.nota}</p>
               </header>
               <Visor serie={serie} texto={texto} t={t} />
-              {texto.historia ? (
-                <div className="serie-historia">
-                  {texto.historia.map((parrafo, k) => (
-                    <p key={k}>{parrafo}</p>
-                  ))}
+              {texto.resumen ? (
+                <div className="serie-resumen">
+                  <p>{texto.resumen}</p>
+                  <a
+                    className="serie-vermas"
+                    href={`/#/p/${serie.id}`}
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    {t.trabajo.verProyecto}
+                    <span className="serie-enlace-flecha" aria-hidden="true">
+                      ↗
+                    </span>
+                  </a>
                 </div>
               ) : null}
               <div className="serie-pie">

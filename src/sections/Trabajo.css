@@ -98,6 +98,42 @@
   margin-top: var(--e-3);
 }
 
+/* resumen del proyecto en la portada: teaser corto + enlace al proyecto completo */
+.serie-resumen {
+  max-width: 54ch;
+  margin: var(--e-5) auto 0;
+  text-align: center;
+}
+
+.serie-resumen p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--tinta);
+}
+
+.serie-vermas {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  margin-top: var(--e-4);
+  font-size: var(--t-meta);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--tinta);
+}
+
+.serie-vermas .serie-enlace-flecha {
+  font-size: 0.9em;
+  color: inherit;
+  vertical-align: 0;
+  margin-left: 0;
+}
+
+.serie-vermas:hover {
+  color: var(--rojo);
+}
+
 /* pie de serie con el boton de compartir */
 .serie-pie {
   display: flex;

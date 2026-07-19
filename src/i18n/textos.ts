@@ -7,6 +7,7 @@ export type SerieTexto = {
   subtitulo?: string
   destacada?: boolean
   historia?: string[]
+  resumen?: string
 }
 
 export type Textos = {
@@ -21,6 +22,7 @@ export type Textos = {
     siguiente: string
     compartir: string
     copiado: string
+    verProyecto: string
   }
   sobre: { titulo: string; p1: string; p2: string }
   cv: {
@@ -59,6 +61,7 @@ export const textos: Record<Idioma, Textos> = {
       siguiente: 'Siguiente',
       compartir: 'Compartir',
       copiado: 'Enlace copiado',
+      verProyecto: 'Ver el proyecto',
     },
     sobre: {
       titulo: 'Sobre mí',
@@ -104,6 +107,8 @@ export const textos: Record<Idioma, Textos> = {
         nota: 'Núria, 85 años, y la vida después de Josep. Blanes.',
         alt: 'Núria, 85 años, en su casa de Blanes; ensayo documental El Ball de Núria',
         destacada: true,
+        resumen:
+          'A los 14 años, Núria conoció a Josep en un baile; él le pidió matrimonio con una cámara en lugar de un anillo. Hoy, a sus 85 y ya sin él, habita la casa que construyeron juntos: el amor que queda y el baile que nunca ha dejado de sonar.',
         historia: [
           'Blanes, años 50. A los 14 años, los padres de Núria la acompañan a un baile en los Terrassans del pueblo. Allí conoce a Josep. Ante la inminencia del servicio militar y el miedo de ella a enamorarse a través de cartas, Josep decide pedir su mano. Sin dinero para un anillo, le regala una cámara de 120 mm en señal de compromiso. A los 28 años, con sus propias manos, comienzan a construir su casa. Nunca tuvieron hijos, ni sintieron que los necesitasen; se tenían el uno al otro.',
           'Cincuenta y cuatro años después, el baile cambió de ritmo. Tras un diagnóstico de cáncer de colon, Núria se convirtió en las manos y el soporte de Josep, cuidándolo y sosteniendo su peso hasta que su propio cuerpo protestó con un ataque de vértigo. Tras la partida de Josep, luego de sesenta y cuatro años de matrimonio, y para calmar a su familia, Núria aceptó colgarse el botón de teleasistencia de la seguridad social, aunque su espíritu sigue siendo el de la mujer independiente que siempre fue. Menos de un año después, llegó la pandemia del COVID-19, empujándola a una lúcida reflexión: la muerte de Josep, rodeado y despedido por los suyos en paz, fue el último acto de fortuna de su vida en común.',
@@ -155,6 +160,7 @@ export const textos: Record<Idioma, Textos> = {
       siguiente: 'Següent',
       compartir: 'Comparteix',
       copiado: 'Enllaç copiat',
+      verProyecto: 'Veure el projecte',
     },
     sobre: {
       titulo: 'Sobre mi',
@@ -200,6 +206,8 @@ export const textos: Record<Idioma, Textos> = {
         nota: 'La Núria, 85 anys, i la vida després d’en Josep. Blanes.',
         alt: 'La Núria, 85 anys, a casa seva a Blanes; assaig documental El Ball de Núria',
         destacada: true,
+        resumen:
+          'Als 14 anys, la Núria va conèixer en Josep en un ball; ell li va demanar matrimoni amb una càmera en lloc d’un anell. Avui, als seus 85 i ja sense ell, habita la casa que van construir junts: l’amor que resta i el ball que no ha deixat mai de sonar.',
         historia: [
           'Blanes, anys cinquanta. Als 14 anys, els pares de la Núria l’acompanyen a un ball als Terrassans del poble. Allà coneix en Josep. Davant la imminència del servei militar i la por d’ella a enamorar-se a través de cartes, en Josep decideix demanar-li la mà. Sense diners per a un anell, li regala una càmera de 120 mm com a senyal de compromís. Als 28 anys, amb les seves pròpies mans, comencen a construir casa seva. Mai no van tenir fills, ni van sentir que els necessitessin; es tenien l’un a l’altre.',
           'Cinquanta-quatre anys després, el ball va canviar de ritme. Després d’un diagnòstic de càncer de còlon, la Núria es va convertir en les mans i el suport d’en Josep, cuidant-lo i aguantant-ne el pes fins que el seu propi cos va protestar amb un atac de vertigen. Després de la partida d’en Josep, al cap de seixanta-quatre anys de matrimoni, i per tranquil·litzar la família, la Núria va acceptar penjar-se el botó de teleassistència de la seguretat social, tot i que el seu esperit continua sent el de la dona independent que sempre ha estat. Menys d’un any després, va arribar la pandèmia de la COVID-19, empenyent-la cap a una reflexió lúcida: la mort d’en Josep, envoltat i acomiadat pels seus en pau, va ser l’últim acte de fortuna de la seva vida en comú.',
@@ -251,6 +259,7 @@ export const textos: Record<Idioma, Textos> = {
       siguiente: 'Weiter',
       compartir: 'Teilen',
       copiado: 'Link kopiert',
+      verProyecto: 'Projekt ansehen',
     },
     sobre: {
       titulo: 'Über mich',
@@ -296,6 +305,8 @@ export const textos: Record<Idioma, Textos> = {
         nota: 'Núria, 85 Jahre, und das Leben nach Josep. Blanes.',
         alt: 'Núria, 85 Jahre, in ihrem Haus in Blanes; Dokumentaressay El Ball de Núria',
         destacada: true,
+        resumen:
+          'Mit 14 lernte Núria bei einem Tanz Josep kennen; er hielt mit einer Kamera statt eines Rings um ihre Hand an. Heute, mit 85 und ohne ihn, bewohnt sie das Haus, das sie gemeinsam bauten: die Liebe, die bleibt, und der Tanz, der nie aufgehört hat zu klingen.',
         historia: [
           'Blanes, in den fünfziger Jahren. Mit 14 Jahren begleiten Núrias Eltern sie zu einem Tanz bei den Terrassans des Dorfes. Dort lernt sie Josep kennen. Angesichts des bevorstehenden Militärdienstes und ihrer Angst, sich über Briefe zu verlieben, beschließt Josep, um ihre Hand anzuhalten. Ohne Geld für einen Ring schenkt er ihr als Zeichen des Versprechens eine 120-mm-Kamera. Mit 28 Jahren beginnen sie, mit ihren eigenen Händen ihr Haus zu bauen. Sie hatten nie Kinder und hatten auch nicht das Gefühl, welche zu brauchen; sie hatten einander.',
           'Vierundfünfzig Jahre später änderte der Tanz seinen Takt. Nach der Diagnose Darmkrebs wurde Núria zu Joseps Händen und Halt: Sie pflegte ihn und trug sein Gewicht, bis ihr eigener Körper mit einem Schwindelanfall protestierte. Nach Joseps Tod, nach vierundsechzig Jahren Ehe, und um ihre Familie zu beruhigen, ließ sich Núria den Notrufknopf des sozialen Hausnotrufs umhängen, auch wenn ihr Geist der einer unabhängigen Frau bleibt, die sie immer war. Weniger als ein Jahr später kam die COVID-19-Pandemie und trieb sie zu einer klaren Erkenntnis: Joseps Tod, im Frieden von seinen Angehörigen umgeben und verabschiedet, war der letzte Glücksfall ihres gemeinsamen Lebens.',
