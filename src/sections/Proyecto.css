@@ -1,0 +1,202 @@
+.proyecto {
+  min-height: 100vh;
+  background: var(--papel);
+}
+
+.proyecto-barra {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--e-3);
+  padding: var(--e-3) var(--e-4);
+  background: var(--papel);
+  border-bottom: 1px solid var(--linea);
+}
+
+/* intro del proyecto: titulo grande, subtitulo, nota e historia en columna de lectura */
+.proyecto-intro {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--e-7) var(--e-4) var(--e-6);
+  text-align: center;
+}
+
+.proyecto-titulo {
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+  text-wrap: balance;
+}
+
+.proyecto-subtitulo {
+  margin-top: var(--e-3);
+  font-size: var(--t-md);
+  font-weight: 500;
+  color: var(--tinta);
+}
+
+.proyecto-nota {
+  margin-top: var(--e-2);
+  font-size: var(--t-meta);
+  color: var(--gris);
+}
+
+.proyecto-historia {
+  max-width: 62ch;
+  margin: var(--e-5) auto 0;
+  text-align: left;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--tinta);
+}
+
+.proyecto-historia p + p {
+  margin-top: var(--e-3);
+}
+
+/* las fotos en scroll vertical, cada una casi a pantalla, centradas */
+.proyecto-fotos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--e-5);
+  max-width: 1180px;
+  margin: var(--e-6) auto 0;
+  padding: 0 var(--e-4) var(--e-7);
+}
+
+.proyecto-foto {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: zoom-in;
+}
+
+.proyecto-foto img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 90vh;
+  display: block;
+}
+
+/* pantalla completa (lightbox) */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(7, 7, 7, 0.97);
+  animation: lbEntra 200ms ease both;
+}
+
+@keyframes lbEntra {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.lb-img {
+  max-width: 94vw;
+  max-height: 92vh;
+  object-fit: contain;
+  cursor: zoom-out;
+}
+
+.lb-cerrar,
+.lb-flecha {
+  position: absolute;
+  background: none;
+  border: none;
+  color: var(--tinta);
+  cursor: pointer;
+  line-height: 1;
+  transition: opacity var(--transicion);
+  opacity: 0.75;
+}
+
+.lb-cerrar:hover,
+.lb-flecha:hover {
+  opacity: 1;
+}
+
+.lb-cerrar {
+  top: var(--e-2);
+  right: var(--e-4);
+  font-size: 40px;
+}
+
+.lb-flecha {
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 52px;
+  padding: var(--e-3);
+}
+
+.lb-izq {
+  left: var(--e-1);
+}
+
+.lb-der {
+  right: var(--e-1);
+}
+
+.lb-contador {
+  position: absolute;
+  bottom: var(--e-4);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: var(--t-meta);
+  letter-spacing: 0.09em;
+  color: var(--gris);
+  font-variant-numeric: tabular-nums;
+}
+
+.lb-contador .sep {
+  opacity: 0.5;
+}
+
+.proyecto-vacio {
+  padding: var(--e-5) var(--e-4);
+}
+
+@media (max-width: 640px) {
+  .proyecto-intro {
+    padding: var(--e-6) var(--e-3) var(--e-5);
+  }
+  .proyecto-titulo {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .proyecto-historia {
+    font-size: 1rem;
+  }
+  .proyecto-fotos {
+    gap: var(--e-4);
+    padding: 0 var(--e-3) var(--e-6);
+  }
+  .proyecto-foto img {
+    max-height: 82vh;
+  }
+  .lb-flecha {
+    font-size: 40px;
+    padding: var(--e-2);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lightbox {
+    animation: none;
+  }
+}

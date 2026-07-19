@@ -16,6 +16,23 @@
   letter-spacing: -0.01em;
 }
 
+.serie-enlace {
+  color: inherit;
+}
+
+.serie-enlace-flecha {
+  margin-left: 0.15em;
+  font-size: 0.5em;
+  font-weight: 500;
+  color: var(--gris);
+  vertical-align: 0.18em;
+  transition: color var(--transicion);
+}
+
+.serie-enlace:hover .serie-enlace-flecha {
+  color: var(--rojo);
+}
+
 /* serie destacada: proyecto en exposicion, enmarcado como una obra colgada */
 .serie-destacada {
   position: relative;

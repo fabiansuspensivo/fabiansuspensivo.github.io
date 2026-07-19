@@ -162,7 +162,7 @@ function Visor({ serie, texto, t }: { serie: Serie; texto: SerieTexto; t: Textos
 function Compartir({ serie, t }: { serie: Serie; t: Textos }) {
   const [copiado, setCopiado] = useState(false)
   const compartir = useCallback(async () => {
-    const url = `${window.location.origin}/#${serie.id}`
+    const url = `${window.location.origin}/#/p/${serie.id}`
     if (navigator.share) {
       try {
         await navigator.share({ url, title: 'Fabian Suspensivo' })
@@ -245,7 +245,19 @@ export default function Trabajo() {
               key={serie.id}
             >
               <header className="serie-cabecera">
-                <h3 className="serie-titulo">{texto.titulo}</h3>
+                <h3 className="serie-titulo">
+                  <a
+                    className="serie-enlace"
+                    href={`/#/p/${serie.id}`}
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    {texto.titulo}
+                    <span className="serie-enlace-flecha" aria-hidden="true">
+                      ↗
+                    </span>
+                  </a>
+                </h3>
                 {texto.subtitulo ? <p className="serie-subtitulo">{texto.subtitulo}</p> : null}
                 <p className="meta">{texto.nota}</p>
               </header>
