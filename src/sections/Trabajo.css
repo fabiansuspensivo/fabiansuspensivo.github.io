@@ -62,6 +62,62 @@
   color: var(--gris);
 }
 
+/* enlace directo a cada proyecto: que no quede tapado por la cabecera fija */
+.serie {
+  scroll-margin-top: 88px;
+}
+
+/* historia del proyecto: statement en columna de lectura comoda */
+.serie-historia {
+  max-width: 62ch;
+  margin: var(--e-6) auto 0;
+  color: var(--tinta);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  text-align: left;
+}
+
+.serie-historia p + p {
+  margin-top: var(--e-3);
+}
+
+/* pie de serie con el boton de compartir */
+.serie-pie {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--e-4);
+}
+
+.serie-destacada .serie-pie {
+  justify-content: center;
+  margin-top: var(--e-5);
+}
+
+.serie-compartir {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--e-2);
+  background: none;
+  border: none;
+  padding: var(--e-1) 0;
+  font-family: inherit;
+  font-size: var(--t-meta);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gris);
+  cursor: pointer;
+  transition: color var(--transicion);
+}
+
+.serie-compartir:hover {
+  color: var(--rojo);
+}
+
+.serie-compartir svg {
+  display: block;
+}
+
 /* visor: una foto a la vez, con paspartu de margen uniforme */
 .visor {
   display: flex;

@@ -6,6 +6,7 @@ export type SerieTexto = {
   alt: string
   subtitulo?: string
   destacada?: boolean
+  historia?: string[]
 }
 
 export type Textos = {
@@ -18,6 +19,8 @@ export type Textos = {
     verMenos: string
     anterior: string
     siguiente: string
+    compartir: string
+    copiado: string
   }
   sobre: { titulo: string; p1: string; p2: string }
   cv: {
@@ -54,6 +57,8 @@ export const textos: Record<Idioma, Textos> = {
       verMenos: 'Mostrar menos',
       anterior: 'Anterior',
       siguiente: 'Siguiente',
+      compartir: 'Compartir',
+      copiado: 'Enlace copiado',
     },
     sobre: {
       titulo: 'Sobre mí',
@@ -99,6 +104,11 @@ export const textos: Record<Idioma, Textos> = {
         nota: 'Núria, 85 años, y la vida después de Josep. Blanes.',
         alt: 'Núria, 85 años, en su casa de Blanes; ensayo documental El Ball de Núria',
         destacada: true,
+        historia: [
+          'Blanes, años 50. A los 14 años, los padres de Núria la acompañan a un baile en los Terrassans del pueblo. Allí conoce a Josep. Ante la inminencia del servicio militar y el miedo de ella a enamorarse a través de cartas, Josep decide pedir su mano. Sin dinero para un anillo, le regala una cámara de 120 mm en señal de compromiso. A los 28 años, con sus propias manos, comienzan a construir su casa. Nunca tuvieron hijos, ni sintieron que los necesitasen; se tenían el uno al otro.',
+          'Cincuenta y cuatro años después, el baile cambió de ritmo. Tras un diagnóstico de cáncer de colon, Núria se convirtió en las manos y el soporte de Josep, cuidándolo y sosteniendo su peso hasta que su propio cuerpo protestó con un ataque de vértigo. Tras la partida de Josep, luego de sesenta y cuatro años de matrimonio, y para calmar a su familia, Núria aceptó colgarse el botón de teleasistencia de la seguridad social, aunque su espíritu sigue siendo el de la mujer independiente que siempre fue. Menos de un año después, llegó la pandemia del COVID-19, empujándola a una lúcida reflexión: la muerte de Josep, rodeado y despedido por los suyos en paz, fue el último acto de fortuna de su vida en común.',
+          'Hoy, a sus 85 años, Núria habita los espacios de la casa construida a cuatro manos. Este proyecto es la foto de esa memoria: un homenaje al amor que queda, a la dignidad del cuidado, a la viudedad habitada con fuerza y a ese primer baile que, a pesar de la ausencia, nunca ha dejado de sonar.',
+        ],
       },
       'open-arms-serie': {
         titulo: 'Open Arms',
@@ -143,6 +153,8 @@ export const textos: Record<Idioma, Textos> = {
       verMenos: 'Mostra’n menys',
       anterior: 'Anterior',
       siguiente: 'Següent',
+      compartir: 'Comparteix',
+      copiado: 'Enllaç copiat',
     },
     sobre: {
       titulo: 'Sobre mi',
@@ -188,6 +200,11 @@ export const textos: Record<Idioma, Textos> = {
         nota: 'La Núria, 85 anys, i la vida després d’en Josep. Blanes.',
         alt: 'La Núria, 85 anys, a casa seva a Blanes; assaig documental El Ball de Núria',
         destacada: true,
+        historia: [
+          'Blanes, anys cinquanta. Als 14 anys, els pares de la Núria l’acompanyen a un ball als Terrassans del poble. Allà coneix en Josep. Davant la imminència del servei militar i la por d’ella a enamorar-se a través de cartes, en Josep decideix demanar-li la mà. Sense diners per a un anell, li regala una càmera de 120 mm com a senyal de compromís. Als 28 anys, amb les seves pròpies mans, comencen a construir casa seva. Mai no van tenir fills, ni van sentir que els necessitessin; es tenien l’un a l’altre.',
+          'Cinquanta-quatre anys després, el ball va canviar de ritme. Després d’un diagnòstic de càncer de còlon, la Núria es va convertir en les mans i el suport d’en Josep, cuidant-lo i aguantant-ne el pes fins que el seu propi cos va protestar amb un atac de vertigen. Després de la partida d’en Josep, al cap de seixanta-quatre anys de matrimoni, i per tranquil·litzar la família, la Núria va acceptar penjar-se el botó de teleassistència de la seguretat social, tot i que el seu esperit continua sent el de la dona independent que sempre ha estat. Menys d’un any després, va arribar la pandèmia de la COVID-19, empenyent-la cap a una reflexió lúcida: la mort d’en Josep, envoltat i acomiadat pels seus en pau, va ser l’últim acte de fortuna de la seva vida en comú.',
+          'Avui, als seus 85 anys, la Núria habita els espais de la casa construïda a quatre mans. Aquest projecte és la fotografia d’aquesta memòria: un homenatge a l’amor que resta, a la dignitat de la cura, a la viudetat habitada amb força i a aquell primer ball que, malgrat l’absència, no ha deixat mai de sonar.',
+        ],
       },
       'open-arms-serie': {
         titulo: 'Open Arms',
@@ -232,6 +249,8 @@ export const textos: Record<Idioma, Textos> = {
       verMenos: 'Weniger anzeigen',
       anterior: 'Zurück',
       siguiente: 'Weiter',
+      compartir: 'Teilen',
+      copiado: 'Link kopiert',
     },
     sobre: {
       titulo: 'Über mich',
@@ -277,6 +296,11 @@ export const textos: Record<Idioma, Textos> = {
         nota: 'Núria, 85 Jahre, und das Leben nach Josep. Blanes.',
         alt: 'Núria, 85 Jahre, in ihrem Haus in Blanes; Dokumentaressay El Ball de Núria',
         destacada: true,
+        historia: [
+          'Blanes, in den fünfziger Jahren. Mit 14 Jahren begleiten Núrias Eltern sie zu einem Tanz bei den Terrassans des Dorfes. Dort lernt sie Josep kennen. Angesichts des bevorstehenden Militärdienstes und ihrer Angst, sich über Briefe zu verlieben, beschließt Josep, um ihre Hand anzuhalten. Ohne Geld für einen Ring schenkt er ihr als Zeichen des Versprechens eine 120-mm-Kamera. Mit 28 Jahren beginnen sie, mit ihren eigenen Händen ihr Haus zu bauen. Sie hatten nie Kinder und hatten auch nicht das Gefühl, welche zu brauchen; sie hatten einander.',
+          'Vierundfünfzig Jahre später änderte der Tanz seinen Takt. Nach der Diagnose Darmkrebs wurde Núria zu Joseps Händen und Halt: Sie pflegte ihn und trug sein Gewicht, bis ihr eigener Körper mit einem Schwindelanfall protestierte. Nach Joseps Tod, nach vierundsechzig Jahren Ehe, und um ihre Familie zu beruhigen, ließ sich Núria den Notrufknopf des sozialen Hausnotrufs umhängen, auch wenn ihr Geist der derselben unabhängigen Frau bleibt, die sie immer war. Weniger als ein Jahr später kam die COVID-19-Pandemie und trieb sie zu einer klaren Erkenntnis: Joseps Tod, im Frieden von seinen Angehörigen umgeben und verabschiedet, war der letzte Glücksfall ihres gemeinsamen Lebens.',
+          'Heute, mit 85 Jahren, bewohnt Núria die Räume des mit vier Händen gebauten Hauses. Dieses Projekt ist das Foto jener Erinnerung: eine Hommage an die Liebe, die bleibt, an die Würde der Fürsorge, an das mit Kraft bewohnte Witwendasein und an jenen ersten Tanz, der trotz der Abwesenheit nie aufgehört hat zu klingen.',
+        ],
       },
       'open-arms-serie': {
         titulo: 'Open Arms',

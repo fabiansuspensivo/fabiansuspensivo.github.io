@@ -157,6 +157,49 @@ function Visor({ serie, texto, t }: { serie: Serie; texto: SerieTexto; t: Textos
   )
 }
 
+// Boton de compartir un proyecto: en el movil abre el menu nativo del sistema
+// (mensajes, WhatsApp...); en el escritorio copia el enlace directo al proyecto.
+function Compartir({ serie, t }: { serie: Serie; t: Textos }) {
+  const [copiado, setCopiado] = useState(false)
+  const compartir = useCallback(async () => {
+    const url = `${window.location.origin}/#${serie.id}`
+    if (navigator.share) {
+      try {
+        await navigator.share({ url, title: 'Fabian Suspensivo' })
+        return
+      } catch {
+        return
+      }
+    }
+    try {
+      await navigator.clipboard.writeText(url)
+      setCopiado(true)
+      window.setTimeout(() => setCopiado(false), 2000)
+    } catch {
+      /* sin portapapeles disponible */
+    }
+  }, [serie])
+  return (
+    <button type="button" className="serie-compartir" onClick={compartir}>
+      <svg
+        viewBox="0 0 24 24"
+        width="14"
+        height="14"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        aria-hidden="true"
+      >
+        <path d="M8.6 13.4l6.8 3.9M15.4 6.7l-6.8 3.9" strokeLinecap="round" />
+        <circle cx="18" cy="5.2" r="2.6" />
+        <circle cx="6" cy="12" r="2.6" />
+        <circle cx="18" cy="18.8" r="2.6" />
+      </svg>
+      {copiado ? t.trabajo.copiado : t.trabajo.compartir}
+    </button>
+  )
+}
+
 export default function Trabajo() {
   const { t } = useIdioma()
 
@@ -176,6 +219,17 @@ export default function Trabajo() {
     return () => obs.disconnect()
   }, [])
 
+  // enlace directo a un proyecto: al abrir la web con #<proyecto> saltamos a el
+  // una vez montado (la web se dibuja en el navegador, asi que esperamos al render)
+  useEffect(() => {
+    const id = decodeURIComponent(window.location.hash.slice(1))
+    if (!id || !series.some((s) => s.id === id)) return
+    const j = window.setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView()
+    }, 80)
+    return () => window.clearTimeout(j)
+  }, [])
+
   if (series.length === 0) return null
 
   return (
@@ -186,6 +240,7 @@ export default function Trabajo() {
           const texto = t.series[serie.id]
           return (
             <article
+              id={serie.id}
               className={texto.destacada ? 'serie revelar serie-destacada' : 'serie revelar'}
               key={serie.id}
             >
@@ -195,6 +250,16 @@ export default function Trabajo() {
                 <p className="meta">{texto.nota}</p>
               </header>
               <Visor serie={serie} texto={texto} t={t} />
+              {texto.historia ? (
+                <div className="serie-historia">
+                  {texto.historia.map((parrafo, k) => (
+                    <p key={k}>{parrafo}</p>
+                  ))}
+                </div>
+              ) : null}
+              <div className="serie-pie">
+                <Compartir serie={serie} t={t} />
+              </div>
             </article>
           )
         })}
