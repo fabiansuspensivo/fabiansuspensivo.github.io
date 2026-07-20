@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { series, type Serie } from '../data/galeria'
 import { useIdioma } from '../i18n/idioma'
 import type { SerieTexto, Textos } from '../i18n/textos'
+import { generarTarjetaStory } from '../utils/tarjetaStory'
 import './Trabajo.css'
 
 // Visor de una serie: una foto a la vez sobre un paspartu de margen uniforme.
@@ -158,11 +159,31 @@ function Visor({ serie, texto, t }: { serie: Serie; texto: SerieTexto; t: Textos
 }
 
 // Boton de compartir un proyecto: en el movil abre el menu nativo del sistema
-// (mensajes, WhatsApp...); en el escritorio copia el enlace directo al proyecto.
-function Compartir({ serie, t }: { serie: Serie; t: Textos }) {
+// con una tarjeta vertical del proyecto adjunta (Instagram la ofrece para
+// Historias); si el navegador no admite archivos comparte solo el enlace, y
+// en el escritorio sin menu nativo copia el enlace directo al proyecto.
+function Compartir({ serie, titulo, t }: { serie: Serie; titulo: string; t: Textos }) {
   const [copiado, setCopiado] = useState(false)
   const compartir = useCallback(async () => {
     const url = `${window.location.origin}/#/p/${serie.id}`
+    if (typeof navigator.canShare === 'function') {
+      let tarjeta: File | undefined
+      try {
+        // normalmente ya esta en cache, pre-generada al entrar la serie en
+        // pantalla; asi el gesto de usuario no caduca en iOS Safari
+        tarjeta = await generarTarjetaStory(serie, titulo)
+      } catch {
+        /* si la composicion falla seguimos con el enlace de siempre */
+      }
+      if (tarjeta && navigator.canShare({ files: [tarjeta] })) {
+        try {
+          await navigator.share({ files: [tarjeta], title: 'Fabian Suspensivo', url })
+        } catch {
+          /* hoja de compartir cancelada por el usuario: sin error */
+        }
+        return
+      }
+    }
     if (navigator.share) {
       try {
         await navigator.share({ url, title: 'Fabian Suspensivo' })
@@ -178,7 +199,7 @@ function Compartir({ serie, t }: { serie: Serie; t: Textos }) {
     } catch {
       /* sin portapapeles disponible */
     }
-  }, [serie])
+  }, [serie, titulo])
   return (
     <button type="button" className="serie-compartir" onClick={compartir}>
       <svg
@@ -203,12 +224,22 @@ function Compartir({ serie, t }: { serie: Serie; t: Textos }) {
 export default function Trabajo() {
   const { t } = useIdioma()
 
+  // Ademas de revelar la serie, pre-genera su tarjeta de compartir cuando
+  // entra en pantalla: asi el click en Compartir solo lee del cache y el
+  // gesto de usuario no caduca en iOS Safari. Depende del idioma para
+  // regenerar las tarjetas visibles al cambiarlo (re-agregar la clase
+  // visible a una serie ya revelada no tiene efecto).
   useEffect(() => {
     const obs = new IntersectionObserver(
       (entradas) => {
         for (const e of entradas) {
           if (e.isIntersecting) {
             e.target.classList.add('visible')
+            if (typeof navigator.canShare === 'function') {
+              const serie = series.find((s) => s.id === e.target.id)
+              const texto = serie && t.series[serie.id]
+              if (serie && texto) generarTarjetaStory(serie, texto.titulo).catch(() => {})
+            }
             obs.unobserve(e.target)
           }
         }
@@ -217,7 +248,7 @@ export default function Trabajo() {
     )
     document.querySelectorAll('.serie').forEach((el) => obs.observe(el))
     return () => obs.disconnect()
-  }, [])
+  }, [t])
 
   // enlace directo a un proyecto: al abrir la web con #<proyecto> saltamos a el
   // una vez montado (la web se dibuja en el navegador, asi que esperamos al render)
@@ -279,7 +310,7 @@ export default function Trabajo() {
                 </div>
               ) : null}
               <div className="serie-pie">
-                <Compartir serie={serie} t={t} />
+                <Compartir serie={serie} titulo={texto.titulo} t={t} />
               </div>
             </article>
           )
