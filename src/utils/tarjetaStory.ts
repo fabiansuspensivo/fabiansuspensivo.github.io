@@ -46,13 +46,13 @@ function medir(ctx: CanvasRenderingContext2D, texto: string, espacio: number) {
   return anchos.reduce((a, b) => a + b, 0) + espacio * (letras.length - 1)
 }
 
-async function componer(serie: Serie, titulo: string): Promise<File> {
+async function componer(serie: Serie, titulo: string, indice: number): Promise<File> {
   // la tipografia (Archivo Variable via fontsource) tiene que estar cargada
   // antes de dibujarla en el canvas o sale la fuente del sistema
   await document.fonts.ready
 
   const img = new Image()
-  img.src = serie.fotos[serie.fotoTarjeta ?? 0].src
+  img.src = serie.fotos[indice].src
   await img.decode()
 
   const canvas = document.createElement('canvas')
@@ -84,21 +84,25 @@ async function componer(serie: Serie, titulo: string): Promise<File> {
 
   ctx.textBaseline = 'middle'
 
-  // nombre del autor como cabecera, centrado en la franja sobre la foto
-  ctx.fillStyle = TINTA
-  ctx.font = `600 28px ${FAMILIA}`
-  dibujarCentrado(ctx, 'FABIAN SUSPENSIVO', FOTO_Y / 2, 28 * 0.14)
+  // si la foto ya trae el titulo y el autor rotulados dentro de la imagen
+  // (el poster de la serie) no se le dibuja texto encima, solo el dominio
+  if (!serie.fotosRotuladas?.includes(indice)) {
+    // nombre del autor como cabecera, centrado en la franja sobre la foto
+    ctx.fillStyle = TINTA
+    ctx.font = `600 28px ${FAMILIA}`
+    dibujarCentrado(ctx, 'FABIAN SUSPENSIVO', FOTO_Y / 2, 28 * 0.14)
 
-  // titulo en mayusculas con el espaciado de titulos del sitio (0.14em,
-  // como .titulo-seccion en global.css); si no cabe se reduce el cuerpo
-  const linea = titulo.toUpperCase()
-  let cuerpo = 64
-  ctx.fillStyle = TINTA
-  for (; cuerpo > 30; cuerpo -= 2) {
-    ctx.font = `700 ${cuerpo}px ${FAMILIA}`
-    if (medir(ctx, linea, cuerpo * 0.14) <= ANCHO - MARGEN * 2) break
+    // titulo en mayusculas con el espaciado de titulos del sitio (0.14em,
+    // como .titulo-seccion en global.css); si no cabe se reduce el cuerpo
+    const linea = titulo.toUpperCase()
+    let cuerpo = 64
+    ctx.fillStyle = TINTA
+    for (; cuerpo > 30; cuerpo -= 2) {
+      ctx.font = `700 ${cuerpo}px ${FAMILIA}`
+      if (medir(ctx, linea, cuerpo * 0.14) <= ANCHO - MARGEN * 2) break
+    }
+    dibujarCentrado(ctx, linea, 1650, cuerpo * 0.14)
   }
-  dibujarCentrado(ctx, linea, 1650, cuerpo * 0.14)
 
   // dominio abajo, tipografia pequena
   ctx.fillStyle = GRIS
@@ -109,19 +113,23 @@ async function componer(serie: Serie, titulo: string): Promise<File> {
     canvas.toBlob(resolver, 'image/jpeg', 0.9),
   )
   if (!blob) throw new Error('no se pudo exportar la tarjeta')
-  return new File([blob], `${serie.id}-story.jpg`, { type: 'image/jpeg' })
+  return new File([blob], `${serie.id}-${indice + 1}-story.jpg`, { type: 'image/jpeg' })
 }
 
-// Cache por serie e idioma (el titulo ya viene en el idioma activo) para no
-// recomponer la tarjeta en cada click; se guarda la promesa para que la
-// pre-generacion y el click no compongan dos veces a la vez.
+// Cache por serie, foto e idioma (el titulo ya viene en el idioma activo)
+// para no recomponer la tarjeta en cada click; se guarda la promesa para que
+// la pre-generacion y el click no compongan dos veces a la vez.
 const cache = new Map<string, Promise<File>>()
 
-export async function generarTarjetaStory(serie: Serie, titulo: string): Promise<File> {
-  const llave = `${serie.id}:${titulo}`
+export async function generarTarjetaStory(
+  serie: Serie,
+  titulo: string,
+  indice = 0,
+): Promise<File> {
+  const llave = `${serie.id}:${indice}:${titulo}`
   let tarjeta = cache.get(llave)
   if (!tarjeta) {
-    tarjeta = componer(serie, titulo)
+    tarjeta = componer(serie, titulo, indice)
     // si fallo (foto rota, canvas sin memoria) no dejamos la promesa rechazada
     // en cache, para poder reintentar en el proximo click
     tarjeta.catch(() => cache.delete(llave))

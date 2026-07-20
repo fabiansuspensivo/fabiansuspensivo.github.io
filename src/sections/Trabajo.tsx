@@ -14,7 +14,17 @@ import './Trabajo.css'
 // sin mover el layout.
 const SALIDA = 240 // ms del fundido de salida antes de cambiar de foto
 
-function Visor({ serie, texto, t }: { serie: Serie; texto: SerieTexto; t: Textos }) {
+function Visor({
+  serie,
+  texto,
+  t,
+  onCambioFoto,
+}: {
+  serie: Serie
+  texto: SerieTexto
+  t: Textos
+  onCambioFoto: (idx: number) => void
+}) {
   const largo = serie.fotos.length
   const [i, setI] = useState(0)
   const [visible, setVisible] = useState(false)
@@ -77,12 +87,13 @@ function Visor({ serie, texto, t }: { serie: Serie; texto: SerieTexto; t: Textos
       const espera = reduce.current ? 0 : SALIDA
       const tt = window.setTimeout(async () => {
         setI(next)
+        onCambioFoto(next)
         await revelar(next)
         animando.current = false
       }, espera)
       timers.current.push(tt)
     },
-    [i, revelar],
+    [i, revelar, onCambioFoto],
   )
 
   const mover = (dir: number) => irA(norm(i + dir))
@@ -159,19 +170,45 @@ function Visor({ serie, texto, t }: { serie: Serie; texto: SerieTexto; t: Textos
 }
 
 // Boton de compartir un proyecto: en el movil abre el menu nativo del sistema
-// con una tarjeta vertical del proyecto adjunta (Instagram la ofrece para
-// Historias); si el navegador no admite archivos comparte solo el enlace, y
-// en el escritorio sin menu nativo copia el enlace directo al proyecto.
-function Compartir({ serie, titulo, t }: { serie: Serie; titulo: string; t: Textos }) {
+// con una tarjeta vertical adjunta hecha con la foto que esta en pantalla en
+// el visor (Instagram la ofrece para Historias); si el navegador no admite
+// archivos comparte solo el enlace, y en el escritorio sin menu nativo copia
+// el enlace directo al proyecto.
+function Compartir({
+  serie,
+  titulo,
+  fotoIdx,
+  t,
+}: {
+  serie: Serie
+  titulo: string
+  fotoIdx: number
+  t: Textos
+}) {
   const [copiado, setCopiado] = useState(false)
+
+  // pre-genera la tarjeta al cambiar de foto o de idioma (la inicial ya la
+  // pre-genera el observer al entrar la serie en pantalla): navegar el visor
+  // es interaccion, asi que la serie esta a la vista y el click solo leera
+  // del cache sin que caduque el gesto de usuario en iOS Safari
+  const montando = useRef(true)
+  useEffect(() => {
+    if (montando.current) {
+      montando.current = false
+      return
+    }
+    if (typeof navigator.canShare !== 'function') return
+    generarTarjetaStory(serie, titulo, fotoIdx).catch(() => {})
+  }, [serie, titulo, fotoIdx])
+
   const compartir = useCallback(async () => {
     const url = `${window.location.origin}/#/p/${serie.id}`
     if (typeof navigator.canShare === 'function') {
       let tarjeta: File | undefined
       try {
-        // normalmente ya esta en cache, pre-generada al entrar la serie en
-        // pantalla; asi el gesto de usuario no caduca en iOS Safari
-        tarjeta = await generarTarjetaStory(serie, titulo)
+        // normalmente ya esta en cache, pre-generada por el observer o al
+        // navegar el visor; asi el gesto de usuario no caduca en iOS Safari
+        tarjeta = await generarTarjetaStory(serie, titulo, fotoIdx)
       } catch {
         /* si la composicion falla seguimos con el enlace de siempre */
       }
@@ -199,7 +236,7 @@ function Compartir({ serie, titulo, t }: { serie: Serie; titulo: string; t: Text
     } catch {
       /* sin portapapeles disponible */
     }
-  }, [serie, titulo])
+  }, [serie, titulo, fotoIdx])
   return (
     <button type="button" className="serie-compartir" onClick={compartir}>
       <svg
@@ -218,6 +255,46 @@ function Compartir({ serie, titulo, t }: { serie: Serie; titulo: string; t: Text
       </svg>
       {copiado ? t.trabajo.copiado : t.trabajo.compartir}
     </button>
+  )
+}
+
+// Un proyecto completo: cabecera, visor, resumen y pie. Guarda que foto esta
+// en pantalla en el visor para que Compartir arme la tarjeta con esa foto.
+function SerieArticulo({ serie, texto, t }: { serie: Serie; texto: SerieTexto; t: Textos }) {
+  const [fotoIdx, setFotoIdx] = useState(0)
+  return (
+    <article
+      id={serie.id}
+      className={texto.destacada ? 'serie revelar serie-destacada' : 'serie revelar'}
+    >
+      <header className="serie-cabecera">
+        <h3 className="serie-titulo">
+          <a className="serie-enlace" href={`/#/p/${serie.id}`} target="_blank" rel="noopener">
+            {texto.titulo}
+            <span className="serie-enlace-flecha" aria-hidden="true">
+              ↗
+            </span>
+          </a>
+        </h3>
+        {texto.subtitulo ? <p className="serie-subtitulo">{texto.subtitulo}</p> : null}
+        <p className="meta">{texto.nota}</p>
+      </header>
+      <Visor serie={serie} texto={texto} t={t} onCambioFoto={setFotoIdx} />
+      {texto.resumen ? (
+        <div className="serie-resumen">
+          <p>{texto.resumen}</p>
+          <a className="serie-vermas" href={`/#/p/${serie.id}`} target="_blank" rel="noopener">
+            {t.trabajo.verProyecto}
+            <span className="serie-enlace-flecha" aria-hidden="true">
+              ↗
+            </span>
+          </a>
+        </div>
+      ) : null}
+      <div className="serie-pie">
+        <Compartir serie={serie} titulo={texto.titulo} fotoIdx={fotoIdx} t={t} />
+      </div>
+    </article>
   )
 }
 
@@ -267,54 +344,9 @@ export default function Trabajo() {
     <section className="seccion" id="trabajo">
       <div className="contenedor">
         <h2 className="titulo-seccion">{t.trabajo.titulo}</h2>
-        {series.map((serie) => {
-          const texto = t.series[serie.id]
-          return (
-            <article
-              id={serie.id}
-              className={texto.destacada ? 'serie revelar serie-destacada' : 'serie revelar'}
-              key={serie.id}
-            >
-              <header className="serie-cabecera">
-                <h3 className="serie-titulo">
-                  <a
-                    className="serie-enlace"
-                    href={`/#/p/${serie.id}`}
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    {texto.titulo}
-                    <span className="serie-enlace-flecha" aria-hidden="true">
-                      ↗
-                    </span>
-                  </a>
-                </h3>
-                {texto.subtitulo ? <p className="serie-subtitulo">{texto.subtitulo}</p> : null}
-                <p className="meta">{texto.nota}</p>
-              </header>
-              <Visor serie={serie} texto={texto} t={t} />
-              {texto.resumen ? (
-                <div className="serie-resumen">
-                  <p>{texto.resumen}</p>
-                  <a
-                    className="serie-vermas"
-                    href={`/#/p/${serie.id}`}
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    {t.trabajo.verProyecto}
-                    <span className="serie-enlace-flecha" aria-hidden="true">
-                      ↗
-                    </span>
-                  </a>
-                </div>
-              ) : null}
-              <div className="serie-pie">
-                <Compartir serie={serie} titulo={texto.titulo} t={t} />
-              </div>
-            </article>
-          )
-        })}
+        {series.map((serie) => (
+          <SerieArticulo key={serie.id} serie={serie} texto={t.series[serie.id]} t={t} />
+        ))}
       </div>
     </section>
   )
