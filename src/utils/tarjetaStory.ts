@@ -13,9 +13,14 @@ const GRIS = '#948f89'
 
 const ANCHO = 1080
 const ALTO = 1920
-// banda central donde va la foto con crop tipo object-fit: cover
-const FOTO_Y = 150
-const FOTO_ALTO = 1350
+// La interfaz de historias de Instagram tapa una franja arriba (avatar,
+// cerrar) y otra abajo (responder, enviar): todo el contenido se dibuja
+// dentro de la zona segura entre ambas.
+const SEGURA_SUP = 280
+const SEGURA_INF = ALTO - 370
+// banda de la foto con crop tipo object-fit: cover, dentro de la zona segura
+const FOTO_Y = 400
+const FOTO_ALTO = 1000
 // margen lateral minimo del titulo
 const MARGEN = 96
 
@@ -65,32 +70,46 @@ async function componer(serie: Serie, titulo: string, indice: number): Promise<F
   ctx.fillStyle = PAPEL
   ctx.fillRect(0, 0, ANCHO, ALTO)
 
-  // foto centrada con crop cover: se escala hasta llenar la banda y se
-  // recorta el exceso por los lados, sin deformar
-  const escala = Math.max(ANCHO / img.naturalWidth, FOTO_ALTO / img.naturalHeight)
-  const sw = ANCHO / escala
-  const sh = FOTO_ALTO / escala
-  ctx.drawImage(
-    img,
-    (img.naturalWidth - sw) / 2,
-    (img.naturalHeight - sh) / 2,
-    sw,
-    sh,
-    0,
-    FOTO_Y,
-    ANCHO,
-    FOTO_ALTO,
-  )
+  // si la foto ya trae el titulo y el autor rotulados dentro de la imagen
+  // (el poster de la serie) no se le dibuja texto encima y ocupa casi toda
+  // la zona segura; si no, deja sitio para la cabecera y el titulo
+  const rotulada = serie.fotosRotuladas?.includes(indice) ?? false
+  const fotoY = rotulada ? SEGURA_SUP : FOTO_Y
+  const fotoAlto = rotulada ? 1200 : FOTO_ALTO
+
+  if (rotulada) {
+    // una foto rotulada se muestra entera (tipo object-fit: contain, sobre
+    // el fondo negro) para no recortar el texto que trae dentro
+    const escala = Math.min(ANCHO / img.naturalWidth, fotoAlto / img.naturalHeight)
+    const dw = img.naturalWidth * escala
+    const dh = img.naturalHeight * escala
+    ctx.drawImage(img, (ANCHO - dw) / 2, fotoY + (fotoAlto - dh) / 2, dw, dh)
+  } else {
+    // foto centrada con crop cover: se escala hasta llenar la banda y se
+    // recorta el exceso por los lados, sin deformar
+    const escala = Math.max(ANCHO / img.naturalWidth, fotoAlto / img.naturalHeight)
+    const sw = ANCHO / escala
+    const sh = fotoAlto / escala
+    ctx.drawImage(
+      img,
+      (img.naturalWidth - sw) / 2,
+      (img.naturalHeight - sh) / 2,
+      sw,
+      sh,
+      0,
+      fotoY,
+      ANCHO,
+      fotoAlto,
+    )
+  }
 
   ctx.textBaseline = 'middle'
 
-  // si la foto ya trae el titulo y el autor rotulados dentro de la imagen
-  // (el poster de la serie) no se le dibuja texto encima, solo el dominio
-  if (!serie.fotosRotuladas?.includes(indice)) {
-    // nombre del autor como cabecera, centrado en la franja sobre la foto
+  if (!rotulada) {
+    // nombre del autor como cabecera, centrado entre la zona segura y la foto
     ctx.fillStyle = TINTA
     ctx.font = `600 28px ${FAMILIA}`
-    dibujarCentrado(ctx, 'FABIAN SUSPENSIVO', FOTO_Y / 2, 28 * 0.14)
+    dibujarCentrado(ctx, 'FABIAN SUSPENSIVO', (SEGURA_SUP + FOTO_Y) / 2, 28 * 0.14)
 
     // titulo en mayusculas con el espaciado de titulos del sitio (0.14em,
     // como .titulo-seccion en global.css); si no cabe se reduce el cuerpo
@@ -101,13 +120,13 @@ async function componer(serie: Serie, titulo: string, indice: number): Promise<F
       ctx.font = `700 ${cuerpo}px ${FAMILIA}`
       if (medir(ctx, linea, cuerpo * 0.14) <= ANCHO - MARGEN * 2) break
     }
-    dibujarCentrado(ctx, linea, 1650, cuerpo * 0.14)
+    dibujarCentrado(ctx, linea, 1470, cuerpo * 0.14)
   }
 
-  // dominio abajo, tipografia pequena
+  // dominio abajo, tipografia pequena, al borde de la zona segura
   ctx.fillStyle = GRIS
   ctx.font = `500 30px ${FAMILIA}`
-  dibujarCentrado(ctx, 'suspensivo.com', 1830, 30 * 0.08)
+  dibujarCentrado(ctx, 'suspensivo.com', SEGURA_INF, 30 * 0.08)
 
   const blob = await new Promise<Blob | null>((resolver) =>
     canvas.toBlob(resolver, 'image/jpeg', 0.9),
