@@ -10,11 +10,16 @@ export type Foto = {
 export type Serie = {
   id: string
   fotos: Foto[]
+  // indice de la foto para la tarjeta de compartir en historias; sin definir
+  // se usa la primera. Sirve para series cuya portada ya trae texto rotulado
+  // (el poster de El Ball de Nuria) y el titulo saldria dos veces.
+  fotoTarjeta?: number
 }
 
 export const series: Serie[] = [
   {
     id: 'ball-de-nuria',
+    fotoTarjeta: 3,
     fotos: [
       { src: '/fotos/ball-de-nuria-01.jpg', w: 1125, h: 1500 },
       { src: '/fotos/ball-de-nuria-02.jpg', w: 2000, h: 1332 },

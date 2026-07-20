@@ -52,7 +52,7 @@ async function componer(serie: Serie, titulo: string): Promise<File> {
   await document.fonts.ready
 
   const img = new Image()
-  img.src = serie.fotos[0].src
+  img.src = serie.fotos[serie.fotoTarjeta ?? 0].src
   await img.decode()
 
   const canvas = document.createElement('canvas')
@@ -83,6 +83,11 @@ async function componer(serie: Serie, titulo: string): Promise<File> {
   )
 
   ctx.textBaseline = 'middle'
+
+  // nombre del autor como cabecera, centrado en la franja sobre la foto
+  ctx.fillStyle = TINTA
+  ctx.font = `600 28px ${FAMILIA}`
+  dibujarCentrado(ctx, 'FABIAN SUSPENSIVO', FOTO_Y / 2, 28 * 0.14)
 
   // titulo en mayusculas con el espaciado de titulos del sitio (0.14em,
   // como .titulo-seccion en global.css); si no cabe se reduce el cuerpo
