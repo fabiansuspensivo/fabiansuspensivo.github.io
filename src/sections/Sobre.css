@@ -12,6 +12,9 @@
   width: 100%;
   aspect-ratio: 4 / 5;
   pointer-events: none;
+  /* mismo paspartu blanco que el visor del resto de la web */
+  background: #f4f3f0;
+  padding: clamp(16px, 2.4vw, 40px);
 }
 
 .sobre-rotador img {
@@ -29,8 +32,20 @@
 }
 
 .sobre-texto {
+  position: relative;
   max-width: 62ch;
   font-size: var(--t-md);
+  /* mismo marco de galeria que el proyecto El Ball de Núria (doble linea) */
+  padding: clamp(24px, 4vw, 56px);
+  border: 1px solid var(--gris);
+}
+
+.sobre-texto::before {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border: 1px solid var(--linea);
+  pointer-events: none;
 }
 
 .sobre-texto p + p {
