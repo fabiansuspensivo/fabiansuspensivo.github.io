@@ -75,6 +75,7 @@ export const series: Serie[] = [
   },
   {
     id: 'top-manta',
+    oculto: true,
     fotos: [
       { src: '/fotos/cursa-top-manta-01.jpg', w: 1400, h: 2099 },
       { src: '/fotos/cursa-top-manta-02.jpg', w: 1400, h: 2100 },
