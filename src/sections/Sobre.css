@@ -1,3 +1,33 @@
+.sobre-fila {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: var(--e-6);
+  align-items: center;
+}
+
+/* Rotador "Pasamontañas": una foto a la vez, cambia sola cada 10 s, sin controles.
+   Las fotos se ven enteras (sin recortar); orientaciones mixtas caben con contain. */
+.sobre-rotador {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  pointer-events: none;
+}
+
+.sobre-rotador img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.sobre-rotador img.visible {
+  opacity: 1;
+}
+
 .sobre-texto {
   max-width: 62ch;
   font-size: var(--t-md);
@@ -5,4 +35,22 @@
 
 .sobre-texto p + p {
   margin-top: var(--e-4);
+}
+
+@media (max-width: 720px) {
+  .sobre-fila {
+    grid-template-columns: 1fr;
+    gap: var(--e-5);
+  }
+  .sobre-rotador {
+    aspect-ratio: 3 / 4;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sobre-rotador img {
+    transition: none;
+  }
 }
