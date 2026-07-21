@@ -17,7 +17,7 @@
   /* mismo paspartu blanco que el visor del resto de la web:
      margen uniforme en los cuatro lados, el marco abraza cada foto */
   background: #f4f3f0;
-  padding: clamp(16px, 2.4vw, 40px);
+  padding: clamp(9px, 1.4vw, 23px);
 }
 
 .sobre-rotador img {
