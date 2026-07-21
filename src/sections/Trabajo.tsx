@@ -236,8 +236,10 @@ export default function Trabajo() {
     <section className="seccion" id="trabajo">
       <div className="contenedor">
         <h2 className="titulo-seccion">{t.trabajo.titulo}</h2>
-        {series.map((serie) => {
-          const texto = t.series[serie.id]
+        {series
+          .filter((serie) => !serie.oculto)
+          .map((serie) => {
+            const texto = t.series[serie.id]
           return (
             <article
               id={serie.id}

@@ -101,6 +101,11 @@ export const textos: Record<Idioma, Textos> = {
       escribeme: 'Escríbeme',
     },
     series: {
+      'bodas': {
+        titulo: 'Bodas',
+        nota: 'Fotografía de bodas',
+        alt: 'Fotografía de bodas, Fabian Suspensivo',
+      },
       'ball-de-nuria': {
         titulo: 'El Ball de Núria',
         subtitulo: 'Este proyecto se expondrá en Perpinyà, en el festival OFF.',
@@ -200,6 +205,11 @@ export const textos: Record<Idioma, Textos> = {
       escribeme: 'Escriu-me',
     },
     series: {
+      'bodas': {
+        titulo: 'Casaments',
+        nota: 'Fotografia de casaments',
+        alt: 'Fotografia de casaments, Fabian Suspensivo',
+      },
       'ball-de-nuria': {
         titulo: 'El Ball de Núria',
         subtitulo: 'Aquest projecte s’exposarà a Perpinyà, al festival OFF.',
@@ -299,6 +309,11 @@ export const textos: Record<Idioma, Textos> = {
       escribeme: 'Schreib mir',
     },
     series: {
+      'bodas': {
+        titulo: 'Hochzeiten',
+        nota: 'Hochzeitsfotografie',
+        alt: 'Hochzeitsfotografie, Fabian Suspensivo',
+      },
       'ball-de-nuria': {
         titulo: 'El Ball de Núria',
         subtitulo: 'Dieses Projekt wird in Perpignan beim OFF-Festival ausgestellt.',

@@ -10,6 +10,7 @@ export type Foto = {
 export type Serie = {
   id: string
   fotos: Foto[]
+  oculto?: boolean
 }
 
 export const series: Serie[] = [
@@ -157,6 +158,30 @@ export const series: Serie[] = [
       { src: '/fotos/prensa-22.jpg', w: 1333, h: 2000 },
       { src: '/fotos/prensa-23.jpg', w: 1334, h: 2000 },
       { src: '/fotos/prensa-24.jpg', w: 1333, h: 2000 },
+    ],
+  },
+  {
+    id: 'bodas',
+    oculto: true,
+    fotos: [
+      { src: '/fotos/bodas-01.jpg', w: 2000, h: 1324 },
+      { src: '/fotos/bodas-02.jpg', w: 2000, h: 1324 },
+      { src: '/fotos/bodas-03.jpg', w: 2000, h: 1324 },
+      { src: '/fotos/bodas-04.jpg', w: 2000, h: 1325 },
+      { src: '/fotos/bodas-05.jpg', w: 2000, h: 1325 },
+      { src: '/fotos/bodas-06.jpg', w: 2000, h: 1538 },
+      { src: '/fotos/bodas-07.jpg', w: 2000, h: 1335 },
+      { src: '/fotos/bodas-08.jpg', w: 1335, h: 2000 },
+      { src: '/fotos/bodas-09.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/bodas-10.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/bodas-11.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/bodas-12.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/bodas-13.jpg', w: 1333, h: 2000 },
+      { src: '/fotos/bodas-14.jpg', w: 2000, h: 1208 },
+      { src: '/fotos/bodas-15.jpg', w: 1333, h: 2000 },
+      { src: '/fotos/bodas-16.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/bodas-17.jpg', w: 1334, h: 2000 },
+      { src: '/fotos/bodas-18.jpg', w: 2000, h: 1333 },
     ],
   },
 ]
