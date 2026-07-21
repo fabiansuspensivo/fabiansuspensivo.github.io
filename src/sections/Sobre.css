@@ -8,23 +8,26 @@
 /* Rotador "Pasamontañas": una foto a la vez, cambia sola cada 10 s, sin controles.
    Las fotos se ven enteras (sin recortar); orientaciones mixtas caben con contain. */
 .sobre-rotador {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4 / 5;
+  justify-self: center;
+  align-self: center;
+  display: inline-block;
+  max-width: 100%;
   pointer-events: none;
-  /* mismo paspartu blanco que el visor del resto de la web */
+  line-height: 0;
+  /* mismo paspartu blanco que el visor del resto de la web:
+     margen uniforme en los cuatro lados, el marco abraza cada foto */
   background: #f4f3f0;
   padding: clamp(16px, 2.4vw, 40px);
 }
 
 .sobre-rotador img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 62vh;
   opacity: 0;
-  transition: opacity 1.2s ease;
+  transition: opacity 0.6s ease;
 }
 
 .sobre-rotador img.visible {
@@ -57,10 +60,8 @@
     grid-template-columns: 1fr;
     gap: var(--e-5);
   }
-  .sobre-rotador {
-    aspect-ratio: 3 / 4;
-    max-width: 420px;
-    margin: 0 auto;
+  .sobre-rotador img {
+    max-height: 56vh;
   }
 }
 

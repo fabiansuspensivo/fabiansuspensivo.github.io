@@ -16,23 +16,25 @@ const INTERVALO = 10000
 
 function Rotador() {
   const [i, setI] = useState(0)
+  const [visible, setVisible] = useState(true)
   useEffect(() => {
+    // precargar todas para que el cambio sea instantaneo
+    PASAMONTANAS.forEach((src) => {
+      const im = new Image()
+      im.src = src
+    })
     const id = window.setInterval(() => {
-      setI((v) => (v + 1) % PASAMONTANAS.length)
+      setVisible(false)
+      window.setTimeout(() => {
+        setI((v) => (v + 1) % PASAMONTANAS.length)
+        setVisible(true)
+      }, 650)
     }, INTERVALO)
     return () => window.clearInterval(id)
   }, [])
   return (
     <div className="sobre-rotador" aria-hidden="true">
-      {PASAMONTANAS.map((src, k) => (
-        <img
-          key={src}
-          src={src}
-          alt=""
-          className={k === i ? 'visible' : ''}
-          loading={k === 0 ? 'eager' : 'lazy'}
-        />
-      ))}
+      <img src={PASAMONTANAS[i]} alt="" className={visible ? 'visible' : ''} />
     </div>
   )
 }
