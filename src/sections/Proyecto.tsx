@@ -94,6 +94,14 @@ export default function Proyecto({ id }: { id: string }) {
             ))}
           </div>
         ) : null}
+        {texto.fuente ? (
+          <p className="proyecto-fuente">
+            <a href={texto.fuente.url} target="_blank" rel="noopener">
+              {texto.fuente.texto}
+              <span aria-hidden="true"> ↗</span>
+            </a>
+          </p>
+        ) : null}
       </div>
 
       <div className="proyecto-fotos">

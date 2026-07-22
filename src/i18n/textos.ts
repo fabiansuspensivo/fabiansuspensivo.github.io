@@ -8,6 +8,7 @@ export type SerieTexto = {
   destacada?: boolean
   historia?: string[]
   resumen?: string
+  fuente?: { texto: string; url: string }
 }
 
 export type Textos = {
@@ -124,11 +125,27 @@ export const textos: Record<Idioma, Textos> = {
         titulo: 'Open Arms',
         nota: 'Rescate en el mar, con la ONG',
         alt: 'Rescate de Open Arms en el mar Mediterráneo',
+        historia: [
+          'Mediterráneo central, mayo de 2026. El Open Arms zarpa de Barcelona hacia la zona de rescate entre Malta y Libia, la frontera más letal del mundo: desde 2014 han muerto o desaparecido allí cerca de 31.000 personas. Es la misión 126, del 25 de mayo al 11 de junio.',
+          'En alta mar, la tripulación encuentra una embarcación precaria con 58 personas a bordo, 24 de ellas menores que viajan sin ningún adulto; la más pequeña tiene 10 años. Esta serie retrata ese pulso: la guardia del horizonte, el rescate, los chalecos naranjas, las manos que sostienen a quien acaba de salir del agua. En el mar, cada minuto cuenta.',
+        ],
+        fuente: {
+          texto: 'Sobre la misión 126 de Open Arms',
+          url: 'https://www.openarms.es/es/que-hacemos/misiones/mediterraneo',
+        },
       },
       tenerife: {
         titulo: 'El caso Hondius',
         nota: 'Tenerife, publicado en Der Spiegel',
         alt: 'Cobertura del caso de hantavirus del barco Hondius en Tenerife',
+        historia: [
+          'Tenerife, mayo de 2026. El Hondius, un buque de expediciones polares, vuelve del hemisferio sur con un brote de hantavirus a bordo. Tras semanas de incertidumbre y tres fallecidos desde que zarpó de Sudamérica el 1 de abril, España le permite atracar en el puerto de Tenerife el 10 de mayo con 147 personas a bordo, entre pasajeros y tripulación.',
+          'Durante tres días, con acceso restringido a la prensa acreditada, esta serie documenta la llegada y la evacuación: los pasajeros trasladados en aviones militares y del Estado, el cerco sanitario, la espera de las familias pendientes del horizonte. El hantavirus, que se transmite por contacto con roedores, mantuvo al barco aislado mientras el mundo lo miraba de lejos.',
+        ],
+        fuente: {
+          texto: 'Reportaje de Jonah Lemm para Der Spiegel',
+          url: 'https://www.spiegel.de/ausland/hantavirus-auf-der-hondius-einer-ruft-wenn-irgendjemand-das-schiff-sieht-sagt-uns-bescheid-a-c741520f-5596-49cd-8c47-e28909ac47f6',
+        },
       },
       'top-manta': {
         titulo: 'Top Manta',
@@ -228,11 +245,27 @@ export const textos: Record<Idioma, Textos> = {
         titulo: 'Open Arms',
         nota: 'Rescat al mar, amb l’ONG',
         alt: 'Rescat d’Open Arms al mar Mediterrani',
+        historia: [
+          'Mediterrani central, maig de 2026. L’Open Arms salpa de Barcelona cap a la zona de rescat entre Malta i Líbia, la frontera més letal del món: des del 2014 hi han mort o desaparegut prop de 31.000 persones. És la missió 126, del 25 de maig a l’11 de juny.',
+          'En alta mar, la tripulació troba una embarcació precària amb 58 persones a bord, 24 de les quals menors que viatgen sense cap adult; la més petita té 10 anys. Aquesta sèrie retrata aquell pols: la vigilància de l’horitzó, el rescat, les armilles taronges, les mans que sostenen qui acaba de sortir de l’aigua. Al mar, cada minut compta.',
+        ],
+        fuente: {
+          texto: 'Sobre la missió 126 d’Open Arms',
+          url: 'https://www.openarms.es/es/que-hacemos/misiones/mediterraneo',
+        },
       },
       tenerife: {
         titulo: 'El cas Hondius',
         nota: 'Tenerife, publicat a Der Spiegel',
         alt: 'Cobertura del cas d’hantavirus del vaixell Hondius a Tenerife',
+        historia: [
+          'Tenerife, maig de 2026. El Hondius, un vaixell d’expedicions polars, torna de l’hemisferi sud amb un brot d’hantavirus a bord. Després de setmanes d’incertesa i tres morts des que va salpar de Sud-amèrica l’1 d’abril, Espanya li permet atracar al port de Tenerife el 10 de maig amb 147 persones a bord, entre passatgers i tripulació.',
+          'Durant tres dies, amb accés restringit a la premsa acreditada, aquesta sèrie documenta l’arribada i l’evacuació: els passatgers traslladats en avions militars i de l’Estat, el setge sanitari, l’espera de les famílies pendents de l’horitzó. L’hantavirus, que es transmet pel contacte amb rosegadors, va mantenir el vaixell aïllat mentre el món el mirava de lluny.',
+        ],
+        fuente: {
+          texto: 'Reportatge de Jonah Lemm per a Der Spiegel',
+          url: 'https://www.spiegel.de/ausland/hantavirus-auf-der-hondius-einer-ruft-wenn-irgendjemand-das-schiff-sieht-sagt-uns-bescheid-a-c741520f-5596-49cd-8c47-e28909ac47f6',
+        },
       },
       'top-manta': {
         titulo: 'Top Manta',
@@ -332,11 +365,27 @@ export const textos: Record<Idioma, Textos> = {
         titulo: 'Open Arms',
         nota: 'Seenotrettung, mit der NGO',
         alt: 'Rettungseinsatz von Open Arms im Mittelmeer',
+        historia: [
+          'Zentrales Mittelmeer, Mai 2026. Die Open Arms läuft von Barcelona in das Rettungsgebiet zwischen Malta und Libyen aus, die tödlichste Grenze der Welt: Seit 2014 sind dort rund 31.000 Menschen gestorben oder verschwunden. Es ist die Mission 126, vom 25. Mai bis zum 11. Juni.',
+          'Auf hoher See findet die Crew ein seeuntüchtiges Boot mit 58 Menschen an Bord, 24 davon Minderjährige, die ohne jede Begleitung reisen; das jüngste ist 10 Jahre alt. Diese Serie zeigt den Puls jener Tage: das Absuchen des Horizonts, die Rettung, die orangefarbenen Westen, die Hände, die jene stützen, die gerade aus dem Wasser kommen. Auf See zählt jede Minute.',
+        ],
+        fuente: {
+          texto: 'Über die Mission 126 von Open Arms',
+          url: 'https://www.openarms.es/es/que-hacemos/misiones/mediterraneo',
+        },
       },
       tenerife: {
         titulo: 'Der Fall Hondius',
         nota: 'Teneriffa, veröffentlicht im Spiegel',
         alt: 'Berichterstattung zum Hantavirus-Fall des Schiffs Hondius auf Teneriffa',
+        historia: [
+          'Teneriffa, Mai 2026. Die Hondius, ein Polar-Expeditionsschiff, kehrt aus dem Süden mit einem Hantavirus-Ausbruch an Bord zurück. Nach Wochen der Ungewissheit und drei Todesfällen, seit sie am 1. April Südamerika verlassen hatte, erlaubt Spanien ihr am 10. Mai das Anlegen im Hafen von Teneriffa mit 147 Menschen an Bord, Passagieren und Besatzung.',
+          'Drei Tage lang, mit beschränktem Zugang für akkreditierte Presse, dokumentiert diese Serie die Ankunft und die Evakuierung: die Passagiere, die in Militär- und Staatsflugzeugen ausgeflogen werden, die Gesundheitssperre, das Warten der Angehörigen mit Blick auf den Horizont. Das Hantavirus, das durch Kontakt mit Nagetieren übertragen wird, hielt das Schiff isoliert, während die Welt aus der Ferne zusah.',
+        ],
+        fuente: {
+          texto: 'Reportage von Jonah Lemm für Der Spiegel',
+          url: 'https://www.spiegel.de/ausland/hantavirus-auf-der-hondius-einer-ruft-wenn-irgendjemand-das-schiff-sieht-sagt-uns-bescheid-a-c741520f-5596-49cd-8c47-e28909ac47f6',
+        },
       },
       'top-manta': {
         titulo: 'Top Manta',

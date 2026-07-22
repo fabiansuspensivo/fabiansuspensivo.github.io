@@ -58,6 +58,27 @@
   margin-top: var(--e-3);
 }
 
+/* credito / fuente con enlace a la revista */
+.proyecto-fuente {
+  max-width: 62ch;
+  margin: var(--e-4) auto 0;
+  text-align: left;
+  font-size: var(--t-meta);
+  color: var(--gris);
+}
+
+.proyecto-fuente a {
+  color: var(--gris);
+  border-bottom: 1px solid var(--linea);
+  padding-bottom: 2px;
+  transition: color var(--transicion), border-color var(--transicion);
+}
+
+.proyecto-fuente a:hover {
+  color: var(--rojo);
+  border-color: var(--rojo);
+}
+
 /* las fotos en scroll vertical, cada una casi a pantalla, centradas */
 .proyecto-fotos {
   display: flex;
