@@ -151,6 +151,15 @@ export const textos: Record<Idioma, Textos> = {
         titulo: 'Top Manta',
         nota: 'Cursa Top Manta y cursa antirracista, Barcelona',
         alt: 'Cursa Top Manta en Barcelona',
+        historia: [
+          'Barcelona, 2015. Un grupo de vendedores ambulantes, en su mayoría migrantes de África occidental, se organiza en el Sindicat Popular de Venedors Ambulants para defenderse del racismo institucional, la persecución y la criminalización de su manera de ganarse la vida en la manta.',
+          'En 2017 el sindicato lanza su propia marca, Top Manta: ropa legal hecha por gente ilegal. Es una cooperativa con talleres de costura y serigrafía y una tienda en el Raval donde diseñan y fabrican ropa, zapatillas y equipación deportiva. Su logo une la forma de una manta y la de un cayuco, el mismo con el que muchos cruzaron el mar.',
+          'Más que una marca, es una comunidad: busca un trabajo digno y con papeles que saque a la gente de la calle, y sostiene apoyo legal, deporte antirracista (el fútbol y la cursa) y una lucha diaria por la dignidad. Esta serie retrata ese pulso, del taller a la calle.',
+        ],
+        fuente: {
+          texto: 'Top Manta · Sindicat Popular de Venedors Ambulants',
+          url: 'https://www.instagram.com/topmanta_bcn/',
+        },
       },
       musica: {
         titulo: 'Música',
@@ -271,6 +280,15 @@ export const textos: Record<Idioma, Textos> = {
         titulo: 'Top Manta',
         nota: 'Cursa Top Manta i cursa antiracista, Barcelona',
         alt: 'Cursa Top Manta a Barcelona',
+        historia: [
+          'Barcelona, 2015. Un grup de venedors ambulants, majoritàriament migrants de l’Àfrica occidental, s’organitza en el Sindicat Popular de Venedors Ambulants per defensar-se del racisme institucional, la persecució i la criminalització de la seva manera de guanyar-se la vida a la manta.',
+          'El 2017 el sindicat llança la seva pròpia marca, Top Manta: roba legal feta per gent il·legal. És una cooperativa amb tallers de costura i serigrafia i una botiga al Raval on dissenyen i fabriquen roba, sabatilles i equipament esportiu. El seu logotip uneix la forma d’una manta i la d’un caiuc, el mateix amb què molts van creuar el mar.',
+          'Més que una marca, és una comunitat: busca una feina digna i amb papers que tregui la gent del carrer, i sosté suport legal, esport antiracista (el futbol i la cursa) i una lluita diària per la dignitat. Aquesta sèrie retrata aquell pols, del taller al carrer.',
+        ],
+        fuente: {
+          texto: 'Top Manta · Sindicat Popular de Venedors Ambulants',
+          url: 'https://www.instagram.com/topmanta_bcn/',
+        },
       },
       musica: {
         titulo: 'Música',
@@ -391,6 +409,15 @@ export const textos: Record<Idioma, Textos> = {
         titulo: 'Top Manta',
         nota: 'Cursa Top Manta und antirassistischer Lauf, Barcelona',
         alt: 'Cursa Top Manta in Barcelona',
+        historia: [
+          'Barcelona, 2015. Eine Gruppe von Straßenverkäufern, überwiegend Migranten aus Westafrika, schließt sich in der Sindicat Popular de Venedors Ambulants (Volksgewerkschaft der Straßenverkäufer) zusammen, um sich gegen institutionellen Rassismus, Verfolgung und die Kriminalisierung ihres Broterwerbs auf der Decke zu wehren.',
+          '2017 bringt die Gewerkschaft ihre eigene Marke heraus: Top Manta, „legale Kleidung von illegalen Menschen“. Es ist eine Kooperative mit Näh- und Siebdruckwerkstätten und einem Laden im Viertel Raval, wo sie Kleidung, Sneaker und Sportbekleidung entwerfen und herstellen. Ihr Logo verbindet die Form einer Decke mit der eines Cayucos, jenes Boots, mit dem viele das Meer überquerten.',
+          'Mehr als eine Marke ist es eine Gemeinschaft: Sie sucht würdige, legale Arbeit, die die Menschen von der Straße holt, und trägt Rechtshilfe, antirassistischen Sport (Fußball und den Lauf) und einen täglichen Kampf um die Würde. Diese Serie zeigt diesen Puls, von der Werkstatt bis auf die Straße.',
+        ],
+        fuente: {
+          texto: 'Top Manta · Sindicat Popular de Venedors Ambulants',
+          url: 'https://www.instagram.com/topmanta_bcn/',
+        },
       },
       musica: {
         titulo: 'Musik',
