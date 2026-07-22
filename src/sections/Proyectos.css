@@ -1,7 +1,28 @@
-.proyectos-intro {
-  color: var(--gris);
+.lista-proy-cabecera {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--e-7) var(--e-4) var(--e-5);
+  text-align: center;
+}
+
+.lista-proy-h1 {
+  font-size: var(--t-xl);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin: 0;
+}
+
+.lista-proy-intro {
+  margin: var(--e-3) auto 0;
   max-width: 52ch;
-  margin: calc(var(--e-4) * -1) 0 var(--e-6);
+  color: var(--gris);
+}
+
+.lista-proy-lista {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 var(--e-4) var(--e-7);
 }
 
 .lista-proy + .lista-proy {
@@ -32,7 +53,6 @@
 }
 
 .lista-proy-titulo {
-  /* un escalon por debajo de los titulos de Trabajo: aqui manda la portada */
   font-size: clamp(1.8rem, 4vw, 2.4rem);
   font-weight: 700;
   letter-spacing: -0.025em;

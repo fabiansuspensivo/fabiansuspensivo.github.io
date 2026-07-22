@@ -70,13 +70,14 @@ y publicar el primer proyecto de autor.
 Entregable: pestaña "Proyectos" en la navegación, seccion `#proyectos` en la portada
 (`src/sections/Proyectos.tsx` y `.css`), serie `la-playa-que-desaparece` con 14 fotos
 en `public/fotos/` y textos en es, ca y de.
-Hecho cuando: la pestaña Proyectos lleva al apartado, el proyecto abre en `#/p/...` y
-las 14 fotos cargan en los tres idiomas.
+Hecho cuando: la pestaña Proyectos abre su propia pagina `#/proyectos`, desde ahi se entra
+al proyecto en `#/p/...` y las 14 fotos cargan en los tres idiomas.
 Notas: las fotos salieron del album compartido de Google Fotos "LA PLAYA QUE DESAPARECE"
 (nov 2023 a jun 2024, 196 fotos); Fabian eligio 14 con una hoja de contacto con casillas.
-El texto del proyecto es suyo, tal cual lo escribio en la portada del album. Decision suya
-del 2026-07-22: **cada proyecto aparece una sola vez**; El Ball de Nuria se queda arriba en
-Trabajo y NO se repite en Proyectos. Ojo al tocar estilos: la pagina de proyecto
+El texto del proyecto es suyo, tal cual lo escribio en la portada del album. Decisiones suyas del 2026-07-22: **cada proyecto aparece una sola vez**; El Ball de Nuria se
+queda arriba en Trabajo y NO se repite en Proyectos; y **Proyectos NO es una seccion de la
+portada**, es una pagina aparte a la que se llega desde la pestaña, porque no quiere obra de
+autor colgando al final del inicio. Ojo al tocar estilos: la pagina de proyecto
 (`Proyecto.css`) ya usaba `.proyecto-titulo` y compania, por eso el listado usa el prefijo
 `.lista-proy-`.
 

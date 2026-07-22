@@ -37,7 +37,7 @@ export default function Header() {
               ) : (
                 <a href="#trabajo">{t.nav.trabajo}</a>
               ))}
-            {proyectos.length > 0 && <a href="#proyectos">{t.nav.proyectos}</a>}
+            {proyectos.length > 0 && <a href="/#/proyectos">{t.nav.proyectos}</a>}
             <a href="#sobre">{t.nav.sobre}</a>
             <a href="#contacto">{t.nav.contacto}</a>
           </nav>

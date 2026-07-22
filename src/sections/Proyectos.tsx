@@ -1,26 +1,50 @@
 import { series } from '../data/galeria'
 import { useIdioma } from '../i18n/idioma'
+import type { Idioma } from '../i18n/textos'
+import Puntos from '../components/Puntos'
 import './Proyectos.css'
 
-// Apartado de obra de autor. A diferencia de Trabajo, aqui no hay visor: cada
-// proyecto se presenta con su foto de portada y su texto, y el enlace lleva a
-// la pagina completa del proyecto.
+const IDIOMAS: Idioma[] = ['es', 'ca', 'de']
+
+// Pagina propia de obra de autor (#/proyectos). No vive en la portada: se llega
+// desde la pestaña Proyectos y desde aqui se entra a cada proyecto.
 export default function Proyectos() {
-  const { t } = useIdioma()
+  const { idioma, t, cambiarIdioma } = useIdioma()
   const proyectos = series.filter((s) => s.proyecto)
-  if (proyectos.length === 0) return null
 
   return (
-    <section className="seccion" id="proyectos">
-      <div className="contenedor">
-        <h2 className="titulo-seccion">{t.proyectos.titulo}</h2>
-        <p className="proyectos-intro">{t.proyectos.intro}</p>
+    <div className="proyecto">
+      <header className="proyecto-barra">
+        <a href="/" className="wordmark" aria-label="Inicio">
+          <img src="/logo-s.png" alt="" className="logo-s" width="48" height="48" />
+          suspensivo
+          <Puntos />
+        </a>
+        <div className="idiomas" role="group" aria-label="Idioma">
+          {IDIOMAS.map((cod) => (
+            <button
+              key={cod}
+              type="button"
+              className={cod === idioma ? 'idioma activo' : 'idioma'}
+              onClick={() => cambiarIdioma(cod)}
+            >
+              {cod.toUpperCase()}
+            </button>
+          ))}
+        </div>
+      </header>
 
+      <div className="lista-proy-cabecera">
+        <h1 className="lista-proy-h1">{t.proyectos.titulo}</h1>
+        <p className="lista-proy-intro">{t.proyectos.intro}</p>
+      </div>
+
+      <div className="lista-proy-lista">
         {proyectos.map((serie) => {
           const texto = t.series[serie.id]
           const portada = serie.fotos[0]
           return (
-            <article className="lista-proy" id={`proy-${serie.id}`} key={serie.id}>
+            <article className="lista-proy" key={serie.id}>
               <a className="lista-proy-portada" href={`/#/p/${serie.id}`}>
                 <img
                   src={portada.src}
@@ -31,9 +55,9 @@ export default function Proyectos() {
                 />
               </a>
               <div className="lista-proy-texto">
-                <h3 className="lista-proy-titulo">
+                <h2 className="lista-proy-titulo">
                   <a href={`/#/p/${serie.id}`}>{texto.titulo}</a>
-                </h3>
+                </h2>
                 {texto.subtitulo ? <p className="lista-proy-fecha">{texto.subtitulo}</p> : null}
                 <p className="lista-proy-resumen">{texto.resumen ?? texto.nota}</p>
                 <a className="lista-proy-ver" href={`/#/p/${serie.id}`}>
@@ -47,6 +71,6 @@ export default function Proyectos() {
           )
         })}
       </div>
-    </section>
+    </div>
   )
 }
