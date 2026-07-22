@@ -9,7 +9,10 @@ const IDIOMAS: Idioma[] = ['es', 'ca', 'de']
 export default function Header() {
   const { idioma, t, cambiarIdioma } = useIdioma()
   const visibles = series.filter((s) => !s.oculto)
-  const ocultos = series.filter((s) => s.oculto)
+  // en el menu de Trabajo solo las series sueltas que no salen en portada;
+  // la obra de autor tiene su propio apartado
+  const ocultos = series.filter((s) => s.oculto && !s.proyecto)
+  const proyectos = series.filter((s) => s.proyecto)
   return (
     <header className="cabecera">
       <div className="contenedor cabecera-fila">
@@ -34,6 +37,7 @@ export default function Header() {
               ) : (
                 <a href="#trabajo">{t.nav.trabajo}</a>
               ))}
+            {proyectos.length > 0 && <a href="#proyectos">{t.nav.proyectos}</a>}
             <a href="#sobre">{t.nav.sobre}</a>
             <a href="#contacto">{t.nav.contacto}</a>
           </nav>

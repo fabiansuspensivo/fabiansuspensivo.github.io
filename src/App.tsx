@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import Header from './sections/Header'
 import Hero from './sections/Hero'
 import Trabajo from './sections/Trabajo'
+import Proyectos from './sections/Proyectos'
 import Sobre from './sections/Sobre'
 import Contacto from './sections/Contacto'
 import Footer from './sections/Footer'
@@ -33,6 +34,7 @@ export default function App() {
       <main>
         <Hero />
         <Trabajo />
+        <Proyectos />
         <Sobre />
         <Contacto />
       </main>

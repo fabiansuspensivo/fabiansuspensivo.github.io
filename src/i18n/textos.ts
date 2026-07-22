@@ -13,7 +13,7 @@ export type SerieTexto = {
 
 export type Textos = {
   meta: { titulo: string; descripcion: string }
-  nav: { trabajo: string; sobre: string; cv: string; contacto: string }
+  nav: { trabajo: string; proyectos: string; sobre: string; cv: string; contacto: string }
   hero: { sub: string }
   trabajo: {
     titulo: string
@@ -25,6 +25,7 @@ export type Textos = {
     copiado: string
     verProyecto: string
   }
+  proyectos: { titulo: string; intro: string; ver: string }
   sobre: { titulo: string; p1: string; p2: string }
   cv: {
     titulo: string
@@ -50,7 +51,7 @@ export const textos: Record<Idioma, Textos> = {
       descripcion:
         'Fabian Suspensivo, fotógrafo chileno/catalán en Barcelona. Conciertos, sesiones a artistas y fotoperiodismo. Publicado en Der Spiegel. Colaboración con Open Arms.',
     },
-    nav: { trabajo: 'Trabajo', sobre: 'Sobre mí', cv: 'CV', contacto: 'Contacto' },
+    nav: { trabajo: 'Trabajo', proyectos: 'Proyectos', sobre: 'Sobre mí', cv: 'CV', contacto: 'Contacto' },
     hero: {
       sub: 'Fotógrafo. Conciertos, sesiones a artistas y fotoperiodismo. Barcelona.',
     },
@@ -63,6 +64,11 @@ export const textos: Record<Idioma, Textos> = {
       compartir: 'Compartir',
       copiado: 'Enlace copiado',
       verProyecto: 'Ver el proyecto',
+    },
+    proyectos: {
+      titulo: 'Proyectos',
+      intro: 'Trabajo de autor: series largas, hechas por decisión propia y sin encargo.',
+      ver: 'Ver el proyecto',
     },
     sobre: {
       titulo: 'Sobre mí',
@@ -102,6 +108,17 @@ export const textos: Record<Idioma, Textos> = {
       escribeme: 'Escríbeme',
     },
     series: {
+      'la-playa-que-desaparece': {
+        titulo: 'La playa que desaparece',
+        subtitulo: 'Noviembre de 2023 a junio de 2024.',
+        nota: 'Turismo masivo y erosión de la costa mediterránea.',
+        alt: 'La playa que desaparece: erosión de la costa mediterránea, proyecto documental de Fabian Suspensivo',
+        resumen:
+          'Todo acaba, todo tiene un fin, pero no muchas cosas desaparecen y vuelven a aparecer.',
+        historia: [
+          'Todo acaba, todo tiene un fin, pero no muchas cosas desaparecen y vuelven a aparecer. La playa que desaparece es una representación visual del problema que genera el turismo masivo en algunas de las playas del Mediterráneo y cómo el comportamiento de la costa afecta la vida de los habitantes, la fauna y el ecosistema en general de estos pueblos.',
+        ],
+      },
       'bodas': {
         titulo: 'Bodas',
         nota: 'Fotografía de bodas',
@@ -179,7 +196,7 @@ export const textos: Record<Idioma, Textos> = {
       descripcion:
         'Fabian Suspensivo, fotògraf xilè/català a Barcelona. Concerts, sessions a artistes i fotoperiodisme. Publicat a Der Spiegel. Col·laboració amb Open Arms.',
     },
-    nav: { trabajo: 'Treball', sobre: 'Sobre mi', cv: 'CV', contacto: 'Contacte' },
+    nav: { trabajo: 'Treball', proyectos: 'Projectes', sobre: 'Sobre mi', cv: 'CV', contacto: 'Contacte' },
     hero: {
       sub: 'Fotògraf. Concerts, sessions a artistes i fotoperiodisme. Barcelona.',
     },
@@ -192,6 +209,11 @@ export const textos: Record<Idioma, Textos> = {
       compartir: 'Comparteix',
       copiado: 'Enllaç copiat',
       verProyecto: 'Veure el projecte',
+    },
+    proyectos: {
+      titulo: 'Projectes',
+      intro: "Treball d'autor: sèries llargues, fetes per decisió pròpia i sense encàrrec.",
+      ver: 'Veure el projecte',
     },
     sobre: {
       titulo: 'Sobre mi',
@@ -231,6 +253,17 @@ export const textos: Record<Idioma, Textos> = {
       escribeme: 'Escriu-me',
     },
     series: {
+      'la-playa-que-desaparece': {
+        titulo: 'La platja que desapareix',
+        subtitulo: 'De novembre del 2023 a juny del 2024.',
+        nota: 'Turisme massiu i erosió de la costa mediterrània.',
+        alt: 'La platja que desapareix: erosió de la costa mediterrània, projecte documental de Fabian Suspensivo',
+        resumen:
+          'Tot s\u2019acaba, tot té un final, però no gaires coses desapareixen i tornen a aparèixer.',
+        historia: [
+          'Tot s\u2019acaba, tot té un final, però no gaires coses desapareixen i tornen a aparèixer. La platja que desapareix és una representació visual del problema que genera el turisme massiu en algunes de les platges del Mediterrani i de com el comportament de la costa afecta la vida dels habitants, la fauna i l\u2019ecosistema en general d\u2019aquests pobles.',
+        ],
+      },
       'bodas': {
         titulo: 'Casaments',
         nota: 'Fotografia de casaments',
@@ -308,7 +341,7 @@ export const textos: Record<Idioma, Textos> = {
       descripcion:
         'Fabian Suspensivo, chilenisch-katalanischer Fotograf in Barcelona. Konzerte, Künstlersessions und Fotojournalismus. Veröffentlicht im Spiegel. Zusammenarbeit mit Open Arms.',
     },
-    nav: { trabajo: 'Arbeit', sobre: 'Über mich', cv: 'CV', contacto: 'Kontakt' },
+    nav: { trabajo: 'Arbeit', proyectos: 'Projekte', sobre: 'Über mich', cv: 'CV', contacto: 'Kontakt' },
     hero: {
       sub: 'Fotograf. Konzerte, Künstlersessions und Fotojournalismus. Barcelona.',
     },
@@ -321,6 +354,11 @@ export const textos: Record<Idioma, Textos> = {
       compartir: 'Teilen',
       copiado: 'Link kopiert',
       verProyecto: 'Projekt ansehen',
+    },
+    proyectos: {
+      titulo: 'Projekte',
+      intro: 'Autorenarbeit: lange Serien, aus eigenem Antrieb und ohne Auftrag entstanden.',
+      ver: 'Projekt ansehen',
     },
     sobre: {
       titulo: 'Über mich',
@@ -360,6 +398,17 @@ export const textos: Record<Idioma, Textos> = {
       escribeme: 'Schreib mir',
     },
     series: {
+      'la-playa-que-desaparece': {
+        titulo: 'Der Strand, der verschwindet',
+        subtitulo: 'November 2023 bis Juni 2024.',
+        nota: 'Massentourismus und Erosion der Mittelmeerküste.',
+        alt: 'Der Strand, der verschwindet: Erosion der Mittelmeerküste, Dokumentarprojekt von Fabian Suspensivo',
+        resumen:
+          'Alles endet, alles hat ein Ende, aber nur wenige Dinge verschwinden und tauchen wieder auf.',
+        historia: [
+          'Alles endet, alles hat ein Ende, aber nur wenige Dinge verschwinden und tauchen wieder auf. Der Strand, der verschwindet ist eine visuelle Darstellung des Problems, das der Massentourismus an einigen Stränden des Mittelmeers verursacht, und davon, wie das Verhalten der Küste das Leben der Bewohner, die Tierwelt und das Ökosystem dieser Orte insgesamt beeinflusst.',
+        ],
+      },
       'bodas': {
         titulo: 'Hochzeiten',
         nota: 'Hochzeitsfotografie',

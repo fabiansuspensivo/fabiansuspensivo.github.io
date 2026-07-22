@@ -1,0 +1,90 @@
+.proyectos-intro {
+  color: var(--gris);
+  max-width: 52ch;
+  margin: calc(var(--e-4) * -1) 0 var(--e-6);
+}
+
+.lista-proy + .lista-proy {
+  margin-top: var(--e-7);
+  padding-top: var(--e-6);
+  border-top: 1px solid var(--linea);
+}
+
+.lista-proy-portada {
+  display: block;
+  background: #141414;
+}
+
+.lista-proy-portada img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.35s ease;
+}
+
+.lista-proy-portada:hover img {
+  opacity: 0.88;
+}
+
+.lista-proy-texto {
+  margin-top: var(--e-4);
+  max-width: 56ch;
+}
+
+.lista-proy-titulo {
+  /* un escalon por debajo de los titulos de Trabajo: aqui manda la portada */
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  margin: 0;
+}
+
+.lista-proy-titulo a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.lista-proy-titulo a:hover {
+  color: var(--rojo);
+}
+
+.lista-proy-fecha {
+  margin: var(--e-2) 0 0;
+  font-size: var(--t-meta);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gris);
+}
+
+.lista-proy-resumen {
+  margin: var(--e-3) 0 0;
+  font-size: var(--t-md);
+  line-height: 1.5;
+  color: var(--tinta);
+}
+
+.lista-proy-ver {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: var(--e-4);
+  font-size: var(--t-meta);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--tinta);
+  text-decoration: none;
+  border-bottom: 1px solid var(--linea);
+  padding-bottom: 4px;
+}
+
+.lista-proy-ver:hover {
+  color: var(--rojo);
+  border-bottom-color: var(--rojo);
+}
+
+@media (min-width: 900px) {
+  .lista-proy-texto {
+    margin-top: var(--e-5);
+  }
+}

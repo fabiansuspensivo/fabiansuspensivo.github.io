@@ -10,11 +10,15 @@ export type Foto = {
 export type Serie = {
   id: string
   fotos: Foto[]
+  // oculto: no sale en la galeria de Trabajo de la portada
   oculto?: boolean
+  // proyecto: obra de autor; sale en el apartado Proyectos
+  proyecto?: boolean
 }
 
 export const series: Serie[] = [
   {
+    // sale una sola vez, arriba en Trabajo: no se repite en Proyectos
     id: 'ball-de-nuria',
     fotos: [
       { src: '/fotos/ball-de-nuria-01.jpg', w: 2000, h: 1333 },
@@ -30,6 +34,27 @@ export const series: Serie[] = [
       { src: '/fotos/ball-de-nuria-11.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ball-de-nuria-12.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ball-de-nuria-13.jpg', w: 2000, h: 1333 },
+    ],
+  },
+  {
+    id: 'la-playa-que-desaparece',
+    proyecto: true,
+    oculto: true,
+    fotos: [
+      { src: '/fotos/la-playa-que-desaparece-01.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/la-playa-que-desaparece-02.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/la-playa-que-desaparece-03.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/la-playa-que-desaparece-04.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/la-playa-que-desaparece-05.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/la-playa-que-desaparece-06.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/la-playa-que-desaparece-07.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/la-playa-que-desaparece-08.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/la-playa-que-desaparece-09.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/la-playa-que-desaparece-10.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/la-playa-que-desaparece-11.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/la-playa-que-desaparece-12.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/la-playa-que-desaparece-13.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/la-playa-que-desaparece-14.jpg', w: 2000, h: 1333 },
     ],
   },
   {
