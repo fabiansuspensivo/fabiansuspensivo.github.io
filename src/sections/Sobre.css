@@ -60,8 +60,25 @@
     grid-template-columns: 1fr;
     gap: var(--e-5);
   }
+  /* Solo en movil: se fija el ALTO del marco, no el ancho. La foto rota entre
+     formatos vertical y horizontal; sin esto el alto cambia y la pagina salta.
+     Con el alto fijo el marco abraza cada foto (el ancho sigue a la foto y queda
+     centrado), asi el paspartu blanco es uniforme en los cuatro lados y las fotos
+     NO se recortan. El 56vw deja caber de ancho hasta las horizontales; el tope de
+     320px evita que crezca demasiado en pantallas anchas. La version de ordenador
+     no se toca. */
+  .sobre-rotador {
+    box-sizing: border-box;
+    width: auto;
+    max-width: 100%;
+    height: min(56vw, 320px);
+  }
   .sobre-rotador img {
-    max-height: 56vh;
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    max-height: none;
+    object-fit: contain;
   }
 }
 

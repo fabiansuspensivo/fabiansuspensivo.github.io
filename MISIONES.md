@@ -114,3 +114,9 @@ Ajustes del 2026-07-23 (todos pedidos por Fabian, ya en vivo):
 - El texto de cada proyecto (`.proyecto-historia`) va enmarcado con el mismo marco de doble
   linea que la biografia (`.sobre-texto`): borde exterior `--gris` y borde interior `--linea`
   a 8px.
+- Biografia (Sobre mi), SOLO en movil (la version de ordenador NO se toca): la foto rota
+  entre formatos vertical y horizontal y la pagina saltaba. Arreglo en el `@media (max-width:
+  720px)` de `Sobre.css`: se fija el ALTO del marco (`height: min(56vw, 320px)`) y el ancho
+  sigue a cada foto (`width:auto`, centrado). Asi el hueco no cambia de alto (no salta), el
+  paspartu blanco queda uniforme en los cuatro lados y las fotos no se recortan
+  (`object-fit: contain`). El 56vw garantiza que las horizontales quepan de ancho.
