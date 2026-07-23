@@ -1,38 +1,17 @@
 import { series } from '../data/galeria'
 import { useIdioma } from '../i18n/idioma'
-import type { Idioma } from '../i18n/textos'
-import Puntos from '../components/Puntos'
+import BarraProyecto from './BarraProyecto'
 import './Proyectos.css'
-
-const IDIOMAS: Idioma[] = ['es', 'ca', 'de']
 
 // Pagina propia de obra de autor (#/proyectos). No vive en la portada: se llega
 // desde la pestaña Proyectos y desde aqui se entra a cada proyecto.
 export default function Proyectos() {
-  const { idioma, t, cambiarIdioma } = useIdioma()
+  const { t } = useIdioma()
   const proyectos = series.filter((s) => s.proyecto)
 
   return (
     <div className="proyecto">
-      <header className="proyecto-barra">
-        <a href="/" className="wordmark" aria-label="Inicio">
-          <img src="/logo-s.png" alt="" className="logo-s" width="48" height="48" />
-          suspensivo
-          <Puntos />
-        </a>
-        <div className="idiomas" role="group" aria-label="Idioma">
-          {IDIOMAS.map((cod) => (
-            <button
-              key={cod}
-              type="button"
-              className={cod === idioma ? 'idioma activo' : 'idioma'}
-              onClick={() => cambiarIdioma(cod)}
-            >
-              {cod.toUpperCase()}
-            </button>
-          ))}
-        </div>
-      </header>
+      <BarraProyecto />
 
       <div className="lista-proy-cabecera">
         <h1 className="lista-proy-h1">{t.proyectos.titulo}</h1>

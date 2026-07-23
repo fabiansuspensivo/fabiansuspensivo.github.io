@@ -1,15 +1,13 @@
 import { useCallback, useEffect, useState } from 'react'
 import { series } from '../data/galeria'
 import { useIdioma } from '../i18n/idioma'
-import Puntos from '../components/Puntos'
+import BarraProyecto from './BarraProyecto'
 import './Proyecto.css'
-
-const IDIOMAS = ['es', 'ca', 'de'] as const
 
 // Pagina dedicada a un solo proyecto: intro (titulo, subtitulo, historia) y las
 // fotos en scroll vertical. Al pulsar una foto se abre a pantalla completa.
 export default function Proyecto({ id }: { id: string }) {
-  const { t, idioma, cambiarIdioma } = useIdioma()
+  const { t } = useIdioma()
   const serie = series.find((s) => s.id === id)
   const [abierta, setAbierta] = useState<number | null>(null)
 
@@ -52,36 +50,14 @@ export default function Proyecto({ id }: { id: string }) {
   if (!serie || !texto) {
     return (
       <div className="proyecto proyecto-vacio">
-        <a href="/" className="wordmark">
-          <img src="/logo-s.png" alt="" className="logo-s" width="48" height="48" />
-          suspensivo
-          <Puntos />
-        </a>
+        <BarraProyecto />
       </div>
     )
   }
 
   return (
     <div className="proyecto">
-      <header className="proyecto-barra">
-        <a href="/" className="wordmark" aria-label="Inicio">
-          <img src="/logo-s.png" alt="" className="logo-s" width="48" height="48" />
-          suspensivo
-          <Puntos />
-        </a>
-        <div className="idiomas" role="group" aria-label="Idioma">
-          {IDIOMAS.map((cod) => (
-            <button
-              key={cod}
-              type="button"
-              className={cod === idioma ? 'idioma activo' : 'idioma'}
-              onClick={() => cambiarIdioma(cod)}
-            >
-              {cod.toUpperCase()}
-            </button>
-          ))}
-        </div>
-      </header>
+      <BarraProyecto />
 
       <div className="proyecto-intro">
         <h1 className="proyecto-titulo">{texto.titulo}</h1>

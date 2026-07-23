@@ -46,12 +46,24 @@
 }
 
 .proyecto-historia {
+  position: relative;
   max-width: 62ch;
   margin: var(--e-5) auto 0;
   text-align: left;
   font-size: 1.05rem;
   line-height: 1.75;
   color: var(--tinta);
+  /* mismo marco de doble linea que la biografia (seccion Sobre mi) */
+  padding: clamp(24px, 4vw, 56px);
+  border: 1px solid var(--gris);
+}
+
+.proyecto-historia::before {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border: 1px solid var(--linea);
+  pointer-events: none;
 }
 
 .proyecto-historia p + p {

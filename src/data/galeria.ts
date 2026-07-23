@@ -18,8 +18,9 @@ export type Serie = {
 
 export const series: Serie[] = [
   {
-    // sale una sola vez, arriba en Trabajo: no se repite en Proyectos
+    // sale al inicio, en Trabajo, y tambien en el apartado Proyectos (obra de autor)
     id: 'ball-de-nuria',
+    proyecto: true,
     fotos: [
       { src: '/fotos/ball-de-nuria-01.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ball-de-nuria-02.jpg', w: 2000, h: 1333 },

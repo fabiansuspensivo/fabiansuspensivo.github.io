@@ -37,7 +37,18 @@ export default function Header() {
               ) : (
                 <a href="#trabajo">{t.nav.trabajo}</a>
               ))}
-            {proyectos.length > 0 && <a href="/#/proyectos">{t.nav.proyectos}</a>}
+            {proyectos.length > 0 && (
+              <div className="nav-trabajo">
+                <a href="/#/proyectos">{t.nav.proyectos}</a>
+                <div className="nav-menu" role="menu">
+                  {proyectos.map((s) => (
+                    <a key={s.id} role="menuitem" href={`/#/p/${s.id}`}>
+                      {t.series[s.id].titulo}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
             <a href="#sobre">{t.nav.sobre}</a>
             <a href="#contacto">{t.nav.contacto}</a>
           </nav>

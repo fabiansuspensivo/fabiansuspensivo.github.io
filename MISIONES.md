@@ -99,3 +99,18 @@ Hecho cuando: decisión tomada y anotada aquí.
 Misiones de la marca de servicios (Cataluña) viven aparte y parten cuando el portafolio
 esté publicado: naming e identidad, landing con una sola llamada a la acción, copy es-ES y
 catalán, SEO local.
+
+Ajustes del 2026-07-23 (todos pedidos por Fabian, ya en vivo):
+- Proyectos NO es seccion de la portada: es su propia pagina en `#/proyectos`
+  (`App.tsx` la enruta como las paginas de proyecto). La portada solo tiene Hero,
+  Trabajo, Sobre mi y Contacto.
+- La pestaña "Proyectos" abre un menu que se desliza (patron `.nav-trabajo`/`.nav-menu`
+  de Header) con los dos proyectos, para que la gente elija cual ver: El Ball de Nuria
+  y La playa que desaparece. Los dos tienen `proyecto: true`; Ball de Nuria ademas se
+  queda en Trabajo (no lleva `oculto`), La playa solo en Proyectos (`oculto`).
+- Barra compartida `BarraProyecto.tsx`: en cada pagina de proyecto y en la lista aparece
+  arriba la navegacion completa (logo a Inicio, Trabajo, Proyectos con su menu, Sobre mi,
+  Contacto), para poder volver siempre.
+- El texto de cada proyecto (`.proyecto-historia`) va enmarcado con el mismo marco de doble
+  linea que la biografia (`.sobre-texto`): borde exterior `--gris` y borde interior `--linea`
+  a 8px.
