@@ -120,3 +120,20 @@ Ajustes del 2026-07-23 (todos pedidos por Fabian, ya en vivo):
   sigue a cada foto (`width:auto`, centrado). Asi el hueco no cambia de alto (no salta), el
   paspartu blanco queda uniforme en los cuatro lados y las fotos no se recortan
   (`object-fit: contain`). El 56vw garantiza que las horizontales quepan de ancho.
+
+## SEO / posicionamiento en Google (2026-07-25)  [x]
+Objetivo: que encuentren a Fabián en Google (gratis) quien busca fotógrafo en Catalunya,
+comercial, conciertos, documental, foto fija.
+Entregable: SEO técnico en vivo. Hecho:
+- Título/meta por idioma con Catalunya + servicios (index.html, textos.ts).
+- Datos estructurados schema.org (Person + LocalBusiness/ProfessionalService + WebSite) en index.html.
+- Rutas reales indexables /proyectos/<id> (antes #/p/<id>, no indexables): App.tsx enruta por
+  pathname con compat de hash, vercel.json con rewrite SPA.
+- Metadatos por página (título, descripción, canonical, OG) fijados por ruta en App (fijarMeta).
+- sitemap.xml ampliado; IndexNow enviado (clave en public/, aviso a Bing y su red).
+Hecho cuando: rutas profundas devuelven 200 y sirven la web, estáticos intactos, datos
+estructurados servidos, sitemap con 4 URLs. VERIFICADO en vivo el 2026-07-25.
+Pendiente (necesita la cuenta de Fabián, ver studio/marketing/seo.md): Perfil de Empresa de
+Google, Search Console (+ verificación DNS por GoDaddy con su código), Bing, directorios,
+backlinks desde su trabajo publicado.
+Nota: hreflang real y prerender quedan como mejoras futuras (hoy los 3 idiomas comparten URL).
