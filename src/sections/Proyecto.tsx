@@ -13,14 +13,10 @@ export default function Proyecto({ id }: { id: string }) {
 
   const texto = serie ? t.series[serie.id] : undefined
 
+  // El titulo de la pestaña y el resto de metadatos los fija App (fijarMeta)
+  // segun la ruta, en el idioma activo. Aqui solo aseguramos empezar arriba.
   useEffect(() => {
-    if (!texto) return
-    const previo = document.title
-    document.title = `${texto.titulo} — Fabian Suspensivo`
     window.scrollTo(0, 0)
-    return () => {
-      document.title = previo
-    }
   }, [texto])
 
   const total = serie ? serie.fotos.length : 0

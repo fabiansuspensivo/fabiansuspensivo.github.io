@@ -40,12 +40,10 @@ export function ProveedorIdioma({ children }: { children: ReactNode }) {
   }, [])
 
   useEffect(() => {
-    const t = textos[idioma]
+    // El titulo, la descripcion, el canonical y las etiquetas Open Graph se fijan
+    // por RUTA en App (fijarMeta), para que cada pagina de proyecto tenga los
+    // suyos propios (clave para que Google indexe cada proyecto por separado).
     document.documentElement.lang = idioma
-    document.title = t.meta.titulo
-    document
-      .querySelector('meta[name="description"]')
-      ?.setAttribute('content', t.meta.descripcion)
   }, [idioma])
 
   return (

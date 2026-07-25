@@ -24,7 +24,7 @@ export default function Proyectos() {
           const portada = serie.fotos[0]
           return (
             <article className="lista-proy" key={serie.id}>
-              <a className="lista-proy-portada" href={`/#/p/${serie.id}`}>
+              <a className="lista-proy-portada" href={`/proyectos/${serie.id}`}>
                 <img
                   src={portada.src}
                   alt={texto.alt}
@@ -35,11 +35,11 @@ export default function Proyectos() {
               </a>
               <div className="lista-proy-texto">
                 <h2 className="lista-proy-titulo">
-                  <a href={`/#/p/${serie.id}`}>{texto.titulo}</a>
+                  <a href={`/proyectos/${serie.id}`}>{texto.titulo}</a>
                 </h2>
                 {texto.subtitulo ? <p className="lista-proy-fecha">{texto.subtitulo}</p> : null}
                 <p className="lista-proy-resumen">{texto.resumen ?? texto.nota}</p>
-                <a className="lista-proy-ver" href={`/#/p/${serie.id}`}>
+                <a className="lista-proy-ver" href={`/proyectos/${serie.id}`}>
                   {t.proyectos.ver}
                   <span className="serie-enlace-flecha" aria-hidden="true">
                     ↗

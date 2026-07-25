@@ -9,22 +9,140 @@
         background: #0b0b0b;
       }
     </style>
-    <title>Fabian Suspensivo — fotógrafo. Música y fotoperiodismo, Barcelona</title>
+
+    <title>Fabian Suspensivo · Fotógrafo documental y de conciertos en Barcelona (Catalunya)</title>
     <meta
       name="description"
-      content="Fabian Suspensivo, fotógrafo chileno/catalán en Barcelona. Conciertos, sesiones a artistas y fotoperiodismo. Publicado en Der Spiegel. Colaboración con Open Arms."
+      content="Fotógrafo en Barcelona, disponible en toda Catalunya. Fotografía documental y fotoperiodismo, cobertura de conciertos, foto fija, retrato de artistas y fotografía comercial. Publicado en Der Spiegel."
     />
-    <meta property="og:title" content="Fabian Suspensivo — fotógrafo" />
+    <meta
+      name="keywords"
+      content="fotógrafo Barcelona, fotógrafo Catalunya, fotografía documental, fotoperiodismo, fotografía de conciertos, foto fija, fotografía comercial, retrato de artistas, fotógrafo de prensa"
+    />
+    <meta name="author" content="Fabian Suspensivo" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+
+    <!-- Ubicacion (senal local para buscadores) -->
+    <meta name="geo.region" content="ES-CT" />
+    <meta name="geo.placename" content="Barcelona, Catalunya" />
+
+    <!-- Open Graph (al compartir en redes) -->
+    <meta property="og:site_name" content="Fabian Suspensivo" />
+    <meta property="og:title" content="Fabian Suspensivo · Fotógrafo en Barcelona (Catalunya)" />
     <meta
       property="og:description"
-      content="Conciertos, artistas y fotoperiodismo. Barcelona."
+      content="Fotografía documental, conciertos, foto fija, retrato de artistas y comercial. Barcelona y toda Catalunya."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://suspensivo.com/" />
     <meta property="og:image" content="https://suspensivo.com/og.png" />
+    <meta property="og:image:alt" content="Fabian Suspensivo, fotógrafo en Barcelona" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:locale:alternate" content="ca_ES" />
+    <meta property="og:locale:alternate" content="de_DE" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fabian Suspensivo · Fotógrafo en Barcelona (Catalunya)" />
+    <meta
+      name="twitter:description"
+      content="Fotografía documental, conciertos, foto fija, retrato y comercial. Barcelona y toda Catalunya."
+    />
+    <meta name="twitter:image" content="https://suspensivo.com/og.png" />
+
     <link rel="canonical" href="https://suspensivo.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://suspensivo.com/" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="apple-touch-icon" href="/icono-180.png" />
+
+    <!-- Datos estructurados (schema.org): le dicen a Google quien es Fabian,
+         donde trabaja y que servicios ofrece. Es la base para aparecer en
+         busquedas de "fotografo en Barcelona / Catalunya" y por servicio. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://suspensivo.com/#fabian",
+            "name": "Fabian Suspensivo",
+            "alternateName": "Fabián Suspensivo",
+            "url": "https://suspensivo.com/",
+            "image": "https://suspensivo.com/og.png",
+            "jobTitle": "Fotógrafo documental y fotoperiodista",
+            "description": "Fotógrafo documental y fotoperiodista en Barcelona (Catalunya). Fotografía documental, de conciertos, foto fija, retrato de artistas y fotografía comercial.",
+            "telephone": "+34722133162",
+            "email": "fabiansuspensivo@gmail.com",
+            "knowsLanguage": ["es", "ca", "en"],
+            "nationality": "Chilean",
+            "worksFor": { "@id": "https://suspensivo.com/#negocio" },
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Barcelona",
+              "addressRegion": "Catalunya",
+              "postalCode": "08028",
+              "addressCountry": "ES"
+            },
+            "knowsAbout": [
+              "Fotografía documental",
+              "Fotoperiodismo",
+              "Fotografía de conciertos",
+              "Foto fija de cine",
+              "Fotografía comercial",
+              "Retrato de artistas",
+              "Fotografía de prensa"
+            ],
+            "sameAs": ["https://www.instagram.com/suspensivof/"]
+          },
+          {
+            "@type": ["LocalBusiness", "ProfessionalService"],
+            "@id": "https://suspensivo.com/#negocio",
+            "name": "Fabian Suspensivo — Fotografía",
+            "image": "https://suspensivo.com/og.png",
+            "logo": "https://suspensivo.com/logo-s.png",
+            "url": "https://suspensivo.com/",
+            "telephone": "+34722133162",
+            "email": "fabiansuspensivo@gmail.com",
+            "priceRange": "€€",
+            "founder": { "@id": "https://suspensivo.com/#fabian" },
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Barcelona",
+              "addressRegion": "Catalunya",
+              "postalCode": "08028",
+              "addressCountry": "ES"
+            },
+            "areaServed": [
+              { "@type": "AdministrativeArea", "name": "Catalunya" },
+              { "@type": "City", "name": "Barcelona" },
+              { "@type": "Country", "name": "España" }
+            ],
+            "knowsLanguage": ["es", "ca", "en"],
+            "sameAs": ["https://www.instagram.com/suspensivof/"],
+            "description": "Fotógrafo en Barcelona, disponible en toda Catalunya. Fotografía documental y fotoperiodismo, cobertura de conciertos, foto fija, retrato de artistas y fotografía comercial.",
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Servicios de fotografía",
+              "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fotografía documental y fotoperiodismo" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fotografía de conciertos" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Foto fija para cine y publicidad" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Retrato de artistas y prensa" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fotografía comercial" } }
+              ]
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://suspensivo.com/#web",
+            "url": "https://suspensivo.com/",
+            "name": "Fabian Suspensivo",
+            "inLanguage": ["es", "ca", "de"],
+            "publisher": { "@id": "https://suspensivo.com/#fabian" }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

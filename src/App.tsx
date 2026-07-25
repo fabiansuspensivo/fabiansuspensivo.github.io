@@ -8,40 +8,98 @@ import Contacto from './sections/Contacto'
 import Footer from './sections/Footer'
 import Proyecto from './sections/Proyecto'
 import { series } from './data/galeria'
+import { useIdioma } from './i18n/idioma'
+import type { Textos } from './i18n/textos'
 
-// enrutado minimo por hash: #/p/<proyecto> abre la pagina dedicada a un proyecto
-function proyectoDelHash(): string | null {
-  const m = window.location.hash.match(/^#\/p\/(.+)$/)
-  if (!m) return null
-  const id = decodeURIComponent(m[1])
-  return series.some((s) => s.id === id) ? id : null
+type Ruta = { tipo: 'home' } | { tipo: 'lista' } | { tipo: 'proyecto'; id: string }
+
+// Enrutado por RUTA REAL (indexable por Google): /proyectos y /proyectos/<id>.
+// Se mantiene compatibilidad con los enlaces antiguos por hash (#/p/<id>,
+// #/proyectos) para que los links ya compartidos sigan funcionando.
+function rutaActual(): Ruta {
+  const p = window.location.pathname.replace(/\/+$/, '') || '/'
+  const mp = p.match(/^\/proyectos\/(.+)$/)
+  if (mp) {
+    const id = decodeURIComponent(mp[1])
+    if (series.some((s) => s.id === id)) return { tipo: 'proyecto', id }
+  }
+  if (p === '/proyectos') return { tipo: 'lista' }
+
+  const mh = window.location.hash.match(/^#\/p\/(.+)$/)
+  if (mh) {
+    const id = decodeURIComponent(mh[1])
+    if (series.some((s) => s.id === id)) return { tipo: 'proyecto', id }
+  }
+  if (/^#\/proyectos\/?$/.test(window.location.hash)) return { tipo: 'lista' }
+
+  return { tipo: 'home' }
 }
 
-// #/proyectos: el listado de obra de autor, que tampoco vive en la portada
-function esListaDeProyectos(): boolean {
-  return /^#\/proyectos\/?$/.test(window.location.hash)
+function fijarEtiqueta(selector: string, attr: string, valor: string) {
+  document.querySelector(selector)?.setAttribute(attr, valor)
+}
+
+// Fija titulo, descripcion, canonical y Open Graph segun la ruta. Asi cada
+// pagina de proyecto tiene metadatos unicos: Google puede indexarla por separado
+// y no la trata como copia de la portada.
+function fijarMeta(ruta: Ruta, t: Textos) {
+  const marca = 'Fabian Suspensivo'
+  const origin = window.location.origin
+  let titulo = t.meta.titulo
+  let desc = t.meta.descripcion
+  let url = origin + '/'
+  let imagen = origin + '/og.png'
+
+  if (ruta.tipo === 'proyecto') {
+    const st = t.series[ruta.id]
+    const serie = series.find((s) => s.id === ruta.id)
+    if (st) {
+      titulo = `${st.titulo} · ${marca}`
+      desc = st.resumen || st.nota || t.meta.descripcion
+    }
+    url = origin + '/proyectos/' + ruta.id
+    if (serie && serie.fotos[0]) imagen = origin + serie.fotos[0].src
+  } else if (ruta.tipo === 'lista') {
+    titulo = `${t.proyectos.titulo} · ${marca}`
+    desc = t.proyectos.intro
+    url = origin + '/proyectos'
+  }
+
+  document.title = titulo
+  fijarEtiqueta('meta[name="description"]', 'content', desc)
+  fijarEtiqueta('link[rel="canonical"]', 'href', url)
+  fijarEtiqueta('meta[property="og:title"]', 'content', titulo)
+  fijarEtiqueta('meta[property="og:url"]', 'content', url)
+  fijarEtiqueta('meta[property="og:description"]', 'content', desc)
+  fijarEtiqueta('meta[property="og:image"]', 'content', imagen)
 }
 
 export default function App() {
-  const [proyecto, setProyecto] = useState<string | null>(proyectoDelHash)
-  const [lista, setLista] = useState<boolean>(esListaDeProyectos)
+  const { t } = useIdioma()
+  const [ruta, setRuta] = useState<Ruta>(rutaActual)
 
   useEffect(() => {
-    const alCambiar = () => {
-      setProyecto(proyectoDelHash())
-      setLista(esListaDeProyectos())
-    }
+    const alCambiar = () => setRuta(rutaActual())
     window.addEventListener('hashchange', alCambiar)
-    return () => window.removeEventListener('hashchange', alCambiar)
+    window.addEventListener('popstate', alCambiar)
+    return () => {
+      window.removeEventListener('hashchange', alCambiar)
+      window.removeEventListener('popstate', alCambiar)
+    }
   }, [])
+
+  // metadatos por ruta e idioma
+  useEffect(() => {
+    fijarMeta(ruta, t)
+  }, [ruta, t])
 
   // al entrar a una pagina propia siempre se empieza arriba
   useEffect(() => {
-    if (proyecto || lista) window.scrollTo(0, 0)
-  }, [proyecto, lista])
+    if (ruta.tipo !== 'home') window.scrollTo(0, 0)
+  }, [ruta])
 
-  if (proyecto) return <Proyecto id={proyecto} />
-  if (lista) return <Proyectos />
+  if (ruta.tipo === 'proyecto') return <Proyecto id={ruta.id} />
+  if (ruta.tipo === 'lista') return <Proyectos />
 
   return (
     <>

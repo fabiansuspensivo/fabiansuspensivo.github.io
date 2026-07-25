@@ -47,9 +47,9 @@ export type Textos = {
 export const textos: Record<Idioma, Textos> = {
   es: {
     meta: {
-      titulo: 'Fabian Suspensivo — fotógrafo. Música y fotoperiodismo, Barcelona',
+      titulo: 'Fabian Suspensivo · Fotógrafo documental y de conciertos en Barcelona (Catalunya)',
       descripcion:
-        'Fabian Suspensivo, fotógrafo chileno/catalán en Barcelona. Conciertos, sesiones a artistas y fotoperiodismo. Publicado en Der Spiegel. Colaboración con Open Arms.',
+        'Fotógrafo en Barcelona, disponible en toda Catalunya. Fotografía documental y fotoperiodismo, conciertos, foto fija, retrato de artistas y fotografía comercial. Publicado en Der Spiegel.',
     },
     nav: { trabajo: 'Trabajo', proyectos: 'Proyectos', sobre: 'Sobre mí', cv: 'CV', contacto: 'Contacto' },
     hero: {
@@ -192,9 +192,9 @@ export const textos: Record<Idioma, Textos> = {
   },
   ca: {
     meta: {
-      titulo: 'Fabian Suspensivo — fotògraf. Música i fotoperiodisme, Barcelona',
+      titulo: 'Fabian Suspensivo · Fotògraf documental i de concerts a Barcelona (Catalunya)',
       descripcion:
-        'Fabian Suspensivo, fotògraf xilè/català a Barcelona. Concerts, sessions a artistes i fotoperiodisme. Publicat a Der Spiegel. Col·laboració amb Open Arms.',
+        'Fotògraf a Barcelona, disponible a tota Catalunya. Fotografia documental i fotoperiodisme, concerts, foto fixa, retrat d’artistes i fotografia comercial. Publicat a Der Spiegel.',
     },
     nav: { trabajo: 'Treball', proyectos: 'Projectes', sobre: 'Sobre mi', cv: 'CV', contacto: 'Contacte' },
     hero: {
@@ -337,9 +337,9 @@ export const textos: Record<Idioma, Textos> = {
   },
   de: {
     meta: {
-      titulo: 'Fabian Suspensivo — Fotograf. Musik und Fotojournalismus, Barcelona',
+      titulo: 'Fabian Suspensivo · Dokumentar- und Konzertfotograf in Barcelona (Katalonien)',
       descripcion:
-        'Fabian Suspensivo, chilenisch-katalanischer Fotograf in Barcelona. Konzerte, Künstlersessions und Fotojournalismus. Veröffentlicht im Spiegel. Zusammenarbeit mit Open Arms.',
+        'Fotograf in Barcelona, verfügbar in ganz Katalonien. Dokumentarfotografie und Fotojournalismus, Konzerte, Standfotografie, Künstlerporträts und Werbefotografie. Veröffentlicht im Spiegel.',
     },
     nav: { trabajo: 'Arbeit', proyectos: 'Projekte', sobre: 'Über mich', cv: 'CV', contacto: 'Kontakt' },
     hero: {

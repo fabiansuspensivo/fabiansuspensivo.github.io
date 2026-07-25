@@ -28,7 +28,7 @@ export default function Header() {
                   <a href="#trabajo">{t.nav.trabajo}</a>
                   <div className="nav-menu" role="menu">
                     {ocultos.map((s) => (
-                      <a key={s.id} role="menuitem" href={`/#/p/${s.id}`}>
+                      <a key={s.id} role="menuitem" href={`/proyectos/${s.id}`}>
                         {t.series[s.id].titulo}
                       </a>
                     ))}
@@ -39,10 +39,10 @@ export default function Header() {
               ))}
             {proyectos.length > 0 && (
               <div className="nav-trabajo">
-                <a href="/#/proyectos">{t.nav.proyectos}</a>
+                <a href="/proyectos">{t.nav.proyectos}</a>
                 <div className="nav-menu" role="menu">
                   {proyectos.map((s) => (
-                    <a key={s.id} role="menuitem" href={`/#/p/${s.id}`}>
+                    <a key={s.id} role="menuitem" href={`/proyectos/${s.id}`}>
                       {t.series[s.id].titulo}
                     </a>
                   ))}

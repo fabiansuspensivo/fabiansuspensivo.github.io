@@ -22,10 +22,10 @@ export default function BarraProyecto() {
           <a href="/#trabajo">{t.nav.trabajo}</a>
           {proyectos.length > 0 && (
             <div className="nav-trabajo">
-              <a href="/#/proyectos">{t.nav.proyectos}</a>
+              <a href="/proyectos">{t.nav.proyectos}</a>
               <div className="nav-menu" role="menu">
                 {proyectos.map((s) => (
-                  <a key={s.id} role="menuitem" href={`/#/p/${s.id}`}>
+                  <a key={s.id} role="menuitem" href={`/proyectos/${s.id}`}>
                     {t.series[s.id].titulo}
                   </a>
                 ))}
