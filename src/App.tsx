@@ -74,6 +74,50 @@ function fijarMeta(ruta: Ruta, t: Textos) {
   fijarEtiqueta('meta[property="og:image"]', 'content', imagen)
 }
 
+// Datos estructurados por PROYECTO: le dicen a Google que cada proyecto es una
+// obra fotografica documental de Fabian, en Catalunya, con sus temas. Ayuda a que
+// cada pagina de proyecto salga en las busquedas por su tema. Se inserta solo en
+// las paginas de proyecto y se retira en el resto.
+function fijarProyectoLd(ruta: Ruta, t: Textos) {
+  const ID = 'ld-proyecto'
+  const previo = document.getElementById(ID)
+  if (previo) previo.remove()
+  if (ruta.tipo !== 'proyecto') return
+  const st = t.series[ruta.id]
+  const serie = series.find((s) => s.id === ruta.id)
+  if (!st || !serie) return
+  const origin = window.location.origin
+  const datos = {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    '@id': origin + '/proyectos/' + ruta.id + '#obra',
+    name: st.titulo,
+    headline: st.titulo,
+    description: st.resumen || st.nota || '',
+    url: origin + '/proyectos/' + ruta.id,
+    inLanguage: document.documentElement.lang || 'es',
+    genre: ['Fotografía documental', 'Fotoperiodismo'],
+    keywords: [
+      'fotografía documental',
+      'fotoperiodismo',
+      'fotógrafo',
+      'Barcelona',
+      'Catalunya',
+    ],
+    author: { '@id': origin + '/#fabian' },
+    creator: { '@id': origin + '/#fabian' },
+    copyrightHolder: { '@id': origin + '/#fabian' },
+    contentLocation: { '@type': 'Place', name: 'Catalunya, España' },
+    isPartOf: { '@id': origin + '/#web' },
+    image: serie.fotos.slice(0, 6).map((f) => origin + f.src),
+  }
+  const el = document.createElement('script')
+  el.id = ID
+  el.type = 'application/ld+json'
+  el.textContent = JSON.stringify(datos)
+  document.head.appendChild(el)
+}
+
 export default function App() {
   const { t } = useIdioma()
   const [ruta, setRuta] = useState<Ruta>(rutaActual)
@@ -91,6 +135,7 @@ export default function App() {
   // metadatos por ruta e idioma
   useEffect(() => {
     fijarMeta(ruta, t)
+    fijarProyectoLd(ruta, t)
   }, [ruta, t])
 
   // al entrar a una pagina propia siempre se empieza arriba
