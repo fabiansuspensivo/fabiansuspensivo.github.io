@@ -119,6 +119,13 @@ export const textos: Record<Idioma, Textos> = {
           'Todo acaba, todo tiene un fin, pero no muchas cosas desaparecen y vuelven a aparecer. La playa que desaparece es una representación visual del problema que genera el turismo masivo en algunas de las playas del Mediterráneo y cómo el comportamiento de la costa afecta la vida de los habitantes, la fauna y el ecosistema en general de estos pueblos.',
         ],
       },
+      'comercial': {
+        titulo: 'Comercial',
+        nota: 'Retrato profesional, empresa y eventos. Barcelona.',
+        alt: 'Retrato profesional y fotografía para empresas, Fabian Suspensivo, Barcelona',
+        resumen:
+          'Retrato profesional, fotografía de empresa, ferias y eventos en Barcelona. El oficio viene del fotoperiodismo: buscar el momento real en vez de colocar a la gente delante del logo.',
+      },
       'bodas': {
         titulo: 'Bodas',
         nota: 'Fotografía de bodas',
@@ -264,6 +271,13 @@ export const textos: Record<Idioma, Textos> = {
           'Tot s\u2019acaba, tot té un final, però no gaires coses desapareixen i tornen a aparèixer. La platja que desapareix és una representació visual del problema que genera el turisme massiu en algunes de les platges del Mediterrani i de com el comportament de la costa afecta la vida dels habitants, la fauna i l\u2019ecosistema en general d\u2019aquests pobles.',
         ],
       },
+      'comercial': {
+        titulo: 'Comercial',
+        nota: 'Retrat professional, empresa i esdeveniments. Barcelona.',
+        alt: 'Retrat professional i fotografia per a empreses, Fabian Suspensivo, Barcelona',
+        resumen:
+          'Retrat professional, fotografia d’empresa, fires i esdeveniments a Barcelona. L’ofici ve del fotoperiodisme: buscar el moment real en comptes de posar la gent davant del logotip.',
+      },
       'bodas': {
         titulo: 'Casaments',
         nota: 'Fotografia de casaments',
@@ -408,6 +422,13 @@ export const textos: Record<Idioma, Textos> = {
         historia: [
           'Alles endet, alles hat ein Ende, aber nur wenige Dinge verschwinden und tauchen wieder auf. Der Strand, der verschwindet ist eine visuelle Darstellung des Problems, das der Massentourismus an einigen Stränden des Mittelmeers verursacht, und davon, wie das Verhalten der Küste das Leben der Bewohner, die Tierwelt und das Ökosystem dieser Orte insgesamt beeinflusst.',
         ],
+      },
+      'comercial': {
+        titulo: 'Business',
+        nota: 'Professionelle Porträts, Unternehmen und Events. Barcelona.',
+        alt: 'Professionelle Porträts und Unternehmensfotografie, Fabian Suspensivo, Barcelona',
+        resumen:
+          'Professionelle Porträts, Unternehmensfotografie, Messen und Events in Barcelona. Das Handwerk kommt aus dem Fotojournalismus: den echten Moment suchen, statt die Leute vor dem Logo aufzustellen.',
       },
       'bodas': {
         titulo: 'Hochzeiten',
