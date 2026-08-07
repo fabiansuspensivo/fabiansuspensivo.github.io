@@ -121,10 +121,10 @@ export const textos: Record<Idioma, Textos> = {
       },
       'comercial': {
         titulo: 'Comercial',
-        nota: 'Retrato profesional, empresa y eventos. Barcelona.',
+        nota: 'Retrato, producto y eventos de empresa. Barcelona.',
         alt: 'Retrato profesional y fotografía para empresas, Fabian Suspensivo, Barcelona',
         resumen:
-          'Retrato profesional, fotografía de empresa, ferias y eventos en Barcelona. El oficio viene del fotoperiodismo: buscar el momento real en vez de colocar a la gente delante del logo.',
+          'Retrato profesional, producto, juntas, presentaciones y ferias en Barcelona. El oficio viene del fotoperiodismo: buscar el momento real en vez de colocar a la gente delante del logo.',
       },
       'bodas': {
         titulo: 'Bodas',
@@ -273,10 +273,10 @@ export const textos: Record<Idioma, Textos> = {
       },
       'comercial': {
         titulo: 'Comercial',
-        nota: 'Retrat professional, empresa i esdeveniments. Barcelona.',
+        nota: 'Retrat, producte i esdeveniments d’empresa. Barcelona.',
         alt: 'Retrat professional i fotografia per a empreses, Fabian Suspensivo, Barcelona',
         resumen:
-          'Retrat professional, fotografia d’empresa, fires i esdeveniments a Barcelona. L’ofici ve del fotoperiodisme: buscar el moment real en comptes de posar la gent davant del logotip.',
+          'Retrat professional, producte, juntes, presentacions i fires a Barcelona. L’ofici ve del fotoperiodisme: buscar el moment real en comptes de posar la gent davant del logotip.',
       },
       'bodas': {
         titulo: 'Casaments',
@@ -425,10 +425,10 @@ export const textos: Record<Idioma, Textos> = {
       },
       'comercial': {
         titulo: 'Business',
-        nota: 'Professionelle Porträts, Unternehmen und Events. Barcelona.',
+        nota: 'Porträt, Produkt und Firmenevents. Barcelona.',
         alt: 'Professionelle Porträts und Unternehmensfotografie, Fabian Suspensivo, Barcelona',
         resumen:
-          'Professionelle Porträts, Unternehmensfotografie, Messen und Events in Barcelona. Das Handwerk kommt aus dem Fotojournalismus: den echten Moment suchen, statt die Leute vor dem Logo aufzustellen.',
+          'Professionelle Porträts, Produkt, Hauptversammlungen, Präsentationen und Messen in Barcelona. Das Handwerk kommt aus dem Fotojournalismus: den echten Moment suchen, statt die Leute vor dem Logo aufzustellen.',
       },
       'bodas': {
         titulo: 'Hochzeiten',
