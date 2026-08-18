@@ -30,11 +30,13 @@ export type Textos = {
   cv: {
     titulo: string
     bloques: {
+      exposiciones: string
       publicaciones: string
       organizaciones: string
       cine: string
       encurso: string
     }
+    perpinya: { titulo: string; detalle: string }
     spiegel: { titulo: string; detalle: string }
     openarms: { titulo: string; detalle: string }
     fotofija: { titulo: string; detalle: string }
@@ -73,15 +75,21 @@ export const textos: Record<Idioma, Textos> = {
     sobre: {
       titulo: 'Sobre mí',
       p1: 'Fabian Suspensivo es fotoperiodista y fotógrafo documental chileno/catalán, radicado en Barcelona. Fotografía la actualidad y los movimientos sociales de Catalunya, y su trabajo se extiende al retrato, la cobertura de conciertos y la foto fija para cine.',
-      p2: 'Autodidacta, ha colaborado con medios y organizaciones en Chile y en Europa, con publicaciones que incluyen Der Spiegel y colaboraciones como las de Open Arms y Top Manta. Trabaja con la mirada puesta en el reportaje para revistas, periódicos y agencias internacionales.',
+      p2: 'Autodidacta, ha colaborado con medios y organizaciones en Chile y en Europa, con publicaciones que incluyen Der Spiegel y colaboraciones como las de Open Arms y Top Manta. En 2026 expone «El Ball de Núria» en el festival OFF de Perpinyà, del 29 de agosto al 12 de septiembre, en paralelo a Visa pour l’Image. Trabaja con la mirada puesta en el reportaje para revistas, periódicos y agencias internacionales.',
     },
     cv: {
       titulo: 'CV',
       bloques: {
+        exposiciones: 'Exposiciones',
         publicaciones: 'Publicaciones',
         organizaciones: 'Organizaciones',
         cine: 'Cine y producción',
         encurso: 'En curso',
+      },
+      perpinya: {
+        titulo: 'Festival OFF de Perpinyà (Objectif Image Pays Catalan)',
+        detalle:
+          'Exposición de «El Ball de Núria», del 29 de agosto al 12 de septiembre de 2026, en una sala del Hôtel de Ville de Perpinyà. El festival OFF se celebra en paralelo a Visa pour l’Image.',
       },
       spiegel: {
         titulo: 'Der Spiegel (Alemania)',
@@ -133,7 +141,8 @@ export const textos: Record<Idioma, Textos> = {
       },
       'ball-de-nuria': {
         titulo: 'El Ball de Núria',
-        subtitulo: 'Este proyecto se expondrá en Perpinyà, en el festival OFF.',
+        subtitulo:
+          'Se expone del 29 de agosto al 12 de septiembre de 2026 en el festival OFF de Perpinyà, en paralelo a Visa pour l’Image.',
         nota: 'Núria, 85 años, y la vida después de Josep. Blanes.',
         alt: 'Núria, 85 años, en su casa de Blanes; ensayo documental El Ball de Núria',
         destacada: true,
@@ -225,15 +234,21 @@ export const textos: Record<Idioma, Textos> = {
     sobre: {
       titulo: 'Sobre mi',
       p1: 'Fabian Suspensivo és fotoperiodista i fotògraf documental xilè/català, resident a Barcelona. Fotografia l’actualitat i els moviments socials de Catalunya, i el seu treball s’estén al retrat, la cobertura de concerts i la foto fixa per a cinema.',
-      p2: 'Autodidacta, ha col·laborat amb mitjans i organitzacions a Xile i a Europa, amb publicacions que inclouen Der Spiegel i col·laboracions com les d’Open Arms i Top Manta. Treballa amb la mirada posada en el reportatge per a revistes, diaris i agències internacionals.',
+      p2: 'Autodidacta, ha col·laborat amb mitjans i organitzacions a Xile i a Europa, amb publicacions que inclouen Der Spiegel i col·laboracions com les d’Open Arms i Top Manta. El 2026 exposa «El Ball de Núria» al festival OFF de Perpinyà, del 29 d’agost al 12 de setembre, en paral·lel a Visa pour l’Image. Treballa amb la mirada posada en el reportatge per a revistes, diaris i agències internacionals.',
     },
     cv: {
       titulo: 'CV',
       bloques: {
+        exposiciones: 'Exposicions',
         publicaciones: 'Publicacions',
         organizaciones: 'Organitzacions',
         cine: 'Cinema i producció',
         encurso: 'En curs',
+      },
+      perpinya: {
+        titulo: 'Festival OFF de Perpinyà (Objectif Image Pays Catalan)',
+        detalle:
+          'Exposició d’«El Ball de Núria», del 29 d’agost al 12 de setembre de 2026, en una sala de l’Hôtel de Ville de Perpinyà. El festival OFF se celebra en paral·lel a Visa pour l’Image.',
       },
       spiegel: {
         titulo: 'Der Spiegel (Alemanya)',
@@ -285,7 +300,8 @@ export const textos: Record<Idioma, Textos> = {
       },
       'ball-de-nuria': {
         titulo: 'El Ball de Núria',
-        subtitulo: 'Aquest projecte s’exposarà a Perpinyà, al festival OFF.',
+        subtitulo:
+          'S’exposa del 29 d’agost al 12 de setembre de 2026 al festival OFF de Perpinyà, en paral·lel a Visa pour l’Image.',
         nota: 'La Núria, 85 anys, i la vida després d’en Josep. Blanes.',
         alt: 'La Núria, 85 anys, a casa seva a Blanes; assaig documental El Ball de Núria',
         destacada: true,
@@ -377,15 +393,21 @@ export const textos: Record<Idioma, Textos> = {
     sobre: {
       titulo: 'Über mich',
       p1: 'Fabian Suspensivo ist ein chilenisch-katalanischer Fotojournalist und Dokumentarfotograf mit Sitz in Barcelona. Er fotografiert das aktuelle Geschehen und die sozialen Bewegungen in Katalonien; seine Arbeit umfasst auch Porträts, Konzertfotografie und Standfotografie fürs Kino.',
-      p2: 'Als Autodidakt hat er mit Medien und Organisationen in Chile und Europa zusammengearbeitet, mit Veröffentlichungen unter anderem im Spiegel sowie Kooperationen wie mit Open Arms und Top Manta. Er arbeitet mit Blick auf Reportagen für Magazine, Zeitungen und internationale Agenturen.',
+      p2: 'Als Autodidakt hat er mit Medien und Organisationen in Chile und Europa zusammengearbeitet, mit Veröffentlichungen unter anderem im Spiegel sowie Kooperationen wie mit Open Arms und Top Manta. 2026 zeigt er «El Ball de Núria» beim OFF-Festival in Perpignan, vom 29. August bis 12. September, parallel zu Visa pour l’Image. Er arbeitet mit Blick auf Reportagen für Magazine, Zeitungen und internationale Agenturen.',
     },
     cv: {
       titulo: 'CV',
       bloques: {
+        exposiciones: 'Ausstellungen',
         publicaciones: 'Veröffentlichungen',
         organizaciones: 'Organisationen',
         cine: 'Film und Produktion',
         encurso: 'Laufend',
+      },
+      perpinya: {
+        titulo: 'Festival OFF Perpignan (Objectif Image Pays Catalan)',
+        detalle:
+          'Ausstellung von «El Ball de Núria», vom 29. August bis 12. September 2026, in einem Saal des Hôtel de Ville in Perpignan. Das OFF-Festival findet parallel zu Visa pour l’Image statt.',
       },
       spiegel: {
         titulo: 'Der Spiegel (Deutschland)',
@@ -437,7 +459,8 @@ export const textos: Record<Idioma, Textos> = {
       },
       'ball-de-nuria': {
         titulo: 'El Ball de Núria',
-        subtitulo: 'Dieses Projekt wird in Perpignan beim OFF-Festival ausgestellt.',
+        subtitulo:
+          'Ausgestellt vom 29. August bis 12. September 2026 beim OFF-Festival in Perpignan, parallel zu Visa pour l’Image.',
         nota: 'Núria, 85 Jahre, und das Leben nach Josep. Blanes.',
         alt: 'Núria, 85 Jahre, in ihrem Haus in Blanes; Dokumentaressay El Ball de Núria',
         destacada: true,

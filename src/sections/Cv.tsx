@@ -9,6 +9,7 @@ const ENLACE_SPIEGEL =
 export default function Cv() {
   const { t } = useIdioma()
   const filas = [
+    { bloque: t.cv.bloques.exposiciones, entrada: t.cv.perpinya },
     { bloque: t.cv.bloques.publicaciones, entrada: t.cv.spiegel, enlace: ENLACE_SPIEGEL },
     { bloque: t.cv.bloques.organizaciones, entrada: t.cv.openarms },
     { bloque: t.cv.bloques.cine, entrada: t.cv.fotofija },

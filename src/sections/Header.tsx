@@ -50,6 +50,7 @@ export default function Header() {
               </div>
             )}
             <a href="#sobre">{t.nav.sobre}</a>
+            <a href="#cv">{t.nav.cv}</a>
             <a href="#contacto">{t.nav.contacto}</a>
           </nav>
           <div className="idiomas" role="group" aria-label="Idioma">
