@@ -133,7 +133,8 @@ export const textos: Record<Idioma, Textos> = {
       },
       'la-playa-que-desaparece': {
         titulo: 'La playa que desaparece',
-        subtitulo: 'Noviembre de 2023 a junio de 2024.',
+        subtitulo:
+          'Noviembre de 2023 a junio de 2024. Se expuso del 14 de febrero al 22 de marzo de 2025 en el Casal de Barri Can Carol, en Vallcarca, Barcelona.',
         nota: 'Turismo masivo y erosión de la costa mediterránea.',
         alt: 'La playa que desaparece: erosión de la costa mediterránea, proyecto documental de Fabian Suspensivo',
         resumen:
@@ -311,7 +312,8 @@ export const textos: Record<Idioma, Textos> = {
       },
       'la-playa-que-desaparece': {
         titulo: 'La platja que desapareix',
-        subtitulo: 'De novembre del 2023 a juny del 2024.',
+        subtitulo:
+          'De novembre del 2023 a juny del 2024. Es va exposar del 14 de febrer al 22 de març del 2025 al Casal de Barri Can Carol, a Vallcarca, Barcelona.',
         nota: 'Turisme massiu i erosió de la costa mediterrània.',
         alt: 'La platja que desapareix: erosió de la costa mediterrània, projecte documental de Fabian Suspensivo',
         resumen:
@@ -489,7 +491,8 @@ export const textos: Record<Idioma, Textos> = {
       },
       'la-playa-que-desaparece': {
         titulo: 'Der Strand, der verschwindet',
-        subtitulo: 'November 2023 bis Juni 2024.',
+        subtitulo:
+          'November 2023 bis Juni 2024. Ausgestellt vom 14. Februar bis 22. März 2025 im Casal de Barri Can Carol in Vallcarca, Barcelona.',
         nota: 'Massentourismus und Erosion der Mittelmeerküste.',
         alt: 'Der Strand, der verschwindet: Erosion der Mittelmeerküste, Dokumentarprojekt von Fabian Suspensivo',
         resumen:
