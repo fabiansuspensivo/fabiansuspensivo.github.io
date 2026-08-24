@@ -127,7 +127,7 @@ export const textos: Record<Idioma, Textos> = {
           'En marzo de 2026 empecé a ir al puerto de Barcelona. Los barcos que iban a salir hacia Gaza estaban allí, amarrados unos junto a otros, y lo que pasaba a bordo no se parecía a una salida: se parecía a una obra en marcha. Gente lijando cubiertas, cosiendo, cargando cajas, aprendiendo a usar un timón de emergencia por si fallaba el otro.',
           'Volví durante semanas y acabé conociendo los barcos por dentro. Las literas donde se dormía, la cocina estrecha, la mesa donde se comía de pie. Llegaba gente de fuera que no se conocía entre sí y que a los tres días ya discutía en asambleas de horas. Alguien subió a lo alto del mástil a colgar banderas.',
           'Casi todo ese mes fue esperar. Al material que no llegaba, al parte del tiempo, a los permisos, a la gente que faltaba. Hubo quien acabó durmiendo en el suelo del puerto para no perderse la salida. Esa espera no sale en las noticias, y fue casi todo lo que hubo.',
-          'El día que zarparon trabajé como jefe de fotografía de la delegación catalana. El puerto se llenó de gente que había ido a despedirlos y de banderas en todos los mástiles. Thiago Ávila y Saif Abukeshek levantaron el puño delante de la cámara antes de subir a bordo. Después los barcos salieron, y los que nos quedamos los vimos irse desde el muelle.',
+          'El día que zarparon trabajé como jefe de fotografía de la delegación catalana. El puerto se llenó de gente que había ido a despedirlos y de banderas en todos los mástiles. Después los barcos salieron, y los que nos quedamos los vimos irse desde el muelle.',
         ],
       },
       'la-playa-que-desaparece': {
@@ -300,7 +300,7 @@ export const textos: Record<Idioma, Textos> = {
           'El març del 2026 vaig començar a anar al port de Barcelona. Els vaixells que havien de sortir cap a Gaza hi eren, amarrats l\u2019un al costat de l\u2019altre, i el que passava a bord no s\u2019assemblava a una sortida: s\u2019assemblava a una obra en marxa. Gent polint cobertes, cosint, carregant caixes, aprenent a fer servir un timó d\u2019emergència per si fallava l\u2019altre.',
           'Hi vaig tornar durant setmanes i vaig acabar coneixent els vaixells per dins. Les lliteres on es dormia, la cuina estreta, la taula on es menjava dret. Arribava gent de fora que no es coneixia entre ella i que al cap de tres dies ja discutia en assemblees d\u2019hores. Algú va pujar dalt del pal a penjar banderes.',
           'Gairebé tot aquell mes va ser esperar. El material que no arribava, el part del temps, els permisos, la gent que faltava. Hi va haver qui va acabar dormint a terra al port per no perdre\u2019s la sortida. Aquella espera no surt a les notícies, i va ser gairebé tot el que hi va haver.',
-          'El dia que van salpar vaig treballar com a cap de fotografia de la delegació catalana. El port es va omplir de gent que havia anat a acomiadar-los i de banderes a tots els pals. Thiago Ávila i Saif Abukeshek van alçar el puny davant de la càmera abans de pujar a bord. Després els vaixells van sortir, i els que ens vam quedar els vam veure marxar des del moll.',
+          'El dia que van salpar vaig treballar com a cap de fotografia de la delegació catalana. El port es va omplir de gent que havia anat a acomiadar-los i de banderes a tots els pals. Després els vaixells van sortir, i els que ens vam quedar els vam veure marxar des del moll.',
         ],
       },
       'la-playa-que-desaparece': {
@@ -473,7 +473,7 @@ export const textos: Record<Idioma, Textos> = {
           'Im März 2026 begann ich, in den Hafen von Barcelona zu gehen. Die Schiffe, die nach Gaza auslaufen sollten, lagen dort nebeneinander vertäut, und was an Bord geschah, sah nicht nach Abfahrt aus, sondern nach einer Baustelle. Menschen schliffen Decks, nähten, luden Kisten, lernten, eine Notpinne zu bedienen, falls die andere ausfiel.',
           'Ich kam wochenlang wieder und kannte die Schiffe irgendwann von innen. Die Kojen, in denen geschlafen wurde, die enge Kombüse, den Tisch, an dem man im Stehen aß. Es kamen Leute von außerhalb, die einander nicht kannten und die nach drei Tagen schon in stundenlangen Versammlungen diskutierten. Jemand kletterte den Mast hinauf, um Fahnen aufzuhängen.',
           'Fast der ganze Monat war Warten. Auf Material, das nicht kam, auf den Wetterbericht, auf Genehmigungen, auf Leute, die fehlten. Manche schliefen am Ende auf dem Boden des Hafens, um die Abfahrt nicht zu verpassen. Dieses Warten kommt in den Nachrichten nicht vor, und es war fast alles, was es gab.',
-          'Am Tag der Abfahrt arbeitete ich als Cheffotograf der katalanischen Delegation. Der Hafen füllte sich mit Menschen, die gekommen waren, um sie zu verabschieden, und mit Fahnen an allen Masten. Thiago Ávila und Saif Abukeshek hoben die Faust vor der Kamera, bevor sie an Bord gingen. Dann liefen die Schiffe aus, und wir, die blieben, sahen ihnen vom Kai aus nach.',
+          'Am Tag der Abfahrt arbeitete ich als Cheffotograf der katalanischen Delegation. Der Hafen füllte sich mit Menschen, die gekommen waren, um sie zu verabschieden, und mit Fahnen an allen Masten. Dann liefen die Schiffe aus, und wir, die blieben, sahen ihnen vom Kai aus nach.',
         ],
       },
       'la-playa-que-desaparece': {
