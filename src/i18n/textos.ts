@@ -116,6 +116,14 @@ export const textos: Record<Idioma, Textos> = {
       escribeme: 'Escríbeme',
     },
     series: {
+      'flotilla': {
+        titulo: 'Flotilla',
+        subtitulo: 'Un mes con los barcos que iban a Gaza, y el día que zarparon.',
+        nota: 'La preparación de la Global Sumud Flotilla. Barcelona.',
+        alt: 'Preparación y salida de la Global Sumud Flotilla desde Barcelona, reportaje de Fabian Suspensivo',
+        resumen:
+          'Durante un mes fotografié la preparación de los barcos que saldrían rumbo a Gaza: las reuniones, la carga, los ensayos, la gente que los ponía a punto. Casi todo ese mes fue esperar. El día que zarparon fui jefe de fotografía de la delegación catalana.',
+      },
       'la-playa-que-desaparece': {
         titulo: 'La playa que desaparece',
         subtitulo: 'Noviembre de 2023 a junio de 2024.',
@@ -275,6 +283,14 @@ export const textos: Record<Idioma, Textos> = {
       escribeme: 'Escriu-me',
     },
     series: {
+      'flotilla': {
+        titulo: 'Flotilla',
+        subtitulo: 'Un mes amb els vaixells que anaven a Gaza, i el dia que van salpar.',
+        nota: 'La preparació de la Global Sumud Flotilla. Barcelona.',
+        alt: 'Preparació i sortida de la Global Sumud Flotilla des de Barcelona, reportatge de Fabian Suspensivo',
+        resumen:
+          'Durant un mes vaig fotografiar la preparació dels vaixells que sortirien cap a Gaza: les reunions, la càrrega, els assajos, la gent que els posava a punt. Gairebé tot aquell mes va ser esperar. El dia que van salpar vaig ser cap de fotografia de la delegació catalana.',
+      },
       'la-playa-que-desaparece': {
         titulo: 'La platja que desapareix',
         subtitulo: 'De novembre del 2023 a juny del 2024.',
@@ -434,6 +450,14 @@ export const textos: Record<Idioma, Textos> = {
       escribeme: 'Schreib mir',
     },
     series: {
+      'flotilla': {
+        titulo: 'Flotilla',
+        subtitulo: 'Ein Monat mit den Schiffen, die nach Gaza fuhren, und der Tag der Abfahrt.',
+        nota: 'Die Vorbereitung der Global Sumud Flotilla. Barcelona.',
+        alt: 'Vorbereitung und Abfahrt der Global Sumud Flotilla in Barcelona, Reportage von Fabian Suspensivo',
+        resumen:
+          'Einen Monat lang fotografierte ich die Vorbereitung der Schiffe, die nach Gaza auslaufen sollten: die Treffen, das Beladen, die Proben, die Menschen, die sie bereit machten. Fast der ganze Monat war Warten. Am Tag der Abfahrt war ich Cheffotograf der katalanischen Delegation.',
+      },
       'la-playa-que-desaparece': {
         titulo: 'Der Strand, der verschwindet',
         subtitulo: 'November 2023 bis Juni 2024.',

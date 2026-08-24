@@ -38,6 +38,28 @@ export const series: Serie[] = [
     ],
   },
   {
+    // la espera y la salida de la Global Sumud Flotilla; obra de autor
+    id: 'flotilla',
+    proyecto: true,
+    fotos: [
+      { src: '/fotos/flotilla-01.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/flotilla-02.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/flotilla-03.jpg', w: 1334, h: 2000 },
+      { src: '/fotos/flotilla-04.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/flotilla-05.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/flotilla-06.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/flotilla-07.jpg', w: 1333, h: 2000 },
+      { src: '/fotos/flotilla-08.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/flotilla-09.jpg', w: 1333, h: 2000 },
+      { src: '/fotos/flotilla-10.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/flotilla-11.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/flotilla-12.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/flotilla-13.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/flotilla-14.jpg', w: 1333, h: 2000 },
+      { src: '/fotos/flotilla-15.jpg', w: 2000, h: 1333 },
+    ],
+  },
+  {
     id: 'la-playa-que-desaparece',
     proyecto: true,
     oculto: true,
