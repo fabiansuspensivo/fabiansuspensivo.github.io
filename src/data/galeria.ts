@@ -63,7 +63,6 @@ export const series: Serie[] = [
       { src: '/fotos/flotilla-17.jpg', w: 2000, h: 1333 },
       { src: '/fotos/flotilla-18.jpg', w: 1333, h: 2000 },
       { src: '/fotos/flotilla-19.jpg', w: 2000, h: 1333 },
-      { src: '/fotos/flotilla-20.jpg', w: 2000, h: 1333 },
       { src: '/fotos/flotilla-21.jpg', w: 2000, h: 1333 },
       { src: '/fotos/flotilla-22.jpg', w: 2000, h: 1333 },
       { src: '/fotos/flotilla-23.jpg', w: 2000, h: 1333 },
