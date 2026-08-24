@@ -124,10 +124,11 @@ export const textos: Record<Idioma, Textos> = {
         resumen:
           'Durante un mes fotografié la preparación de los barcos que saldrían rumbo a Gaza: las reuniones, la carga, los ensayos, la gente que los ponía a punto. Casi todo ese mes fue esperar. El día que zarparon fui jefe de fotografía de la delegación catalana.',
         historia: [
-          'En marzo de 2026 empecé a ir al puerto de Barcelona. Los barcos que iban a salir hacia Gaza estaban allí, amarrados unos junto a otros, y lo que pasaba a bordo no se parecía a una salida: se parecía a una obra en marcha. Gente lijando cubiertas, cosiendo, cargando cajas, aprendiendo a usar un timón de emergencia por si fallaba el otro.',
-          'Volví durante semanas y acabé conociendo los barcos por dentro. Las literas donde se dormía, la cocina estrecha, la mesa donde se comía de pie. Llegaba gente de fuera que no se conocía entre sí y que a los tres días ya discutía en asambleas de horas. Alguien subió a lo alto del mástil a colgar banderas.',
-          'Casi todo ese mes fue esperar. Al material que no llegaba, al parte del tiempo, a los permisos, a la gente que faltaba. Hubo quien acabó durmiendo en el suelo del puerto para no perderse la salida. Esa espera no sale en las noticias, y fue casi todo lo que hubo.',
-          'El día que zarparon trabajé como jefe de fotografía de la delegación catalana. El puerto se llenó de gente que había ido a despedirlos y de banderas en todos los mástiles. Después los barcos salieron, y los que nos quedamos los vimos irse desde el muelle.',
+          'En marzo de 2026 empecé a ir al puerto de Barcelona. Los barcos que iban a salir hacia Gaza estaban ahí, amarrados unos junto a otros. Lo que pasaba a bordo no se parecía a una salida, se parecía a una obra en marcha.',
+          'Volví durante semanas. Gente lijando cubiertas, cosiendo, cargando cajas, aprendiendo a usar un timón de emergencia por si fallaba el otro. Las literas donde se dormía. La cocina estrecha. La mesa donde se comía de pie.',
+          'Lo que quería fotografiar no era la salida sino lo de antes. Y lo de antes era esperar. Al material que no llegaba, al parte del tiempo, a los permisos, a la gente que faltaba. Llegaban personas de fuera que no se conocían entre ellas y a los tres días ya discutían en asambleas de horas.',
+          'El día que zarparon me hicieron parte de la delegación catalana y trabajé como su jefe de fotografía. El puerto se llenó de gente que había ido a despedirlos. Después los barcos salieron y los que nos quedamos los vimos irse desde el muelle.',
+          'No hay mucho que pueda explicar de esos días. Solo que nos hicimos un poco más humanos de lo que éramos unas horas antes.',
         ],
       },
       'la-playa-que-desaparece': {
@@ -297,10 +298,11 @@ export const textos: Record<Idioma, Textos> = {
         resumen:
           'Durant un mes vaig fotografiar la preparació dels vaixells que sortirien cap a Gaza: les reunions, la càrrega, els assajos, la gent que els posava a punt. Gairebé tot aquell mes va ser esperar. El dia que van salpar vaig ser cap de fotografia de la delegació catalana.',
         historia: [
-          'El març del 2026 vaig començar a anar al port de Barcelona. Els vaixells que havien de sortir cap a Gaza hi eren, amarrats l\u2019un al costat de l\u2019altre, i el que passava a bord no s\u2019assemblava a una sortida: s\u2019assemblava a una obra en marxa. Gent polint cobertes, cosint, carregant caixes, aprenent a fer servir un timó d\u2019emergència per si fallava l\u2019altre.',
-          'Hi vaig tornar durant setmanes i vaig acabar coneixent els vaixells per dins. Les lliteres on es dormia, la cuina estreta, la taula on es menjava dret. Arribava gent de fora que no es coneixia entre ella i que al cap de tres dies ja discutia en assemblees d\u2019hores. Algú va pujar dalt del pal a penjar banderes.',
-          'Gairebé tot aquell mes va ser esperar. El material que no arribava, el part del temps, els permisos, la gent que faltava. Hi va haver qui va acabar dormint a terra al port per no perdre\u2019s la sortida. Aquella espera no surt a les notícies, i va ser gairebé tot el que hi va haver.',
-          'El dia que van salpar vaig treballar com a cap de fotografia de la delegació catalana. El port es va omplir de gent que havia anat a acomiadar-los i de banderes a tots els pals. Després els vaixells van sortir, i els que ens vam quedar els vam veure marxar des del moll.',
+          'El març del 2026 vaig començar a anar al port de Barcelona. Els vaixells que havien de sortir cap a Gaza hi eren, amarrats l\u2019un al costat de l\u2019altre. El que passava a bord no s\u2019assemblava a una sortida, s\u2019assemblava a una obra en marxa.',
+          'Hi vaig tornar durant setmanes. Gent polint cobertes, cosint, carregant caixes, aprenent a fer servir un timó d\u2019emergència per si fallava l\u2019altre. Les lliteres on es dormia. La cuina estreta. La taula on es menjava dret.',
+          'El que volia fotografiar no era la sortida sinó el que hi havia abans. I el que hi havia abans era esperar. El material que no arribava, el part del temps, els permisos, la gent que faltava. Arribaven persones de fora que no es coneixien entre elles i al cap de tres dies ja discutien en assemblees d\u2019hores.',
+          'El dia que van salpar em van fer part de la delegació catalana i vaig treballar com a cap de fotografia. El port es va omplir de gent que havia anat a acomiadar-los. Després els vaixells van sortir i els que ens vam quedar els vam veure marxar des del moll.',
+          'No hi ha gaire cosa que pugui explicar d\u2019aquells dies. Només que ens vam fer una mica més humans del que érem unes hores abans.',
         ],
       },
       'la-playa-que-desaparece': {
@@ -470,10 +472,11 @@ export const textos: Record<Idioma, Textos> = {
         resumen:
           'Einen Monat lang fotografierte ich die Vorbereitung der Schiffe, die nach Gaza auslaufen sollten: die Treffen, das Beladen, die Proben, die Menschen, die sie bereit machten. Fast der ganze Monat war Warten. Am Tag der Abfahrt war ich Cheffotograf der katalanischen Delegation.',
         historia: [
-          'Im März 2026 begann ich, in den Hafen von Barcelona zu gehen. Die Schiffe, die nach Gaza auslaufen sollten, lagen dort nebeneinander vertäut, und was an Bord geschah, sah nicht nach Abfahrt aus, sondern nach einer Baustelle. Menschen schliffen Decks, nähten, luden Kisten, lernten, eine Notpinne zu bedienen, falls die andere ausfiel.',
-          'Ich kam wochenlang wieder und kannte die Schiffe irgendwann von innen. Die Kojen, in denen geschlafen wurde, die enge Kombüse, den Tisch, an dem man im Stehen aß. Es kamen Leute von außerhalb, die einander nicht kannten und die nach drei Tagen schon in stundenlangen Versammlungen diskutierten. Jemand kletterte den Mast hinauf, um Fahnen aufzuhängen.',
-          'Fast der ganze Monat war Warten. Auf Material, das nicht kam, auf den Wetterbericht, auf Genehmigungen, auf Leute, die fehlten. Manche schliefen am Ende auf dem Boden des Hafens, um die Abfahrt nicht zu verpassen. Dieses Warten kommt in den Nachrichten nicht vor, und es war fast alles, was es gab.',
-          'Am Tag der Abfahrt arbeitete ich als Cheffotograf der katalanischen Delegation. Der Hafen füllte sich mit Menschen, die gekommen waren, um sie zu verabschieden, und mit Fahnen an allen Masten. Dann liefen die Schiffe aus, und wir, die blieben, sahen ihnen vom Kai aus nach.',
+          'Im März 2026 begann ich, in den Hafen von Barcelona zu gehen. Die Schiffe, die nach Gaza auslaufen sollten, lagen dort nebeneinander vertäut. Was an Bord geschah, sah nicht nach Abfahrt aus, sondern nach einer Baustelle.',
+          'Ich kam wochenlang wieder. Menschen schliffen Decks, nähten, luden Kisten, lernten, eine Notpinne zu bedienen, falls die andere ausfiel. Die Kojen, in denen geschlafen wurde. Die enge Kombüse. Der Tisch, an dem man im Stehen aß.',
+          'Was ich fotografieren wollte, war nicht die Abfahrt, sondern das davor. Und das davor war Warten. Auf Material, das nicht kam, auf den Wetterbericht, auf Genehmigungen, auf Leute, die fehlten. Es kamen Menschen von außerhalb, die einander nicht kannten und nach drei Tagen schon in stundenlangen Versammlungen diskutierten.',
+          'Am Tag der Abfahrt machten sie mich zum Teil der katalanischen Delegation und ich arbeitete als ihr Cheffotograf. Der Hafen füllte sich mit Menschen, die gekommen waren, um sie zu verabschieden. Dann liefen die Schiffe aus, und wir, die blieben, sahen ihnen vom Kai aus nach.',
+          'Es gibt nicht viel, was ich über diese Tage erklären kann. Nur dass wir ein wenig menschlicher wurden, als wir es Stunden zuvor gewesen waren.',
         ],
       },
       'la-playa-que-desaparece': {
