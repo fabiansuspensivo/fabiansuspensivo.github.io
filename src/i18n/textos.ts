@@ -139,7 +139,10 @@ export const textos: Record<Idioma, Textos> = {
         resumen:
           'Todo acaba, todo tiene un fin, pero no muchas cosas desaparecen y vuelven a aparecer.',
         historia: [
-          'Todo acaba, todo tiene un fin, pero no muchas cosas desaparecen y vuelven a aparecer. La playa que desaparece es una representación visual del problema que genera el turismo masivo en algunas de las playas del Mediterráneo y cómo el comportamiento de la costa afecta la vida de los habitantes, la fauna y el ecosistema en general de estos pueblos.',
+          'Todo acaba, todo tiene un fin, pero no muchas cosas desaparecen y vuelven a aparecer.',
+          'Cada año el mar se lleva la arena y cada año vuelven las máquinas. La dragan de un sitio y la descargan en otro: eso es un trasvase. Camiones, excavadoras y montañas de arena levantadas de noche para que en junio haya playa. La costa catalana funciona así desde que la borrasca Gloria, en enero de 2020, se comió playas enteras; solo las de Barcelona han perdido más de sesenta mil metros cúbicos desde 2022.',
+          'Lo que me interesa no es la máquina, es quién vive de lo que la máquina repone. En estas fotos hay gente que sostiene su vida sobre una playa que aparece y desaparece: trabajos que solo existen cuatro meses al año, negocios que abren cuando hay arena y bajan la persiana cuando no la hay, calles de segundas residencias que se vacían en octubre, vecinos que miran las obras desde el paseo.',
+          'Una playa que se pone y se quita, y un pueblo que se pone y se quita con ella.',
         ],
       },
       'comercial': {
@@ -314,7 +317,10 @@ export const textos: Record<Idioma, Textos> = {
         resumen:
           'Tot s\u2019acaba, tot té un final, però no gaires coses desapareixen i tornen a aparèixer.',
         historia: [
-          'Tot s\u2019acaba, tot té un final, però no gaires coses desapareixen i tornen a aparèixer. La platja que desapareix és una representació visual del problema que genera el turisme massiu en algunes de les platges del Mediterrani i de com el comportament de la costa afecta la vida dels habitants, la fauna i l\u2019ecosistema en general d\u2019aquests pobles.',
+          'Tot s\u2019acaba, tot té un final, però no gaires coses desapareixen i tornen a aparèixer.',
+          'Cada any el mar s\u2019emporta la sorra i cada any tornen les màquines. La draguen d\u2019un lloc i la descarreguen en un altre: això és un transvasament. Camions, excavadores i muntanyes de sorra aixecades de nit perquè al juny hi hagi platja. La costa catalana funciona així des que el temporal Gloria, el gener del 2020, es va menjar platges senceres; només les de Barcelona han perdut més de seixanta mil metres cúbics des del 2022.',
+          'El que m\u2019interessa no és la màquina, és qui viu del que la màquina reposa. En aquestes fotos hi ha gent que sosté la seva vida sobre una platja que apareix i desapareix: feines que només existeixen quatre mesos l\u2019any, negocis que obren quan hi ha sorra i abaixen la persiana quan no n\u2019hi ha, carrers de segones residències que es buiden a l\u2019octubre, veïns que miren les obres des del passeig.',
+          'Una platja que es posa i es treu, i un poble que es posa i es treu amb ella.',
         ],
       },
       'comercial': {
@@ -489,7 +495,10 @@ export const textos: Record<Idioma, Textos> = {
         resumen:
           'Alles endet, alles hat ein Ende, aber nur wenige Dinge verschwinden und tauchen wieder auf.',
         historia: [
-          'Alles endet, alles hat ein Ende, aber nur wenige Dinge verschwinden und tauchen wieder auf. Der Strand, der verschwindet ist eine visuelle Darstellung des Problems, das der Massentourismus an einigen Stränden des Mittelmeers verursacht, und davon, wie das Verhalten der Küste das Leben der Bewohner, die Tierwelt und das Ökosystem dieser Orte insgesamt beeinflusst.',
+          'Alles endet, alles hat ein Ende, aber nur wenige Dinge verschwinden und tauchen wieder auf.',
+          'Jedes Jahr nimmt das Meer den Sand, und jedes Jahr kommen die Maschinen zurück. Sie baggern ihn an einer Stelle aus und kippen ihn an einer anderen ab: das nennt man eine Sandumlagerung. Lastwagen, Bagger und Sandberge, nachts aufgeschüttet, damit es im Juni einen Strand gibt. So funktioniert die katalanische Küste, seit der Sturm Gloria im Januar 2020 ganze Strände auffraß; allein die von Barcelona haben seit 2022 mehr als sechzigtausend Kubikmeter verloren.',
+          'Mich interessiert nicht die Maschine, sondern wer von dem lebt, was die Maschine wieder auffüllt. Auf diesen Bildern sind Menschen, die ihr Leben auf einen Strand stützen, der kommt und geht: Arbeit, die es nur vier Monate im Jahr gibt, Geschäfte, die öffnen, wenn Sand da ist, und schließen, wenn keiner da ist, Straßen voller Zweitwohnungen, die sich im Oktober leeren, Nachbarn, die den Bauarbeiten von der Promenade aus zusehen.',
+          'Ein Strand, der auf- und abgebaut wird, und ein Ort, der mit ihm auf- und abgebaut wird.',
         ],
       },
       'comercial': {
