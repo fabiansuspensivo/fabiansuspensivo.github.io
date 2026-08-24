@@ -123,6 +123,11 @@ export const textos: Record<Idioma, Textos> = {
         alt: 'Thiago Ávila y Saif Abukeshek con el puño en alto antes de zarpar; Global Sumud Flotilla, Barcelona',
         resumen:
           'Durante un mes fotografié la preparación de los barcos que saldrían rumbo a Gaza: las reuniones, la carga, los ensayos, la gente que los ponía a punto. Casi todo ese mes fue esperar. El día que zarparon fui jefe de fotografía de la delegación catalana.',
+        historia: [
+          'En marzo de 2026 empecé a ir al puerto. Los barcos que iban a salir hacia Gaza estaban allí, amarrados, y lo que pasaba a bordo no se parecía a una salida: se parecía a una obra en marcha. Gente lijando, cosiendo, cargando cajas, aprendiendo a usar un timón de emergencia.',
+          'Volví durante semanas. Se dormía en las literas, se comía en cubierta, se discutía en asambleas largas. Casi todo ese mes fue esperar: al material, al tiempo, a los permisos, a la gente que venía de fuera.',
+          'El día que zarparon fui jefe de fotografía de la delegación catalana.',
+        ],
       },
       'la-playa-que-desaparece': {
         titulo: 'La playa que desaparece',
@@ -290,6 +295,11 @@ export const textos: Record<Idioma, Textos> = {
         alt: 'Thiago Ávila i Saif Abukeshek amb el puny enlaire abans de salpar; Global Sumud Flotilla, Barcelona',
         resumen:
           'Durant un mes vaig fotografiar la preparació dels vaixells que sortirien cap a Gaza: les reunions, la càrrega, els assajos, la gent que els posava a punt. Gairebé tot aquell mes va ser esperar. El dia que van salpar vaig ser cap de fotografia de la delegació catalana.',
+        historia: [
+          'El març del 2026 vaig començar a anar al port. Els vaixells que havien de sortir cap a Gaza hi eren, amarrats, i el que passava a bord no s\u2019assemblava a una sortida: s\u2019assemblava a una obra en marxa. Gent polint, cosint, carregant caixes, aprenent a fer servir un timó d\u2019emergència.',
+          'Hi vaig tornar durant setmanes. Es dormia a les lliteres, es menjava a coberta, es discutia en assemblees llargues. Gairebé tot aquell mes va ser esperar: el material, el temps, els permisos, la gent que venia de fora.',
+          'El dia que van salpar vaig ser cap de fotografia de la delegació catalana.',
+        ],
       },
       'la-playa-que-desaparece': {
         titulo: 'La platja que desapareix',
@@ -457,6 +467,11 @@ export const textos: Record<Idioma, Textos> = {
         alt: 'Thiago Ávila und Saif Abukeshek mit erhobener Faust vor der Abfahrt; Global Sumud Flotilla, Barcelona',
         resumen:
           'Einen Monat lang fotografierte ich die Vorbereitung der Schiffe, die nach Gaza auslaufen sollten: die Treffen, das Beladen, die Proben, die Menschen, die sie bereit machten. Fast der ganze Monat war Warten. Am Tag der Abfahrt war ich Cheffotograf der katalanischen Delegation.',
+        historia: [
+          'Im März 2026 begann ich, in den Hafen zu gehen. Die Schiffe, die nach Gaza auslaufen sollten, lagen dort vertäut, und was an Bord geschah, sah nicht nach Abfahrt aus, sondern nach einer Baustelle. Menschen schliffen, nähten, luden Kisten, lernten, eine Notpinne zu bedienen.',
+          'Ich kam wochenlang wieder. Man schlief in den Kojen, aß an Deck, diskutierte in langen Versammlungen. Fast der ganze Monat war Warten: auf Material, auf Wetter, auf Genehmigungen, auf die Leute von außerhalb.',
+          'Am Tag der Abfahrt war ich Cheffotograf der katalanischen Delegation.',
+        ],
       },
       'la-playa-que-desaparece': {
         titulo: 'Der Strand, der verschwindet',
