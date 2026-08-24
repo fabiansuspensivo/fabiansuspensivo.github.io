@@ -120,7 +120,7 @@ export const textos: Record<Idioma, Textos> = {
         titulo: 'Flotilla',
         subtitulo: 'Un mes con los barcos que iban a Gaza, y el día que zarparon.',
         nota: 'La preparación de la Global Sumud Flotilla. Barcelona.',
-        alt: 'Preparación y salida de la Global Sumud Flotilla desde Barcelona, reportaje de Fabian Suspensivo',
+        alt: 'Thiago Ávila y Saif Abukeshek con el puño en alto antes de zarpar; Global Sumud Flotilla, Barcelona',
         resumen:
           'Durante un mes fotografié la preparación de los barcos que saldrían rumbo a Gaza: las reuniones, la carga, los ensayos, la gente que los ponía a punto. Casi todo ese mes fue esperar. El día que zarparon fui jefe de fotografía de la delegación catalana.',
       },
@@ -287,7 +287,7 @@ export const textos: Record<Idioma, Textos> = {
         titulo: 'Flotilla',
         subtitulo: 'Un mes amb els vaixells que anaven a Gaza, i el dia que van salpar.',
         nota: 'La preparació de la Global Sumud Flotilla. Barcelona.',
-        alt: 'Preparació i sortida de la Global Sumud Flotilla des de Barcelona, reportatge de Fabian Suspensivo',
+        alt: 'Thiago Ávila i Saif Abukeshek amb el puny enlaire abans de salpar; Global Sumud Flotilla, Barcelona',
         resumen:
           'Durant un mes vaig fotografiar la preparació dels vaixells que sortirien cap a Gaza: les reunions, la càrrega, els assajos, la gent que els posava a punt. Gairebé tot aquell mes va ser esperar. El dia que van salpar vaig ser cap de fotografia de la delegació catalana.',
       },
@@ -454,7 +454,7 @@ export const textos: Record<Idioma, Textos> = {
         titulo: 'Flotilla',
         subtitulo: 'Ein Monat mit den Schiffen, die nach Gaza fuhren, und der Tag der Abfahrt.',
         nota: 'Die Vorbereitung der Global Sumud Flotilla. Barcelona.',
-        alt: 'Vorbereitung und Abfahrt der Global Sumud Flotilla in Barcelona, Reportage von Fabian Suspensivo',
+        alt: 'Thiago Ávila und Saif Abukeshek mit erhobener Faust vor der Abfahrt; Global Sumud Flotilla, Barcelona',
         resumen:
           'Einen Monat lang fotografierte ich die Vorbereitung der Schiffe, die nach Gaza auslaufen sollten: die Treffen, das Beladen, die Proben, die Menschen, die sie bereit machten. Fast der ganze Monat war Warten. Am Tag der Abfahrt war ich Cheffotograf der katalanischen Delegation.',
       },
