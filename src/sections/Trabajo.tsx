@@ -153,6 +153,8 @@ function Visor({ serie, texto, t }: { serie: Serie; texto: SerieTexto; t: Textos
           {String(largo).padStart(2, '0')}
         </span>
       </div>
+      {/* las ultimas fotos de una serie pueden ser la serie ya colgada: se dice */}
+      <p className="visor-pie">{foto.expo && texto.pieExpo ? texto.pieExpo : ''}</p>
     </div>
   )
 }

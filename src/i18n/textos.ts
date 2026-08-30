@@ -5,6 +5,8 @@ export type SerieTexto = {
   nota: string
   alt: string
   subtitulo?: string
+  // pie de las fotos de la serie ya colgada en una sala
+  pieExpo?: string
   destacada?: boolean
   historia?: string[]
   resumen?: string
@@ -103,7 +105,7 @@ export const textos: Record<Idioma, Textos> = {
       perpinya: {
         titulo: 'Festival OFF de Perpinyà (Objectif Image Pays Catalan)',
         detalle:
-          'Exposición de «El Ball de Núria», del 29 de agosto al 12 de septiembre de 2026, en una sala del Hôtel de Ville de Perpinyà. El festival OFF se celebra en paralelo a Visa pour l’Image.',
+          'Exposición de «El Ball de Núria», del 29 de agosto al 12 de septiembre de 2026, en una sala del Hôtel de Ville de Perpinyà, dentro de la muestra colectiva «La vida en prosa», con Sofía Epstein y Raphael Tibère Stöckel, organizada por el IEFC. El festival OFF se celebra en paralelo a Visa pour l’Image.',
       },
       spiegel: {
         titulo: 'Der Spiegel (Alemania)',
@@ -174,6 +176,8 @@ export const textos: Record<Idioma, Textos> = {
       },
       'ball-de-nuria': {
         titulo: 'El Ball de Núria',
+        pieExpo:
+          'La exposición: Perpinyà, agosto de 2026, dentro de «La vida en prosa», con Sofía Epstein y Raphael Tibère Stöckel.',
         subtitulo:
           'Se expone del 29 de agosto al 12 de septiembre de 2026 en el festival OFF de Perpinyà, en paralelo a Visa pour l’Image.',
         nota: 'Núria, 85 años, en la casa que levantó con sus manos. Blanes.',
@@ -294,7 +298,7 @@ export const textos: Record<Idioma, Textos> = {
       perpinya: {
         titulo: 'Festival OFF de Perpinyà (Objectif Image Pays Catalan)',
         detalle:
-          'Exposició d’«El Ball de Núria», del 29 d’agost al 12 de setembre de 2026, en una sala de l’Hôtel de Ville de Perpinyà. El festival OFF se celebra en paral·lel a Visa pour l’Image.',
+          'Exposició d’«El Ball de Núria», del 29 d’agost al 12 de setembre de 2026, en una sala de l’Hôtel de Ville de Perpinyà, dins de la mostra col·lectiva «La vida en prosa», amb Sofía Epstein i Raphael Tibère Stöckel, organitzada per l’IEFC. El festival OFF se celebra en paral·lel a Visa pour l’Image.',
       },
       spiegel: {
         titulo: 'Der Spiegel (Alemanya)',
@@ -365,6 +369,8 @@ export const textos: Record<Idioma, Textos> = {
       },
       'ball-de-nuria': {
         titulo: 'El Ball de Núria',
+        pieExpo:
+          'L’exposició: Perpinyà, agost del 2026, dins de «La vida en prosa», amb Sofía Epstein i Raphael Tibère Stöckel.',
         subtitulo:
           'S’exposa del 29 d’agost al 12 de setembre de 2026 al festival OFF de Perpinyà, en paral·lel a Visa pour l’Image.',
         nota: 'La Núria, 85 anys, a la casa que va aixecar amb les seves mans. Blanes.',
@@ -485,7 +491,7 @@ export const textos: Record<Idioma, Textos> = {
       perpinya: {
         titulo: 'Festival OFF Perpignan (Objectif Image Pays Catalan)',
         detalle:
-          'Ausstellung von «El Ball de Núria», vom 29. August bis 12. September 2026, in einem Saal des Hôtel de Ville in Perpignan. Das OFF-Festival findet parallel zu Visa pour l’Image statt.',
+          'Ausstellung von «El Ball de Núria», vom 29. August bis 12. September 2026, in einem Saal des Hôtel de Ville in Perpignan, im Rahmen der Gruppenausstellung «La vida en prosa», mit Sofía Epstein und Raphael Tibère Stöckel, organisiert vom IEFC. Das OFF-Festival findet parallel zu Visa pour l’Image statt.',
       },
       spiegel: {
         titulo: 'Der Spiegel (Deutschland)',
@@ -556,6 +562,8 @@ export const textos: Record<Idioma, Textos> = {
       },
       'ball-de-nuria': {
         titulo: 'El Ball de Núria',
+        pieExpo:
+          'Die Ausstellung: Perpignan, August 2026, im Rahmen von «La vida en prosa», mit Sofía Epstein und Raphael Tibère Stöckel.',
         subtitulo:
           'Ausgestellt vom 29. August bis 12. September 2026 beim OFF-Festival in Perpignan, parallel zu Visa pour l’Image.',
         nota: 'Núria, 85 Jahre, in dem Haus, das sie mit eigenen Händen baute. Blanes.',

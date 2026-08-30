@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { Fragment, useCallback, useEffect, useState } from 'react'
 import { series } from '../data/galeria'
 import { useIdioma } from '../i18n/idioma'
 import BarraProyecto from './BarraProyecto'
@@ -78,15 +78,20 @@ export default function Proyecto({ id }: { id: string }) {
 
       <div className="proyecto-fotos">
         {serie.fotos.map((foto, i) => (
-          <button
-            key={foto.src}
-            type="button"
-            className="proyecto-foto"
-            onClick={() => setAbierta(i)}
-            aria-label={texto.alt}
-          >
-            <img src={foto.src} alt={texto.alt} loading="lazy" width={foto.w} height={foto.h} />
-          </button>
+          <Fragment key={foto.src}>
+            {/* una sola vez, donde acaba la serie y empieza la sala */}
+            {foto.expo && !serie.fotos[i - 1]?.expo && texto.pieExpo ? (
+              <p className="proyecto-separador">{texto.pieExpo}</p>
+            ) : null}
+            <button
+              type="button"
+              className="proyecto-foto"
+              onClick={() => setAbierta(i)}
+              aria-label={texto.alt}
+            >
+              <img src={foto.src} alt={texto.alt} loading="lazy" width={foto.w} height={foto.h} />
+            </button>
+          </Fragment>
         ))}
       </div>
 
