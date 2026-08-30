@@ -13,7 +13,14 @@ export type SerieTexto = {
 
 export type Textos = {
   meta: { titulo: string; descripcion: string }
-  nav: { trabajo: string; proyectos: string; sobre: string; cv: string; contacto: string }
+  nav: {
+    trabajo: string
+    proyectos: string
+    sobre: string
+    cv: string
+    contacto: string
+    menu: string
+  }
   hero: { sub: string }
   trabajo: {
     titulo: string
@@ -53,9 +60,16 @@ export const textos: Record<Idioma, Textos> = {
       descripcion:
         'Fotógrafo en Barcelona, disponible en toda Catalunya. Fotografía documental y fotoperiodismo, conciertos, foto fija, retrato de artistas y fotografía comercial. Publicado en Der Spiegel.',
     },
-    nav: { trabajo: 'Trabajo', proyectos: 'Proyectos', sobre: 'Sobre mí', cv: 'CV', contacto: 'Contacto' },
+    nav: {
+      trabajo: 'Trabajo',
+      proyectos: 'Proyectos',
+      sobre: 'Sobre mí',
+      cv: 'CV',
+      contacto: 'Contacto',
+      menu: 'Menú',
+    },
     hero: {
-      sub: 'Fotógrafo. Conciertos, sesiones a artistas y fotoperiodismo. Barcelona.',
+      sub: 'Fotógrafo.',
     },
     trabajo: {
       titulo: 'Trabajo',
@@ -175,6 +189,7 @@ export const textos: Record<Idioma, Textos> = {
       },
       'open-arms-serie': {
         titulo: 'Open Arms',
+        subtitulo: 'Dieciocho días a bordo, en la frontera más letal del mundo.',
         nota: 'Rescate en el mar, con la ONG',
         alt: 'Rescate de Open Arms en el mar Mediterráneo',
         historia: [
@@ -188,6 +203,7 @@ export const textos: Record<Idioma, Textos> = {
       },
       tenerife: {
         titulo: 'El caso Hondius',
+        subtitulo: 'Tres días en el puerto esperando al barco del hantavirus. Publicado en Der Spiegel.',
         nota: 'Tenerife, publicado en Der Spiegel',
         alt: 'Cobertura del caso de hantavirus del barco Hondius en Tenerife',
         historia: [
@@ -201,6 +217,7 @@ export const textos: Record<Idioma, Textos> = {
       },
       'top-manta': {
         titulo: 'Top Manta',
+        subtitulo: 'Del taller del Raval a la calle. Los fotografío desde junio de 2025 y sigue abierto.',
         nota: 'Cursa Top Manta y cursa antirracista, Barcelona',
         alt: 'Cursa Top Manta en Barcelona',
         historia: [
@@ -216,11 +233,13 @@ export const textos: Record<Idioma, Textos> = {
       },
       musica: {
         titulo: 'Música',
+        subtitulo: 'Fotografío a músicos desde 2019, primero en Santiago de Chile y ahora en Catalunya.',
         nota: 'Conciertos y sesiones a artistas',
         alt: 'Concierto, fotografía de música en vivo',
       },
       prensa: {
         titulo: 'Prensa',
+        subtitulo: 'Lo que pasa en la calle en Catalunya: vivienda, huelgas, protestas.',
         nota: 'Selección de fotoperiodismo',
         alt: 'Fotoperiodismo y trabajo de prensa en Barcelona y Catalunya',
       },
@@ -232,9 +251,16 @@ export const textos: Record<Idioma, Textos> = {
       descripcion:
         'Fotògraf a Barcelona, disponible a tota Catalunya. Fotografia documental i fotoperiodisme, concerts, foto fixa, retrat d’artistes i fotografia comercial. Publicat a Der Spiegel.',
     },
-    nav: { trabajo: 'Treball', proyectos: 'Projectes', sobre: 'Sobre mi', cv: 'CV', contacto: 'Contacte' },
+    nav: {
+      trabajo: 'Treball',
+      proyectos: 'Projectes',
+      sobre: 'Sobre mi',
+      cv: 'CV',
+      contacto: 'Contacte',
+      menu: 'Menú',
+    },
     hero: {
-      sub: 'Fotògraf. Concerts, sessions a artistes i fotoperiodisme. Barcelona.',
+      sub: 'Fotògraf.',
     },
     trabajo: {
       titulo: 'Treball',
@@ -354,6 +380,7 @@ export const textos: Record<Idioma, Textos> = {
       },
       'open-arms-serie': {
         titulo: 'Open Arms',
+        subtitulo: 'Divuit dies a bord, a la frontera més letal del món.',
         nota: 'Rescat al mar, amb l’ONG',
         alt: 'Rescat d’Open Arms al mar Mediterrani',
         historia: [
@@ -367,6 +394,7 @@ export const textos: Record<Idioma, Textos> = {
       },
       tenerife: {
         titulo: 'El cas Hondius',
+        subtitulo: 'Tres dies al port esperant el vaixell de l’hantavirus. Publicat a Der Spiegel.',
         nota: 'Tenerife, publicat a Der Spiegel',
         alt: 'Cobertura del cas d’hantavirus del vaixell Hondius a Tenerife',
         historia: [
@@ -380,6 +408,7 @@ export const textos: Record<Idioma, Textos> = {
       },
       'top-manta': {
         titulo: 'Top Manta',
+        subtitulo: 'Del taller del Raval al carrer. Els fotografio des del juny del 2025 i continua obert.',
         nota: 'Cursa Top Manta i cursa antiracista, Barcelona',
         alt: 'Cursa Top Manta a Barcelona',
         historia: [
@@ -395,11 +424,13 @@ export const textos: Record<Idioma, Textos> = {
       },
       musica: {
         titulo: 'Música',
+        subtitulo: 'Fotografio músics des del 2019, primer a Santiago de Xile i ara a Catalunya.',
         nota: 'Concerts i sessions a artistes',
         alt: 'Concert, fotografia de música en directe',
       },
       prensa: {
         titulo: 'Premsa',
+        subtitulo: 'El que passa al carrer a Catalunya: habitatge, vagues, protestes.',
         nota: 'Selecció de fotoperiodisme',
         alt: 'Fotoperiodisme i treball de premsa a Barcelona i Catalunya',
       },
@@ -411,9 +442,16 @@ export const textos: Record<Idioma, Textos> = {
       descripcion:
         'Fotograf in Barcelona, verfügbar in ganz Katalonien. Dokumentarfotografie und Fotojournalismus, Konzerte, Standfotografie, Künstlerporträts und Werbefotografie. Veröffentlicht im Spiegel.',
     },
-    nav: { trabajo: 'Arbeit', proyectos: 'Projekte', sobre: 'Über mich', cv: 'CV', contacto: 'Kontakt' },
+    nav: {
+      trabajo: 'Arbeit',
+      proyectos: 'Projekte',
+      sobre: 'Über mich',
+      cv: 'CV',
+      contacto: 'Kontakt',
+      menu: 'Menü',
+    },
     hero: {
-      sub: 'Fotograf. Konzerte, Künstlersessions und Fotojournalismus. Barcelona.',
+      sub: 'Fotograf.',
     },
     trabajo: {
       titulo: 'Arbeit',
@@ -533,6 +571,7 @@ export const textos: Record<Idioma, Textos> = {
       },
       'open-arms-serie': {
         titulo: 'Open Arms',
+        subtitulo: 'Achtzehn Tage an Bord, an der tödlichsten Grenze der Welt.',
         nota: 'Seenotrettung, mit der NGO',
         alt: 'Rettungseinsatz von Open Arms im Mittelmeer',
         historia: [
@@ -546,6 +585,7 @@ export const textos: Record<Idioma, Textos> = {
       },
       tenerife: {
         titulo: 'Der Fall Hondius',
+        subtitulo: 'Drei Tage im Hafen, im Warten auf das Hantavirus-Schiff. Veröffentlicht im Spiegel.',
         nota: 'Teneriffa, veröffentlicht im Spiegel',
         alt: 'Berichterstattung zum Hantavirus-Fall des Schiffs Hondius auf Teneriffa',
         historia: [
@@ -559,6 +599,7 @@ export const textos: Record<Idioma, Textos> = {
       },
       'top-manta': {
         titulo: 'Top Manta',
+        subtitulo: 'Von der Werkstatt im Raval auf die Straße. Ich fotografiere sie seit Juni 2025, und es geht weiter.',
         nota: 'Cursa Top Manta und antirassistischer Lauf, Barcelona',
         alt: 'Cursa Top Manta in Barcelona',
         historia: [
@@ -574,11 +615,13 @@ export const textos: Record<Idioma, Textos> = {
       },
       musica: {
         titulo: 'Musik',
+        subtitulo: 'Ich fotografiere Musiker seit 2019, erst in Santiago de Chile, jetzt in Katalonien.',
         nota: 'Konzerte und Sessions',
         alt: 'Konzert, Livemusik-Fotografie',
       },
       prensa: {
         titulo: 'Presse',
+        subtitulo: 'Was auf Kataloniens Straßen passiert: Wohnen, Streiks, Proteste.',
         nota: 'Auswahl an Fotojournalismus',
         alt: 'Fotojournalismus und Pressearbeit in Barcelona und Katalonien',
       },

@@ -127,34 +127,82 @@
   font-weight: 800;
 }
 
+/* boton de menu: solo existe en movil */
+.menu-boton {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: var(--t-meta);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--tinta);
+  cursor: pointer;
+}
+
 @media (max-width: 640px) {
+  /* una sola fila: marca a la izquierda, idiomas y menu a la derecha.
+     La nav se despliega debajo, a lo ancho, solo cuando el se abre. */
   .cabecera-fila {
-    flex-direction: column;
-    align-items: flex-start;
-    row-gap: var(--e-2);
-  }
-  .cabecera-derecha {
-    width: 100%;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
     column-gap: var(--e-3);
   }
-  .nav {
-    gap: var(--e-3);
+  .cabecera-derecha {
+    display: contents;
   }
-  /* en movil no hay cursor: Bodas se muestra como enlace normal en la nav */
-  .nav-menu {
+  .idiomas {
+    margin-left: auto;
+    order: 2;
+  }
+  .menu-boton {
+    display: block;
+    order: 3;
+  }
+  .menu-boton.activo {
+    color: var(--rojo);
+  }
+  .nav {
+    order: 4;
+    display: none;
+    width: 100%;
+  }
+  .cabecera.abierta .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    width: 100%;
+    margin-top: var(--e-2);
+    padding-top: var(--e-2);
+    border-top: 1px solid var(--linea);
+  }
+  .cabecera.abierta .nav > a,
+  .cabecera.abierta .nav-trabajo > a {
+    display: block;
+    padding: var(--e-2) 0;
+  }
+  .cabecera.abierta .nav-trabajo {
+    width: 100%;
+  }
+  /* los submenus dejan de ser desplegables: se listan debajo, sangrados */
+  .cabecera.abierta .nav-menu {
     position: static;
-    flex-direction: row;
+    flex-direction: column;
     min-width: 0;
-    padding: 0;
+    padding: 0 0 var(--e-2) var(--e-3);
     border: none;
     background: none;
-    gap: var(--e-3);
+    gap: 0;
     opacity: 1;
     visibility: visible;
     transform: none;
+    transition: none;
   }
-  .nav-menu a {
-    padding: 0;
+  .cabecera.abierta .nav-menu a {
+    padding: var(--e-1) 0;
   }
 }
