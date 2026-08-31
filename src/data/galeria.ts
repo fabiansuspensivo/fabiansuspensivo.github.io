@@ -20,6 +20,34 @@ export type Serie = {
 
 export const series: Serie[] = [
   {
+    // Los desahucios de Catalunya. Obra de autor: sale en Proyectos y tambien en Trabajo.
+    // Orden cronologico, que es como se cuenta: de la plaza llena a la terraza del Txema.
+    id: 'ni-gent-sense-casa',
+    proyecto: true,
+    fotos: [
+      { src: '/fotos/ni-gent-sense-casa-01.jpg', w: 2000, h: 1331 },
+      { src: '/fotos/ni-gent-sense-casa-02.jpg', w: 1440, h: 1919 },
+      { src: '/fotos/ni-gent-sense-casa-03.jpg', w: 2000, h: 1331 },
+      { src: '/fotos/ni-gent-sense-casa-04.jpg', w: 2000, h: 1250 },
+      { src: '/fotos/ni-gent-sense-casa-05.jpg', w: 2000, h: 1250 },
+      { src: '/fotos/ni-gent-sense-casa-06.jpg', w: 2000, h: 1250 },
+      { src: '/fotos/ni-gent-sense-casa-07.jpg', w: 2000, h: 1250 },
+      { src: '/fotos/ni-gent-sense-casa-08.jpg', w: 2000, h: 1250 },
+      { src: '/fotos/ni-gent-sense-casa-09.jpg', w: 2000, h: 1250 },
+      { src: '/fotos/ni-gent-sense-casa-10.jpg', w: 1500, h: 2000 },
+      { src: '/fotos/ni-gent-sense-casa-11.jpg', w: 1620, h: 1079 },
+      { src: '/fotos/ni-gent-sense-casa-12.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/ni-gent-sense-casa-13.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/ni-gent-sense-casa-14.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/ni-gent-sense-casa-15.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/ni-gent-sense-casa-16.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/ni-gent-sense-casa-17.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/ni-gent-sense-casa-18.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/ni-gent-sense-casa-19.jpg', w: 1333, h: 2000 },
+      { src: '/fotos/ni-gent-sense-casa-20.jpg', w: 2000, h: 1333 },
+    ],
+  },
+  {
     // sale al inicio, en Trabajo, y tambien en el apartado Proyectos (obra de autor)
     id: 'ball-de-nuria',
     proyecto: true,

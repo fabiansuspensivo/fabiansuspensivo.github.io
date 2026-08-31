@@ -134,15 +134,17 @@ export const textos: Record<Idioma, Textos> = {
     series: {
       'ni-gent-sense-casa': {
         titulo: 'Ni gent sense casa ni casa sense gent',
-        subtitulo: 'Los desahucios de Catalunya, de enero de 2025 a hoy. Proyecto en curso.',
+        subtitulo: 'Quién está vaciando Barcelona. Cinco casos entre 2026 y hoy, en cinco barrios.',
         nota: 'Desahucios en Catalunya. Proyecto en curso.',
         alt: 'Desahucios en Barcelona, proyecto documental Ni gent sense casa ni casa sense gent de Fabian Suspensivo',
         resumen:
-          'Seis casos, cinco barrios y año y medio siguiendo lo mismo: empresas que compran edificios enteros, los vacían y multiplican la renta. El título es la consigna que se corea en las puertas.',
+          'El título es la consigna que se corea en las puertas. Detrás de estos cinco desahucios no hay cinco historias sueltas: hay tres empresas haciendo lo mismo, comprar el edificio entero, vaciarlo y multiplicar la renta.',
         historia: [
-          'Barcelona, enero de 2025. Empieza en el Raval, con el desalojo de la Antiga Massana y una manifestación de miles de personas que acaba en cargas policiales y cinco detenidos. Desde entonces, esta serie sigue los desahucios de Catalunya hasta dentro de las casas.',
-          'Puestos uno al lado del otro aparece lo que no se ve caso a caso: no son desahucios sueltos, es un modelo. New Amsterdam Developers compra bloques enteros, no renueva los contratos y convierte los pisos en colivings de novecientos a mil euros la habitación. Poliverso Inmuebles, una sociedad constituida días antes de comprar el edificio, deja a Joan nueve meses sin luz en Sants. Urban Power echa a Jordi, a su mujer y a su hijo del carrer Marina después de veintidós años, en un bloque donde cinco de los nueve pisos ya eran alquiler de temporada.',
-          'La serie termina donde empieza el título. Txema Escorsa lleva once años en el bloc Sant Agustí de Gràcia y ha parado tres fechas de desahucio, una de ellas con quinientas personas delante del portal. Estas fotos son del día antes de una de esas fechas, y de la fiesta mayor de su barrio, con él dentro. Es lo que él quería enseñar: que la organización vecinal sirve.',
+          'Puestos uno al lado del otro, estos casos dejan de parecer mala suerte. El mecanismo se repite y es sencillo: una sociedad compra el edificio completo, deja de renovar los contratos, presiona a quien queda dentro y vuelve a alquilar lo mismo por dos o tres veces más. No hace falta subir el alquiler a nadie. Basta con cambiar de inquilino.',
+          'New Amsterdam Developers aparece dos veces en esta serie, con dos vecinos que no se conocen. Es una sociedad del inversor neoyorquino Jeffrey Todd Kaye que ha acumulado alrededor de diez edificios en Barcelona a través de distintas filiales, y convierte los pisos en colivings: habitaciones alquiladas por separado a entre novecientos y mil euros. A l’Olalla, madre de tres menores, la echaron el 20 de mayo de 2026 del carrer Buenos Aires. Al Txema, once años en el bloc Sant Agustí de Gràcia pagando unos ochocientos, aún no. El Sindicat de Llogateres llama a su caso el primer desahucio impulsado por una empresa de coliving en la ciudad.',
+          'Poliverso Inmuebles es una sociedad limitada constituida pocos días antes de comprar el edificio del Joan, en el carrer Olzinelles de Sants. Cuando estas fotos se hicieron, él llevaba nueve meses sin luz. Cortes de suministro, silicona en la cerradura, mensajes amenazantes y una cámara apuntando al portal: no es un desahucio, es esperar a que se vaya solo. Todas las fotos de su casa están hechas con la linterna que él sostiene.',
+          'Urban Power echó al Jordi, a su mujer y a su hijo del carrer Marina 124 el 26 de junio de 2026, después de veintidós años allí. En ese edificio, cinco de los nueve pisos ya eran alquiler de temporada para gente que no vive en la ciudad. La comitiva llegó con antidisturbios y la mañana acabó con una ambulancia en la puerta.',
+          'La serie empieza en una plaza llena y termina en una terraza al anochecer, con el Txema, que ha parado tres fechas de desahucio, una de ellas con quinientas personas delante del portal. Esa es la razón de fotografiarlo también en la fiesta mayor de su barrio, y sus palabras son el argumento entero del proyecto: la organización vecinal sirve.',
         ],
         fuente: {
           texto: 'Sindicat de Llogateres',
@@ -344,15 +346,17 @@ export const textos: Record<Idioma, Textos> = {
     series: {
       'ni-gent-sense-casa': {
         titulo: 'Ni gent sense casa ni casa sense gent',
-        subtitulo: 'Els desnonaments de Catalunya, del gener de 2025 fins avui. Projecte en curs.',
+        subtitulo: 'Qui està buidant Barcelona. Cinc casos entre 2026 i avui, a cinc barris.',
         nota: 'Desnonaments a Catalunya. Projecte en curs.',
         alt: 'Desnonaments a Barcelona, projecte documental Ni gent sense casa ni casa sense gent de Fabian Suspensivo',
         resumen:
-          'Sis casos, cinc barris i un any i mig seguint el mateix: empreses que compren edificis sencers, els buiden i multipliquen la renda. El títol és la consigna que es crida a les portes.',
+          'El títol és la consigna que es crida a les portes. Darrere d’aquests cinc desnonaments no hi ha cinc històries soltes: hi ha tres empreses fent el mateix, comprar l’edifici sencer, buidar-lo i multiplicar la renda.',
         historia: [
-          'Barcelona, gener de 2025. Comença al Raval, amb el desallotjament de l’Antiga Massana i una manifestació de milers de persones que acaba amb càrregues policials i cinc detinguts. Des de llavors, aquesta sèrie segueix els desnonaments de Catalunya fins a dins de les cases.',
-          'Posats l’un al costat de l’altre apareix el que no es veu cas per cas: no són desnonaments solts, és un model. New Amsterdam Developers compra blocs sencers, no renova els contractes i converteix els pisos en colivings de nou-cents a mil euros l’habitació. Poliverso Inmuebles, una societat constituïda dies abans de comprar l’edifici, deixa el Joan nou mesos sense llum a Sants. Urban Power fa fora el Jordi, la seva dona i el seu fill del carrer Marina després de vint-i-dos anys, en un bloc on cinc dels nou pisos ja eren lloguer de temporada.',
-          'La sèrie acaba on comença el títol. El Txema Escorsa porta onze anys al bloc Sant Agustí de Gràcia i ha aturat tres dates de desnonament, una amb cinc-centes persones davant del portal. Aquestes fotos són del dia abans d’una d’aquestes dates, i de la festa major del seu barri, amb ell a dins. És el que ell volia ensenyar: que l’organització veïnal serveix.',
+          'Posats l’un al costat de l’altre, aquests casos deixen de semblar mala sort. El mecanisme es repeteix i és senzill: una societat compra l’edifici complet, deixa de renovar els contractes, pressiona qui queda a dins i torna a llogar el mateix per dues o tres vegades més. No cal apujar el lloguer a ningú. N’hi ha prou amb canviar d’inquilí.',
+          'New Amsterdam Developers surt dues vegades en aquesta sèrie, amb dos veïns que no es coneixen. És una societat de l’inversor novaiorquès Jeffrey Todd Kaye que ha acumulat una desena d’edificis a Barcelona a través de filials diferents, i converteix els pisos en colivings: habitacions llogades per separat a entre nou-cents i mil euros. L’Olalla, mare de tres menors, va ser desnonada el 20 de maig de 2026 del carrer Buenos Aires. El Txema, onze anys al bloc Sant Agustí de Gràcia pagant uns vuit-cents, encara no. El Sindicat de Llogateres anomena el seu cas el primer desnonament impulsat per una empresa de coliving a la ciutat.',
+          'Poliverso Inmuebles és una societat limitada constituïda pocs dies abans de comprar l’edifici del Joan, al carrer Olzinelles de Sants. Quan es van fer aquestes fotos, ell portava nou mesos sense llum. Talls de subministrament, silicona al pany, missatges amenaçadors i una càmera apuntant al portal: no és un desnonament, és esperar que marxi sol. Totes les fotos de casa seva estan fetes amb la llanterna que ell sosté.',
+          'Urban Power va fer fora el Jordi, la seva dona i el seu fill del carrer Marina 124 el 26 de juny de 2026, després de vint-i-dos anys allà. En aquell edifici, cinc dels nou pisos ja eren lloguer de temporada per a gent que no viu a la ciutat. La comitiva va arribar amb antiavalots i el matí va acabar amb una ambulància a la porta.',
+          'La sèrie comença en una plaça plena i acaba en un terrat al capvespre, amb el Txema, que ha aturat tres dates de desnonament, una amb cinc-centes persones davant del portal. Per això també se’l fotografia a la festa major del seu barri, i les seves paraules són l’argument sencer del projecte: l’organització veïnal serveix.',
         ],
         fuente: {
           texto: 'Sindicat de Llogateres',
@@ -554,15 +558,17 @@ export const textos: Record<Idioma, Textos> = {
     series: {
       'ni-gent-sense-casa': {
         titulo: 'Ni gent sense casa ni casa sense gent',
-        subtitulo: 'Zwangsräumungen in Katalonien, von Januar 2025 bis heute. Laufendes Projekt.',
+        subtitulo: 'Wer Barcelona leerräumt. Fünf Fälle zwischen 2026 und heute, in fünf Vierteln.',
         nota: 'Zwangsräumungen in Katalonien. Laufendes Projekt.',
         alt: 'Zwangsräumungen in Barcelona, Dokumentarprojekt Ni gent sense casa ni casa sense gent von Fabian Suspensivo',
         resumen:
-          'Sechs Fälle, fünf Viertel und anderthalb Jahre am selben Thema: Firmen kaufen ganze Häuser, räumen sie leer und vervielfachen die Miete. Der Titel ist die Parole, die vor den Haustüren gerufen wird.',
+          'Der Titel ist die Parole, die vor den Haustüren gerufen wird. Hinter diesen fünf Räumungen stehen keine fünf Einzelschicksale, sondern drei Firmen mit demselben Vorgehen: das ganze Haus kaufen, es leerräumen und die Miete vervielfachen.',
         historia: [
-          'Barcelona, Januar 2025. Es beginnt im Raval, mit der Räumung der Antiga Massana und einer Demonstration von Tausenden, die mit Polizeiknüppeln und fünf Festnahmen endet. Seither folgt diese Serie den Zwangsräumungen in Katalonien bis in die Wohnungen hinein.',
-          'Nebeneinandergelegt zeigt sich, was der Einzelfall verbirgt: Es sind keine Einzelfälle, es ist ein Geschäftsmodell. New Amsterdam Developers kauft ganze Häuser, verlängert keine Verträge und macht aus den Wohnungen Colivings für neunhundert bis tausend Euro pro Zimmer. Poliverso Inmuebles, wenige Tage vor dem Hauskauf gegründet, lässt Joan in Sants neun Monate ohne Strom. Urban Power setzt Jordi, seine Frau und seinen Sohn nach zweiundzwanzig Jahren in der Carrer Marina auf die Strasse, in einem Haus, in dem fünf von neun Wohnungen bereits Saisonvermietung waren.',
-          'Die Serie endet dort, wo der Titel beginnt. Txema Escorsa wohnt seit elf Jahren im Bloc Sant Agustí in Gràcia und hat drei Räumungstermine gestoppt, einen davon mit fünfhundert Menschen vor der Haustür. Diese Bilder entstanden am Tag vor einem dieser Termine und beim Stadtteilfest seines Viertels, mit ihm mittendrin. Genau das wollte er zeigen: dass nachbarschaftliche Organisierung wirkt.',
+          'Nebeneinandergelegt wirken diese Fälle nicht mehr wie Pech. Der Mechanismus wiederholt sich und ist simpel: eine Gesellschaft kauft das gesamte Haus, verlängert keine Verträge mehr, setzt die Verbliebenen unter Druck und vermietet dasselbe für das Zwei- bis Dreifache. Niemandem muss die Miete erhöht werden. Es genügt, die Mieter auszutauschen.',
+          'New Amsterdam Developers taucht in dieser Serie zweimal auf, bei zwei Nachbarn, die sich nicht kennen. Die Gesellschaft des New Yorker Investors Jeffrey Todd Kaye hat über verschiedene Tochterfirmen rund zehn Häuser in Barcelona angesammelt und verwandelt die Wohnungen in Colivings: einzeln vermietete Zimmer für neunhundert bis tausend Euro. Olalla, Mutter dreier minderjähriger Kinder, wurde am 20. Mai 2026 aus der Carrer Buenos Aires geräumt. Txema, seit elf Jahren im Bloc Sant Agustí in Gràcia für rund achthundert Euro, noch nicht. Die Mietergewerkschaft nennt seinen Fall die erste von einer Coliving-Firma betriebene Räumung der Stadt.',
+          'Poliverso Inmuebles ist eine GmbH, die wenige Tage vor dem Kauf von Joans Haus in der Carrer Olzinelles in Sants gegründet wurde. Als diese Bilder entstanden, lebte er seit neun Monaten ohne Strom. Abgestellte Leitungen, Silikon im Türschloss, Drohbotschaften und eine Kamera vor dem Hauseingang: das ist keine Räumung, das ist Warten, bis er von selbst geht. Alle Aufnahmen in seiner Wohnung entstanden im Licht der Taschenlampe, die er selbst hält.',
+          'Urban Power setzte Jordi, seine Frau und seinen Sohn am 26. Juni 2026 nach zweiundzwanzig Jahren aus der Carrer Marina 124 auf die Strasse. In jenem Haus waren fünf der neun Wohnungen bereits Saisonvermietung für Menschen, die nicht in der Stadt leben. Der Gerichtsvollzug kam mit Bereitschaftspolizei, und der Morgen endete mit einem Krankenwagen vor der Tür.',
+          'Die Serie beginnt auf einem vollen Platz und endet auf einer Dachterrasse in der Dämmerung, bei Txema, der drei Räumungstermine gestoppt hat, einen davon mit fünfhundert Menschen vor der Haustür. Deshalb wird er auch beim Stadtteilfest seines Viertels fotografiert, und seine Worte sind das ganze Argument des Projekts: nachbarschaftliche Organisierung wirkt.',
         ],
         fuente: {
           texto: 'Sindicat de Llogateres',
