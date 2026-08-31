@@ -21,9 +21,9 @@ export type Serie = {
 export const series: Serie[] = [
   {
     // Los desahucios de Catalunya. Obra de autor: sale en Proyectos y tambien en Trabajo.
-    // LAS ELIGIO FABIAN una a una, y el 31/08 quito seis mas porque sobraban. Empieza donde
-    // empezo todo: el desalojo de la Antiga Massana del 28 de enero de 2025, con el que se
-    // topo de frente y que el llama su punto de inflexion. Siete episodios, en orden.
+    // LAS ELIGIO FABIAN una a una. Empieza donde empezo todo: el desalojo de la Antiga
+    // Massana del 28 de enero de 2025, con el que se topo de frente y que el llama su punto
+    // de inflexion. Orden cronologico.
     id: 'ni-gent-sense-casa',
     proyecto: true,
     fotos: [
@@ -49,8 +49,8 @@ export const series: Serie[] = [
       { src: '/fotos/ni-gent-sense-casa-20.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ni-gent-sense-casa-21.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ni-gent-sense-casa-22.jpg', w: 2000, h: 1333 },
-      { src: '/fotos/ni-gent-sense-casa-23.jpg', w: 1333, h: 2000 },
-      { src: '/fotos/ni-gent-sense-casa-24.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/ni-gent-sense-casa-23.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/ni-gent-sense-casa-24.jpg', w: 1333, h: 2000 },
       { src: '/fotos/ni-gent-sense-casa-25.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ni-gent-sense-casa-26.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ni-gent-sense-casa-27.jpg', w: 2000, h: 1333 },
@@ -60,8 +60,9 @@ export const series: Serie[] = [
       { src: '/fotos/ni-gent-sense-casa-31.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ni-gent-sense-casa-32.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ni-gent-sense-casa-33.jpg', w: 2000, h: 1333 },
-      { src: '/fotos/ni-gent-sense-casa-34.jpg', w: 1333, h: 2000 },
-      { src: '/fotos/ni-gent-sense-casa-35.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/ni-gent-sense-casa-34.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/ni-gent-sense-casa-35.jpg', w: 1333, h: 2000 },
+      { src: '/fotos/ni-gent-sense-casa-36.jpg', w: 2000, h: 1333 },
     ],
   },
   {
