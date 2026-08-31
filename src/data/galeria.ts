@@ -42,6 +42,7 @@ export const series: Serie[] = [
       // y ninguna con un cuadro entrando a medias por el borde.
       { src: '/fotos/ball-de-nuria-expo-01.jpg', w: 2000, h: 1333, expo: true },
       { src: '/fotos/ball-de-nuria-expo-04.jpg', w: 2000, h: 1333, expo: true },
+      { src: '/fotos/ball-de-nuria-expo-05.jpg', w: 2000, h: 1333, expo: true },
     ],
   },
   {
