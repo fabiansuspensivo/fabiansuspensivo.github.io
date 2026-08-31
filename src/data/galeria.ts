@@ -38,11 +38,11 @@ export const series: Serie[] = [
       { src: '/fotos/ball-de-nuria-12.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ball-de-nuria-13.jpg', w: 2000, h: 1333 },
       // la serie colgada en Perpinya, festival OFF, agosto de 2026
+      // (las cuatro las eligio Fabian el 31/08: nada de cuadros a medias)
       { src: '/fotos/ball-de-nuria-expo-01.jpg', w: 2000, h: 1333, expo: true },
       { src: '/fotos/ball-de-nuria-expo-02.jpg', w: 2000, h: 1333, expo: true },
-      { src: '/fotos/ball-de-nuria-expo-03.jpg', w: 1500, h: 2000, expo: true },
-      { src: '/fotos/ball-de-nuria-expo-04.jpg', w: 1303, h: 2000, expo: true },
-      { src: '/fotos/ball-de-nuria-expo-05.jpg', w: 2000, h: 1559, expo: true },
+      { src: '/fotos/ball-de-nuria-expo-03.jpg', w: 2000, h: 1559, expo: true },
+      { src: '/fotos/ball-de-nuria-expo-04.jpg', w: 2000, h: 1333, expo: true },
     ],
   },
   {
