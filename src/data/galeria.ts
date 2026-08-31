@@ -21,10 +21,9 @@ export type Serie = {
 export const series: Serie[] = [
   {
     // Los desahucios de Catalunya. Obra de autor: sale en Proyectos y tambien en Trabajo.
-    // LAS ELIGIO FABIAN, una a una, el 31/08/2026, sobre una hoja con las 121 que habia.
-    // Entra el bloc Sant Agusti, que estaba en un album COMPARTIDO de Google Fotos, incluida
-    // la pancarta que dice NEW AMSTERDAM ESPECULADORS: la unica foto suya donde se lee el
-    // nombre de la empresa de la que habla el texto.
+    // LAS ELIGIO FABIAN una a una. Orden cronologico, siete episodios: Antiga Massana (enero
+    // de 2025), Vallcarca (julio de 2025), vaga de lloguers, el Joan, l'Olalla, en Jordi, el
+    // bloc Sant Agusti y la festa major de Gracia.
     id: 'ni-gent-sense-casa',
     proyecto: true,
     fotos: [
@@ -33,25 +32,25 @@ export const series: Serie[] = [
       { src: '/fotos/ni-gent-sense-casa-03.jpg', w: 2000, h: 1250 },
       { src: '/fotos/ni-gent-sense-casa-04.jpg', w: 1440, h: 1799 },
       { src: '/fotos/ni-gent-sense-casa-05.jpg', w: 2000, h: 1250 },
-      { src: '/fotos/ni-gent-sense-casa-06.jpg', w: 2000, h: 1331 },
-      { src: '/fotos/ni-gent-sense-casa-07.jpg', w: 1440, h: 1919 },
-      { src: '/fotos/ni-gent-sense-casa-08.jpg', w: 2000, h: 1250 },
-      { src: '/fotos/ni-gent-sense-casa-09.jpg', w: 2000, h: 1250 },
-      { src: '/fotos/ni-gent-sense-casa-10.jpg', w: 2000, h: 1250 },
-      { src: '/fotos/ni-gent-sense-casa-11.jpg', w: 2000, h: 1250 },
-      { src: '/fotos/ni-gent-sense-casa-12.jpg', w: 1500, h: 2000 },
-      { src: '/fotos/ni-gent-sense-casa-13.jpg', w: 2000, h: 1333 },
-      { src: '/fotos/ni-gent-sense-casa-14.jpg', w: 2000, h: 1333 },
-      { src: '/fotos/ni-gent-sense-casa-15.jpg', w: 2000, h: 1333 },
-      { src: '/fotos/ni-gent-sense-casa-16.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/ni-gent-sense-casa-06.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/ni-gent-sense-casa-07.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/ni-gent-sense-casa-08.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/ni-gent-sense-casa-09.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/ni-gent-sense-casa-10.jpg', w: 2000, h: 1331 },
+      { src: '/fotos/ni-gent-sense-casa-11.jpg', w: 1440, h: 1919 },
+      { src: '/fotos/ni-gent-sense-casa-12.jpg', w: 2000, h: 1250 },
+      { src: '/fotos/ni-gent-sense-casa-13.jpg', w: 2000, h: 1250 },
+      { src: '/fotos/ni-gent-sense-casa-14.jpg', w: 2000, h: 1250 },
+      { src: '/fotos/ni-gent-sense-casa-15.jpg', w: 2000, h: 1250 },
+      { src: '/fotos/ni-gent-sense-casa-16.jpg', w: 1500, h: 2000 },
       { src: '/fotos/ni-gent-sense-casa-17.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ni-gent-sense-casa-18.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ni-gent-sense-casa-19.jpg', w: 2000, h: 1333 },
-      { src: '/fotos/ni-gent-sense-casa-20.jpg', w: 1333, h: 2000 },
+      { src: '/fotos/ni-gent-sense-casa-20.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ni-gent-sense-casa-21.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ni-gent-sense-casa-22.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ni-gent-sense-casa-23.jpg', w: 2000, h: 1333 },
-      { src: '/fotos/ni-gent-sense-casa-24.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/ni-gent-sense-casa-24.jpg', w: 1333, h: 2000 },
       { src: '/fotos/ni-gent-sense-casa-25.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ni-gent-sense-casa-26.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ni-gent-sense-casa-27.jpg', w: 2000, h: 1333 },
@@ -61,8 +60,12 @@ export const series: Serie[] = [
       { src: '/fotos/ni-gent-sense-casa-31.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ni-gent-sense-casa-32.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ni-gent-sense-casa-33.jpg', w: 2000, h: 1333 },
-      { src: '/fotos/ni-gent-sense-casa-34.jpg', w: 1333, h: 2000 },
+      { src: '/fotos/ni-gent-sense-casa-34.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ni-gent-sense-casa-35.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/ni-gent-sense-casa-36.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/ni-gent-sense-casa-37.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/ni-gent-sense-casa-38.jpg', w: 1333, h: 2000 },
+      { src: '/fotos/ni-gent-sense-casa-39.jpg', w: 2000, h: 1333 },
     ],
   },
   {
