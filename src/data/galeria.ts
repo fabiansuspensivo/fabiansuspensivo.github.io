@@ -45,6 +45,7 @@ export const series: Serie[] = [
       { src: '/fotos/ball-de-nuria-expo-03.jpg', w: 2000, h: 1333, expo: true },
       { src: '/fotos/ball-de-nuria-expo-04.jpg', w: 2000, h: 1333, expo: true },
       { src: '/fotos/ball-de-nuria-expo-05.jpg', w: 2000, h: 1333, expo: true },
+      { src: '/fotos/ball-de-nuria-expo-06.jpg', w: 1499, h: 2000, expo: true },
     ],
   },
   {
