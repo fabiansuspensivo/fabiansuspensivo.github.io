@@ -21,8 +21,9 @@ export type Serie = {
 export const series: Serie[] = [
   {
     // Los desahucios de Catalunya. Obra de autor: sale en Proyectos y tambien en Trabajo.
-    // Orden cronologico, que es como se cuenta: del desalojo de la Antiga Massana en enero
-    // de 2025 a la terraza del Txema. De la calle en llamas a la casa de alguien que sigue ahi.
+    // LAS ELIGIO FABIAN, una a una, el 31/08/2026, sobre una hoja con las 91 que habia.
+    // Orden cronologico: del desalojo de la Antiga Massana en enero de 2025 a la festa
+    // major de Gracia. De la calle en llamas a la casa de alguien que sigue dentro.
     id: 'ni-gent-sense-casa',
     proyecto: true,
     fotos: [
@@ -39,21 +40,22 @@ export const series: Serie[] = [
       { src: '/fotos/ni-gent-sense-casa-11.jpg', w: 1500, h: 2000 },
       { src: '/fotos/ni-gent-sense-casa-12.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ni-gent-sense-casa-13.jpg', w: 2000, h: 1333 },
-      { src: '/fotos/ni-gent-sense-casa-14.jpg', w: 1620, h: 1079 },
+      { src: '/fotos/ni-gent-sense-casa-14.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ni-gent-sense-casa-15.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ni-gent-sense-casa-16.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ni-gent-sense-casa-17.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ni-gent-sense-casa-18.jpg', w: 2000, h: 1333 },
-      { src: '/fotos/ni-gent-sense-casa-19.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/ni-gent-sense-casa-19.jpg', w: 1333, h: 2000 },
       { src: '/fotos/ni-gent-sense-casa-20.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ni-gent-sense-casa-21.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ni-gent-sense-casa-22.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ni-gent-sense-casa-23.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ni-gent-sense-casa-24.jpg', w: 2000, h: 1333 },
-      { src: '/fotos/ni-gent-sense-casa-25.jpg', w: 1333, h: 2000 },
+      { src: '/fotos/ni-gent-sense-casa-25.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ni-gent-sense-casa-26.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ni-gent-sense-casa-27.jpg', w: 2000, h: 1333 },
-      { src: '/fotos/ni-gent-sense-casa-28.jpg', w: 2000, h: 1333 },
+      { src: '/fotos/ni-gent-sense-casa-28.jpg', w: 1333, h: 2000 },
+      { src: '/fotos/ni-gent-sense-casa-29.jpg', w: 2000, h: 1333 },
     ],
   },
   {
