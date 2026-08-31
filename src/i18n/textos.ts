@@ -132,6 +132,23 @@ export const textos: Record<Idioma, Textos> = {
       escribeme: 'Escríbeme',
     },
     series: {
+      'ni-gent-sense-casa': {
+        titulo: 'Ni gent sense casa ni casa sense gent',
+        subtitulo: 'Los desahucios de Catalunya, de enero de 2025 a hoy. Proyecto en curso.',
+        nota: 'Desahucios en Catalunya. Proyecto en curso.',
+        alt: 'Desahucios en Barcelona, proyecto documental Ni gent sense casa ni casa sense gent de Fabian Suspensivo',
+        resumen:
+          'Seis casos, cinco barrios y año y medio siguiendo lo mismo: empresas que compran edificios enteros, los vacían y multiplican la renta. El título es la consigna que se corea en las puertas.',
+        historia: [
+          'Barcelona, enero de 2025. Empieza en el Raval, con el desalojo de la Antiga Massana y una manifestación de miles de personas que acaba en cargas policiales y cinco detenidos. Desde entonces, esta serie sigue los desahucios de Catalunya hasta dentro de las casas.',
+          'Puestos uno al lado del otro aparece lo que no se ve caso a caso: no son desahucios sueltos, es un modelo. New Amsterdam Developers compra bloques enteros, no renueva los contratos y convierte los pisos en colivings de novecientos a mil euros la habitación. Poliverso Inmuebles, una sociedad constituida días antes de comprar el edificio, deja a Joan nueve meses sin luz en Sants. Urban Power echa a Jordi, a su mujer y a su hijo del carrer Marina después de veintidós años, en un bloque donde cinco de los nueve pisos ya eran alquiler de temporada.',
+          'La serie termina donde empieza el título. Txema Escorsa lleva once años en el bloc Sant Agustí de Gràcia y ha parado tres fechas de desahucio, una de ellas con quinientas personas delante del portal. Estas fotos son del día antes de una de esas fechas, y de la fiesta mayor de su barrio, con él dentro. Es lo que él quería enseñar: que la organización vecinal sirve.',
+        ],
+        fuente: {
+          texto: 'Sindicat de Llogateres',
+          url: 'https://sindicatdellogateres.org/',
+        },
+      },
       'flotilla': {
         titulo: 'Flotilla',
         subtitulo: 'Un mes con los barcos que iban a Gaza, y el día que zarparon.',
@@ -325,6 +342,23 @@ export const textos: Record<Idioma, Textos> = {
       escribeme: 'Escriu-me',
     },
     series: {
+      'ni-gent-sense-casa': {
+        titulo: 'Ni gent sense casa ni casa sense gent',
+        subtitulo: 'Els desnonaments de Catalunya, del gener de 2025 fins avui. Projecte en curs.',
+        nota: 'Desnonaments a Catalunya. Projecte en curs.',
+        alt: 'Desnonaments a Barcelona, projecte documental Ni gent sense casa ni casa sense gent de Fabian Suspensivo',
+        resumen:
+          'Sis casos, cinc barris i un any i mig seguint el mateix: empreses que compren edificis sencers, els buiden i multipliquen la renda. El títol és la consigna que es crida a les portes.',
+        historia: [
+          'Barcelona, gener de 2025. Comença al Raval, amb el desallotjament de l’Antiga Massana i una manifestació de milers de persones que acaba amb càrregues policials i cinc detinguts. Des de llavors, aquesta sèrie segueix els desnonaments de Catalunya fins a dins de les cases.',
+          'Posats l’un al costat de l’altre apareix el que no es veu cas per cas: no són desnonaments solts, és un model. New Amsterdam Developers compra blocs sencers, no renova els contractes i converteix els pisos en colivings de nou-cents a mil euros l’habitació. Poliverso Inmuebles, una societat constituïda dies abans de comprar l’edifici, deixa el Joan nou mesos sense llum a Sants. Urban Power fa fora el Jordi, la seva dona i el seu fill del carrer Marina després de vint-i-dos anys, en un bloc on cinc dels nou pisos ja eren lloguer de temporada.',
+          'La sèrie acaba on comença el títol. El Txema Escorsa porta onze anys al bloc Sant Agustí de Gràcia i ha aturat tres dates de desnonament, una amb cinc-centes persones davant del portal. Aquestes fotos són del dia abans d’una d’aquestes dates, i de la festa major del seu barri, amb ell a dins. És el que ell volia ensenyar: que l’organització veïnal serveix.',
+        ],
+        fuente: {
+          texto: 'Sindicat de Llogateres',
+          url: 'https://sindicatdellogateres.org/',
+        },
+      },
       'flotilla': {
         titulo: 'Flotilla',
         subtitulo: 'Un mes amb els vaixells que anaven a Gaza, i el dia que van salpar.',
@@ -518,6 +552,23 @@ export const textos: Record<Idioma, Textos> = {
       escribeme: 'Schreib mir',
     },
     series: {
+      'ni-gent-sense-casa': {
+        titulo: 'Ni gent sense casa ni casa sense gent',
+        subtitulo: 'Zwangsräumungen in Katalonien, von Januar 2025 bis heute. Laufendes Projekt.',
+        nota: 'Zwangsräumungen in Katalonien. Laufendes Projekt.',
+        alt: 'Zwangsräumungen in Barcelona, Dokumentarprojekt Ni gent sense casa ni casa sense gent von Fabian Suspensivo',
+        resumen:
+          'Sechs Fälle, fünf Viertel und anderthalb Jahre am selben Thema: Firmen kaufen ganze Häuser, räumen sie leer und vervielfachen die Miete. Der Titel ist die Parole, die vor den Haustüren gerufen wird.',
+        historia: [
+          'Barcelona, Januar 2025. Es beginnt im Raval, mit der Räumung der Antiga Massana und einer Demonstration von Tausenden, die mit Polizeiknüppeln und fünf Festnahmen endet. Seither folgt diese Serie den Zwangsräumungen in Katalonien bis in die Wohnungen hinein.',
+          'Nebeneinandergelegt zeigt sich, was der Einzelfall verbirgt: Es sind keine Einzelfälle, es ist ein Geschäftsmodell. New Amsterdam Developers kauft ganze Häuser, verlängert keine Verträge und macht aus den Wohnungen Colivings für neunhundert bis tausend Euro pro Zimmer. Poliverso Inmuebles, wenige Tage vor dem Hauskauf gegründet, lässt Joan in Sants neun Monate ohne Strom. Urban Power setzt Jordi, seine Frau und seinen Sohn nach zweiundzwanzig Jahren in der Carrer Marina auf die Strasse, in einem Haus, in dem fünf von neun Wohnungen bereits Saisonvermietung waren.',
+          'Die Serie endet dort, wo der Titel beginnt. Txema Escorsa wohnt seit elf Jahren im Bloc Sant Agustí in Gràcia und hat drei Räumungstermine gestoppt, einen davon mit fünfhundert Menschen vor der Haustür. Diese Bilder entstanden am Tag vor einem dieser Termine und beim Stadtteilfest seines Viertels, mit ihm mittendrin. Genau das wollte er zeigen: dass nachbarschaftliche Organisierung wirkt.',
+        ],
+        fuente: {
+          texto: 'Sindicat de Llogateres',
+          url: 'https://sindicatdellogateres.org/',
+        },
+      },
       'flotilla': {
         titulo: 'Flotilla',
         subtitulo: 'Ein Monat mit den Schiffen, die nach Gaza fuhren, und der Tag der Abfahrt.',
