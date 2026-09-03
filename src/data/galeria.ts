@@ -56,7 +56,6 @@ export const series: Serie[] = [
       { src: '/fotos/ni-gent-sense-casa-27.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ni-gent-sense-casa-29.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ni-gent-sense-casa-30.jpg', w: 2000, h: 1333 },
-      { src: '/fotos/ni-gent-sense-casa-31.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ni-gent-sense-casa-32.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ni-gent-sense-casa-33.jpg', w: 2000, h: 1333 },
       { src: '/fotos/ni-gent-sense-casa-34.jpg', w: 2000, h: 1333 },
