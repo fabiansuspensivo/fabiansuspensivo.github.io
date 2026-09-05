@@ -90,8 +90,8 @@ export const textos: Record<Idioma, Textos> = {
     },
     sobre: {
       titulo: 'Sobre mí',
-      p1: 'Fabian Suspensivo es fotoperiodista y fotógrafo documental chileno/catalán, radicado en Barcelona. Fotografía la actualidad y los movimientos sociales de Catalunya, y su trabajo se extiende al retrato, la cobertura de conciertos y la foto fija para cine.',
-      p2: 'Autodidacta, ha colaborado con medios y organizaciones en Chile y en Europa, con publicaciones que incluyen Der Spiegel y colaboraciones como las de Open Arms y Top Manta. En 2026 expone «El Ball de Núria» en el festival OFF de Perpinyà, del 29 de agosto al 12 de septiembre, en paralelo a Visa pour l’Image. Trabaja con la mirada puesta en el reportaje para revistas, periódicos y agencias internacionales.',
+      p1: 'Fabian Suspensivo (San Bernardo, Chile, 1996) es fotoperiodista y fotógrafo documental chileno/catalán, radicado en Barcelona. Trabaja en series largas sobre vivienda, migración y movimientos sociales en Catalunya: entra en las casas la noche antes de un desahucio y sigue lo que pasa después. Fotografía también la actualidad, y su trabajo se extiende al retrato, la cobertura de conciertos y la foto fija para cine.',
+      p2: 'Está representado por la agencia internacional ZUMA Press. Autodidacta, ha colaborado con medios y organizaciones en Chile y en Europa, con publicaciones que incluyen Der Spiegel y colaboraciones como las de Open Arms y Top Manta. En 2026 expone «El Ball de Núria» en el festival OFF de Perpinyà, del 29 de agosto al 12 de septiembre, en paralelo a Visa pour l’Image. Trabaja con la mirada puesta en el reportaje para revistas, periódicos y agencias internacionales.',
     },
     cv: {
       titulo: 'CV',
@@ -301,8 +301,8 @@ export const textos: Record<Idioma, Textos> = {
     },
     sobre: {
       titulo: 'Sobre mi',
-      p1: 'Fabian Suspensivo és fotoperiodista i fotògraf documental xilè/català, resident a Barcelona. Fotografia l’actualitat i els moviments socials de Catalunya, i el seu treball s’estén al retrat, la cobertura de concerts i la foto fixa per a cinema.',
-      p2: 'Autodidacta, ha col·laborat amb mitjans i organitzacions a Xile i a Europa, amb publicacions que inclouen Der Spiegel i col·laboracions com les d’Open Arms i Top Manta. El 2026 exposa «El Ball de Núria» al festival OFF de Perpinyà, del 29 d’agost al 12 de setembre, en paral·lel a Visa pour l’Image. Treballa amb la mirada posada en el reportatge per a revistes, diaris i agències internacionals.',
+      p1: 'Fabian Suspensivo (San Bernardo, Xile, 1996) és fotoperiodista i fotògraf documental xilè/català, resident a Barcelona. Treballa en sèries llargues sobre habitatge, migració i moviments socials a Catalunya: entra a les cases la nit abans d’un desnonament i segueix què passa després. Fotografia també l’actualitat, i el seu treball s’estén al retrat, la cobertura de concerts i la foto fixa per a cinema.',
+      p2: 'Està representat per l’agència internacional ZUMA Press. Autodidacta, ha col·laborat amb mitjans i organitzacions a Xile i a Europa, amb publicacions que inclouen Der Spiegel i col·laboracions com les d’Open Arms i Top Manta. El 2026 exposa «El Ball de Núria» al festival OFF de Perpinyà, del 29 d’agost al 12 de setembre, en paral·lel a Visa pour l’Image. Treballa amb la mirada posada en el reportatge per a revistes, diaris i agències internacionals.',
     },
     cv: {
       titulo: 'CV',
@@ -512,8 +512,8 @@ export const textos: Record<Idioma, Textos> = {
     },
     sobre: {
       titulo: 'Über mich',
-      p1: 'Fabian Suspensivo ist ein chilenisch-katalanischer Fotojournalist und Dokumentarfotograf mit Sitz in Barcelona. Er fotografiert das aktuelle Geschehen und die sozialen Bewegungen in Katalonien; seine Arbeit umfasst auch Porträts, Konzertfotografie und Standfotografie fürs Kino.',
-      p2: 'Als Autodidakt hat er mit Medien und Organisationen in Chile und Europa zusammengearbeitet, mit Veröffentlichungen unter anderem im Spiegel sowie Kooperationen wie mit Open Arms und Top Manta. 2026 zeigt er «El Ball de Núria» beim OFF-Festival in Perpignan, vom 29. August bis 12. September, parallel zu Visa pour l’Image. Er arbeitet mit Blick auf Reportagen für Magazine, Zeitungen und internationale Agenturen.',
+      p1: 'Fabian Suspensivo (San Bernardo, Chile, 1996) ist ein chilenisch-katalanischer Fotojournalist und Dokumentarfotograf mit Sitz in Barcelona. Er arbeitet an langfristigen Serien über Wohnen, Migration und soziale Bewegungen in Katalonien: Er ist in den Wohnungen in der Nacht vor einer Zwangsräumung dabei und verfolgt, was danach geschieht. Er fotografiert auch das aktuelle Geschehen; seine Arbeit umfasst auch Porträts, Konzertfotografie und Standfotografie fürs Kino.',
+      p2: 'Er wird von der internationalen Agentur ZUMA Press vertreten. Als Autodidakt hat er mit Medien und Organisationen in Chile und Europa zusammengearbeitet, mit Veröffentlichungen unter anderem im Spiegel sowie Kooperationen wie mit Open Arms und Top Manta. 2026 zeigt er «El Ball de Núria» beim OFF-Festival in Perpignan, vom 29. August bis 12. September, parallel zu Visa pour l’Image. Er arbeitet mit Blick auf Reportagen für Magazine, Zeitungen und internationale Agenturen.',
     },
     cv: {
       titulo: 'CV',
